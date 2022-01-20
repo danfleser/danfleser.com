@@ -1,0 +1,30 @@
+/* Footer */
+.app-footer {
+  @apply w-full flex flex-row items-center justify-center mt-6 select-none;
+
+  .content {
+    @apply border-t flex flex-col;
+
+    .block {
+      @apply flex flex-row justify-between mb-6;
+    }
+
+    .links {
+      h2 {
+        @apply cursor-pointer hover:text-indigo-500;
+      }
+    }
+
+    ul {
+      li {
+        img {
+          @apply grayscale-0 hover:grayscale;
+        }
+      }
+    }
+
+    .copyrights {
+      @apply w-full text-center mb-6;
+    }
+  }
+}

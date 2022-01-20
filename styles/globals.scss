@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "general.scss";
+
+// components
+@import "components/card.scss";
+@import "components/footer.scss";
+@import "components/header.scss";
+@import "components/post.scss";
+@import "components/profile.scss";
+
+// pages
+@import "pages/contact.scss";
+@import "pages/home.scss";

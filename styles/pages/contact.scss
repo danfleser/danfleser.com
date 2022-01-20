@@ -1,0 +1,32 @@
+.contact-card {
+  header {
+    h1 {
+      @apply text-2xl mb-4;
+    }
+  }
+
+  form {
+    .form-item {
+      @apply w-full mb-6;
+
+      label {
+        @apply block mb-2;
+      }
+
+      input,
+      textarea {
+        @apply w-full;
+      }
+
+      textarea {
+        @apply resize-none;
+      }
+    }
+
+    button {
+      @apply w-full px-4 py-2 text-white bg-indigo-500 hover:bg-indigo-600;
+
+      @apply transition ease-in-out duration-150;
+    }
+  }
+}

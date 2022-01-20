@@ -1,0 +1,41 @@
+.app-profile {
+  @apply flex flex-col;
+
+  .block {
+    @apply flex flex-row justify-between;
+
+    &:not(:last-child) {
+      @apply mb-6;
+    }
+  }
+
+  .info {
+    @apply mr-8;
+
+    section {
+      &:not(:last-child) {
+        @apply mb-4;
+      }
+
+      .name {
+        @apply text-2xl font-bold text-indigo-500;
+      }
+    }
+  }
+
+  h2 {
+    @apply font-bold uppercase;
+  }
+
+  .detail {
+    @apply ml-4 text-sm text-gray-400;
+  }
+
+  .image {
+    img {
+      @apply rounded-full;
+      min-width: 100px;
+      min-height: 100px;
+    }
+  }
+}

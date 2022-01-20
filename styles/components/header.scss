@@ -1,0 +1,27 @@
+.app-header {
+  @apply bg-white dark:bg-slate-900 py-2 w-full flex items-center justify-center mb-6 border-b dark:border-0 select-none;
+
+  .content {
+    @apply flex flex-row items-center justify-between;
+
+    .logo {
+      @apply text-2xl font-bold cursor-pointer hover:text-indigo-500;
+    }
+
+    .search {
+      @apply relative mr-4 w-44 md:w-72 h-10;
+
+      input {
+        @apply w-full h-full absolute pr-14;
+      }
+
+      button {
+        @apply absolute top-0 bottom-0 my-auto right-0 pr-4;
+      }
+    }
+
+    svg {
+      @apply cursor-pointer stroke-slate-900 dark:stroke-white;
+    }
+  }
+}
