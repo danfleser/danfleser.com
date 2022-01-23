@@ -1,22 +1,26 @@
 .blog-post {
   article {
     header {
-      @apply mb-4;
+      @apply mb-5;
 
       .post-title {
         @apply text-4xl font-extrabold;
       }
+
+      .date {
+        @apply mb-5;
+      }
     }
 
     .blog-content {
-      @apply prose prose-slate dark:prose-invert max-w-none;
-
       pre {
         .code-block-title {
           @apply -mt-4 -mb-6 w-full flex justify-end;
 
           .language {
             @apply py-1 px-4 uppercase bg-indigo-600 rounded-b-md font-extrabold cursor-default select-none;
+            // dark mode
+            @apply dark:bg-emerald-500;
           }
         }
 
@@ -35,6 +39,8 @@
 
     a {
       @apply text-lg font-bold flex-1 hover:text-indigo-600;
+      // dark mode
+      @apply dark:hover:text-emerald-500;
     }
 
     a:last-child {

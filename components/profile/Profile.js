@@ -1,3 +1,5 @@
+import SocialLinks from "../common/SocialLinks";
+
 export default function Profile() {
   return (
     <article className="app-profile card">
@@ -25,7 +27,7 @@ export default function Profile() {
         </section>
       </section>
 
-      {/* <section className="block">
+      <section className="block">
         <section>
           <h2>Education</h2>
           <div>
@@ -42,7 +44,9 @@ export default function Profile() {
             </p>
           </div>
         </section>
-      </section> */}
+      </section>
+
+      <SocialLinks></SocialLinks>
     </article>
   );
 }

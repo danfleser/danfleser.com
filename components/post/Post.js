@@ -3,24 +3,35 @@ import Link from "next/link";
 export default function Post({ post }) {
   return (
     <article className="app-post card">
-      <header>
-        {post.frontmatter.cover_image ? (
-          <img
-            src={post.frontmatter.cover_image}
-            alt={post.frontmatter.title}
-          />
-        ) : null}
+      <section className=" w-full lg:max-w-full lg:flex">
+        <section
+          className="bg-center h-48 lg:h-auto lg:w-48 flex-none bg-cover"
+          style={{
+            backgroundImage: `url('posts/${post.frontmatter.cover_image}')`,
+          }}
+          title={post.frontmatter.title}
+        ></section>
 
-        <h3 className="btn">
-          <Link href={"/posts/[slug]"} as={`/posts/${post.slug}`}>
-            <a className="title">{post.frontmatter.title}</a>
-          </Link>
-        </h3>
-        <div className="date">{post.frontmatter.date}</div>
-      </header>
+        <section className="p-4 pr-0 flex flex-col justify-between leading-normal">
+          <header className="mb-8">
+            <h3>
+              <Link href={"/posts/[slug]"} as={`/posts/${post.slug}`}>
+                <a className="title">{post.frontmatter.title}</a>
+              </Link>
+            </h3>
+            <div className="date">{post.frontmatter.date}</div>
+          </header>
 
-      <section>
-        <p>{post.frontmatter.tags}</p>
+          <footer className="flex items-center">
+            <div className="text-sm">
+              {post.frontmatter.tags.map((tag) => (
+                <span key={tag} className="tag">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </footer>
+        </section>
       </section>
     </article>
   );

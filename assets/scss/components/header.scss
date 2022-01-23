@@ -6,13 +6,15 @@
 
     .logo {
       @apply text-2xl font-bold cursor-pointer hover:text-indigo-600;
+      // dark mode
+      @apply dark:hover:text-emerald-500;
     }
 
     .search {
       @apply relative mr-4 w-44 md:w-72 h-10;
 
       input {
-        @apply w-full h-full absolute pr-14 hover:border-indigo-600;
+        @apply w-full h-full absolute pr-14;
       }
 
       button {
@@ -21,7 +23,9 @@
     }
 
     .darkMode {
-      @apply cursor-pointer h-10 w-10 flex items-center justify-center border dark:border-slate-800 rounded hover:border-indigo-600 dark:hover:border-indigo-600;
+      @apply cursor-pointer h-10 w-10 flex items-center justify-center border rounded hover:border-indigo-600;
+      // dark mode
+      @apply dark:border-slate-800 dark:hover:border-emerald-500;
     }
 
     svg {

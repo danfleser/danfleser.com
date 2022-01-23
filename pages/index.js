@@ -6,7 +6,7 @@ import { generateRssPostsFeed } from "../utils/rss";
 
 export default function Home({ posts }) {
   return (
-    <section className="app-home">
+    <section>
       <Seo title="All posts" />
       <Profile />
 

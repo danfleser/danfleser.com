@@ -9,24 +9,6 @@
 
 body {
   @apply bg-zinc-50 dark:bg-slate-800;
-
-  // // Colors
-  // $bg-color: rgb(0, 0, 0);
-  // $dot-color: rgb(255, 255, 255);
-
-  // // Dimensions
-  // $dot-size: 2px;
-  // $dot-space: 22px;
-
-  // background: linear-gradient(
-  //       90deg,
-  //       $bg-color ($dot-space - $dot-size),
-  //       transparent 1%
-  //     )
-  //     center,
-  //   linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
-  //   $dot-color;
-  // background-size: $dot-space $dot-space;
 }
 
 .app {
@@ -43,10 +25,9 @@ body {
 
 input,
 textarea {
-  @apply py-2 px-4 border dark:border-slate-800 dark:bg-slate-900;
-
-  // outline
-  @apply focus:outline-none focus:ring focus:ring-indigo-500;
-
+  @apply py-2 px-4 border;
+  @apply focus:outline-none focus:ring focus:ring-indigo-600 hover:border-indigo-600;
   @apply transition ease-in-out duration-150;
+  // dark mode
+  @apply dark:border-slate-800 dark:bg-slate-900 dark:focus:ring-emerald-500 dark:hover:border-emerald-500;
 }

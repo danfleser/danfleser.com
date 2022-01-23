@@ -2,9 +2,9 @@ import matter from "gray-matter";
 import fs from "fs";
 
 export function getPostsFolders() {
-  // Get all posts folders located in `content/posts`
+  // Get all posts folders located in `public/posts`
   const postsFolders = fs
-    .readdirSync(`${process.cwd()}/content/posts`)
+    .readdirSync(`${process.cwd()}/public/posts`)
     .map((folderName) => ({
       directory: folderName,
       filename: `${folderName}.md`,
@@ -28,15 +28,16 @@ export function getSortedPosts() {
     .map(({ filename, directory }) => {
       // Get raw content from file
       const markdownWithMetadata = fs
-        .readFileSync(`content/posts/${directory}/${filename}`, "utf-8")
+        .readFileSync(`public/posts/${directory}/${filename}`, "utf-8")
         .toString();
 
-      // Parse markdown, get frontmatter data, excerpt and content.
-      const { data, excerpt, content } = matter(markdownWithMetadata);
+      // Parse markdown, get frontmatter data and content.
+      const { data, content } = matter(markdownWithMetadata);
 
       const frontmatter = {
         ...data,
         date: getFormattedDate(data.date),
+        tags: data.tags.split(", ").map((t) => `#${t}`)
       };
 
       // Remove .md file extension from post name
@@ -45,8 +46,7 @@ export function getSortedPosts() {
       return {
         slug,
         frontmatter,
-        excerpt,
-        content,
+        content
       };
     })
     .sort(
@@ -73,10 +73,10 @@ export function getPostBySlug(slug) {
 
   const postIndex = posts.findIndex(({ slug: postSlug }) => postSlug === slug);
 
-  const { frontmatter, content, excerpt } = posts[postIndex];
+  const { frontmatter, content } = posts[postIndex];
 
   const previousPost = posts[postIndex + 1];
   const nextPost = posts[postIndex - 1];
 
-  return { frontmatter, post: { content, excerpt }, previousPost, nextPost };
+  return { frontmatter, post: { content }, previousPost, nextPost };
 }

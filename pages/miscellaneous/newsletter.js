@@ -1,11 +1,13 @@
 export default function Newsletter() {
   return (
-    <article>
-      <header className="article-header">
-        <h1 className="article-title">Subscribe to newsletter</h1>
+    <article className="app-newsletter">
+      <header>
+        <h1>📰 Newsletter</h1>
       </header>
 
-      <section className="article-content">newsletter</section>
+      <section className="article-content card">
+        Subscribe to newsletter
+      </section>
     </article>
   );
 }

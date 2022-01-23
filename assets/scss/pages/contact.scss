@@ -24,9 +24,10 @@
     }
 
     button {
-      @apply w-full px-4 py-2 text-white bg-indigo-500 hover:bg-indigo-600;
-
+      @apply w-full px-4 py-2 text-white bg-indigo-600 hover:bg-indigo-600;
       @apply transition ease-in-out duration-150;
+      // dark mode
+      @apply dark:bg-emerald-500 dark:hover:bg-emerald-600;
     }
   }
 }

@@ -1,12 +1,11 @@
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Highlight, { defaultProps } from "prism-react-renderer";
-
-// import theme from "prism-react-renderer/themes/vsDark";
-
 import Seo from "../../components/common/Seo";
 import Profile from "../../components/profile/Profile";
+import Image from "../../components/common/Image";
 import { getPostBySlug, getPostsSlugs } from "../../utils/posts";
+
 const theme = {
   plain: {
     color: "#2A2A2A",
@@ -109,6 +108,7 @@ const theme = {
     },
   ],
 };
+
 export default function PostPage({
   post,
   frontmatter,
@@ -128,13 +128,15 @@ export default function PostPage({
 
           <p className="date">{frontmatter.date}</p>
 
-          <img src={frontmatter.cover_image} alt={post.slug} />
+          {frontmatter.cover_image && (
+            <img src={frontmatter.cover_image} alt={post.slug}></img>
+          )}
         </header>
 
-        <section className="blog-content">
+        <section className="blog-content typography">
           <ReactMarkdown
             children={post.content}
-            components={{ code: SyntaxHighlighterr }}
+            components={{ code: SyntaxHighlighterr, image: Image }}
           />
         </section>
       </article>
@@ -189,7 +191,7 @@ const SyntaxHighlighterr = ({ inline, className, children }) => {
   const code = String(children).replace(/\n$/, "");
   return !inline && match ? (
     <>
-      <section className=" code-block-title">
+      <section className="code-block-title">
         <div className="language">{match[1]}</div>
       </section>
       <Highlight

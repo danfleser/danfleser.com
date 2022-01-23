@@ -18,7 +18,9 @@
       }
 
       .name {
-        @apply text-2xl font-bold text-indigo-500;
+        @apply text-2xl font-bold text-indigo-600;
+        // dark mode
+        @apply dark:text-emerald-500;
       }
     }
   }

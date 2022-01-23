@@ -1,11 +1,11 @@
 export default function PrivacyPolicy() {
   return (
-    <article>
-      <header className="article-header">
-        <h1 className="article-title">Privacy Policy</h1>
+    <article className="app-privacy-policy">
+      <header>
+        <h1>🔏 Privacy Policy</h1>
       </header>
 
-      <section className="article-content">
+      <section className="card typography">
         <p>
           By using this website you agree to the terms outlined in this privacy
           policy. If for any reason you don’t agree these terms of this you
