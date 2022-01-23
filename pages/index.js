@@ -1,46 +1,29 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import Posts from "../components/Posts";
-import Profile from "../components/Profile";
-import { sortByDate } from "../utils";
+import Seo from "../components/common/Seo";
+import Post from "../components/post/Post";
+import Profile from "../components/profile/Profile";
+import { getSortedPosts } from "../utils/posts";
+import { generateRssPostsFeed } from "../utils/rss";
 
 export default function Home({ posts }) {
   return (
     <section className="app-home">
+      <Seo title="All posts" />
       <Profile />
 
-      <Posts posts={posts} />
+      {posts.map((post) => (
+        <Post key={post.slug} post={post} />
+      ))}
     </section>
   );
 }
 
 export async function getStaticProps() {
-  // Get files from the posts dir
-  const files = fs.readdirSync(path.join("posts"));
-
-  // Get slug and frontmatter from posts
-  const posts = files.map((filename) => {
-    // Create slug
-    const slug = filename.replace(".md", "");
-
-    // Get frontmatter
-    const markdownWithMeta = fs.readFileSync(
-      path.join("posts", filename),
-      "utf-8"
-    );
-
-    const { data: frontmatter } = matter(markdownWithMeta);
-
-    return {
-      slug,
-      frontmatter,
-    };
-  });
+  generateRssPostsFeed();
+  const posts = getSortedPosts();
 
   return {
     props: {
-      posts: posts.sort(sortByDate),
+      posts,
     },
   };
 }

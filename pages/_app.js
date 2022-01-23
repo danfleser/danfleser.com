@@ -1,7 +1,6 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import "../styles/globals.scss";
+import Header from "../components/common/Header";
+import Footer from "../components/common/Footer";
+import "../assets/scss/main.scss";
 
 const setTheme = () => {
   if (
@@ -15,26 +14,20 @@ const setTheme = () => {
   }
 };
 
-function MyApp({ Component, pageProps }) {
-  setTimeout(setTheme);
+export default function MyApp({ Component, pageProps }) {
+  // setTimeout(setTheme);
 
   return (
-    <>
-      <Head>
-        <title>Dev Blog</title>
-      </Head>
+    <div className="app">
+      <Header />
 
-      <div className="app">
-        <Header />
-        <main>
-          <div className="app-container">
-            <Component {...pageProps} />
-          </div>
-        </main>
-        <Footer />
-      </div>
-    </>
+      <main>
+        <div className="app-container">
+          <Component {...pageProps} />
+        </div>
+      </main>
+
+      <Footer />
+    </div>
   );
 }
-
-export default MyApp;

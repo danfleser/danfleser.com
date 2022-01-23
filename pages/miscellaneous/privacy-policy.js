@@ -4,7 +4,8 @@ export default function PrivacyPolicy() {
       <header className="article-header">
         <h1 className="article-title">Privacy Policy</h1>
       </header>
-      <div className="article-content">
+
+      <section className="article-content">
         <p>
           By using this website you agree to the terms outlined in this privacy
           policy. If for any reason you don’t agree these terms of this you
@@ -46,7 +47,7 @@ export default function PrivacyPolicy() {
           If you subscribe to the newsletter your email will be stored with our
           email marketing provider.
         </p>
-      </div>
+      </section>
     </article>
   );
 }

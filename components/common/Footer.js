@@ -26,7 +26,7 @@ export default function Footer() {
             <li>
               <a href="https://hashnode.com/@danfleser">
                 <img
-                  src="/images/logos/hashnode.svg"
+                  src="/images/hashnode.svg"
                   alt="Hashnode logo"
                   height={24}
                   width={24}
@@ -36,7 +36,7 @@ export default function Footer() {
             <li>
               <a href="https://danfleser.medium.com/">
                 <img
-                  src="/images/logos/medium.svg"
+                  src="/images/medium.svg"
                   alt="Medium logo"
                   height={24}
                   width={24}
@@ -46,7 +46,7 @@ export default function Footer() {
             <li>
               <a href="https://dev.to/danfleser">
                 <img
-                  src="/images/logos/devto.svg"
+                  src="/images/devto.svg"
                   alt="Dev.to logo"
                   height={24}
                   width={24}
@@ -56,7 +56,7 @@ export default function Footer() {
             <li>
               <a href="https://hackernoon.com/u/danfleser">
                 <img
-                  src="/images/logos/hackernoon.jpeg"
+                  src="/images/hackernoon.jpeg"
                   alt="Hackernoon logo"
                   height={24}
                   width={24}
@@ -66,7 +66,7 @@ export default function Footer() {
             <li>
               <a href="https://twitter.com/danfleser">
                 <img
-                  src="/images/logos/twitter.svg"
+                  src="/images/twitter.svg"
                   alt="Twitter logo"
                   height={24}
                   width={24}
@@ -76,7 +76,7 @@ export default function Footer() {
             <li>
               <a href="https://www.facebook.com/fleser.dan">
                 <img
-                  src="/images/logos/facebook.svg"
+                  src="/images/facebook.svg"
                   alt="Facebook logo"
                   height={24}
                   width={24}
@@ -86,7 +86,7 @@ export default function Footer() {
             <li>
               <a href="https://www.linkedin.com/in/danfleser/">
                 <img
-                  src="/images/logos/linkedin-icon.svg"
+                  src="/images/linkedin-icon.svg"
                   alt="Linkedin logo"
                   height={24}
                   width={24}
@@ -96,7 +96,7 @@ export default function Footer() {
             <li>
               <a href="https://www.instagram.com/danfleser/">
                 <img
-                  src="/images/logos/instagram-icon.svg"
+                  src="/images/instagram-icon.svg"
                   alt="Instagram logo"
                   height={24}
                   width={24}
@@ -107,7 +107,7 @@ export default function Footer() {
               <a href="https://github.com/danfleser">
                 <img
                   className="dark:invert"
-                  src="/images/logos/github-icon.svg"
+                  src="/images/github-icon.svg"
                   alt="GitHub logo"
                   height={24}
                   width={24}

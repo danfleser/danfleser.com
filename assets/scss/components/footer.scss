@@ -17,9 +17,7 @@
 
     ul {
       li {
-        img {
-          @apply grayscale-0 hover:grayscale;
-        }
+        @apply cursor-pointer h-10 w-10 flex items-center justify-center border dark:border-slate-800 rounded hover:border-indigo-600 dark:hover:border-indigo-600;
       }
     }
 

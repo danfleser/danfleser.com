@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap");
+* {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  @apply dark:text-white;
+
+  &:not(pre) {
+    div {
+      code {
+        span {
+          font-family: "IBM Plex Mono", Menlo, Monaco, "Courier New", monospace;
+        }
+      }
+    }
+  }
+  &:not(pre) {
+    pre {
+      div {
+        span {
+          font-family: "Fira  Mono", Menlo, Monaco, "Courier New", monospace;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+body {
+  @apply bg-zinc-50 dark:bg-slate-800;
+
+  // // Colors
+  // $bg-color: rgb(0, 0, 0);
+  // $dot-color: rgb(255, 255, 255);
+
+  // // Dimensions
+  // $dot-size: 2px;
+  // $dot-space: 22px;
+
+  // background: linear-gradient(
+  //       90deg,
+  //       $bg-color ($dot-space - $dot-size),
+  //       transparent 1%
+  //     )
+  //     center,
+  //   linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+  //   $dot-color;
+  // background-size: $dot-space $dot-space;
+}
+
+.app {
+  @apply flex flex-col h-screen justify-between;
+
+  main {
+    @apply w-full flex justify-center mb-auto;
+  }
+
+  .app-container {
+    @apply w-full max-w-3xl mx-6;
+  }
+}
+
+input,
+textarea {
+  @apply py-2 px-4 border dark:border-slate-800 dark:bg-slate-900;
+
+  // outline
+  @apply focus:outline-none focus:ring focus:ring-indigo-500;
+
+  @apply transition ease-in-out duration-150;
+}
