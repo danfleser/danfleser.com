@@ -1,15 +1,114 @@
-import Image from "next/image";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
-
 import Highlight, { defaultProps } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/vsDark";
+
+// import theme from "prism-react-renderer/themes/vsDark";
 
 import Seo from "../../components/common/Seo";
 import Profile from "../../components/profile/Profile";
 import { getPostBySlug, getPostsSlugs } from "../../utils/posts";
-
+const theme = {
+  plain: {
+    color: "#2A2A2A",
+    backgroundColor: "#F6F6F6",
+    borderRadius: 10,
+  },
+  styles: [
+    {
+      types: ["prolog", "comment", "doctype", "cdata"],
+      style: {
+        color: "#B0BEC5",
+      },
+    },
+    {
+      types: ["property", "tag", "deleted", "constant", "symbol"],
+      style: { color: "#f40088" },
+    },
+    {
+      types: ["boolean", "number"],
+      style: { color: "#FF9100" },
+    },
+    {
+      types: ["attr-name", "tag"],
+      style: { fontWeight: "700" },
+    },
+    {
+      types: ["string", "attr-value"],
+      style: {
+        color: "#78909C",
+      },
+    },
+    {
+      types: [
+        "operator",
+        "entity",
+        "url",
+        "string",
+        "variable",
+        "language-css",
+        "keyword",
+      ],
+      style: {
+        color: "#651fff",
+      },
+    },
+    {
+      types: [
+        "selector",
+        "attr-name",
+        "char",
+        "builtin",
+        "insert",
+        "script-punctuation",
+      ],
+      style: {
+        color: "#AA00FF",
+      },
+    },
+    {
+      types: ["deleted"],
+      style: {
+        color: "rgb(255, 85, 85)",
+      },
+    },
+    {
+      types: ["italic"],
+      style: {
+        fontStyle: "italic",
+      },
+    },
+    {
+      types: ["important", "bold"],
+      style: {
+        fontWeight: "bold",
+      },
+    },
+    {
+      types: ["regex", "important"],
+      style: {
+        color: "#ffd700",
+      },
+    },
+    {
+      types: ["atrule", "function"],
+      style: {
+        color: "#3D5AFE",
+      },
+    },
+    {
+      types: ["symbol"],
+      style: {
+        opacity: "0.7",
+      },
+    },
+    {
+      types: ["string", "comment"],
+      style: {
+        fontWeight: 500,
+      },
+    },
+  ],
+};
 export default function PostPage({
   post,
   frontmatter,
@@ -17,47 +116,42 @@ export default function PostPage({
   previousPost,
 }) {
   return (
-    <section>
+    <section className="blog-post">
       <Seo
         title={frontmatter.title}
         description={frontmatter.description || post.excerpt}
       />
 
-      <article className="card card-page">
+      <article className="card">
         <header>
           <h1 className="post-title">{frontmatter.title}</h1>
 
-          <p className="post-date">Posted on {frontmatter.date}</p>
+          <p className="date">{frontmatter.date}</p>
 
           <img src={frontmatter.cover_image} alt={post.slug} />
         </header>
 
-        <section className="prose prose-slate max-w-none">
+        <section className="blog-content">
           <ReactMarkdown
-            className="post-body mb-4 prose lg:prose-lg dark:prose-dark"
             children={post.content}
             components={{ code: SyntaxHighlighterr }}
           />
         </section>
-
-        <footer>
-          <Profile />
-        </footer>
       </article>
 
-      <nav className="flex flex-wrap justify-between mb-10">
+      <Profile />
+
+      <nav>
         {previousPost ? (
           <Link href={"/posts/[slug]"} as={`/posts/${previousPost.slug}`}>
-            <a className="text-lg font-bold">
-              ← {previousPost.frontmatter.title}
-            </a>
+            <a>← {previousPost.frontmatter.title}</a>
           </Link>
         ) : (
           <div />
         )}
         {nextPost ? (
           <Link href={"/posts/[slug]"} as={`/posts/${nextPost.slug}`}>
-            <a className="text-lg font-bold">{nextPost.frontmatter.title} →</a>
+            <a>{nextPost.frontmatter.title} →</a>
           </Link>
         ) : (
           <div />
@@ -90,50 +184,34 @@ export async function getStaticProps({ params: { slug } }) {
   return { props: postData };
 }
 
-const CodeBlock = ({ node, inline, className, children, ...props }) => {
-  const match = /language-(\w+)/.exec(className || "");
-  return !inline && match ? (
-    <SyntaxHighlighter
-      style={dracula} // try passing different color schemes, drak, dracula etc.
-      language={match[1]}
-      PreTag="div"
-      {...props}
-    >
-      {String(children).replace(/\n$/, "")}
-    </SyntaxHighlighter>
-  ) : (
-    <code>{children}</code>
-  );
-};
-
-const SyntaxHighlighterr = ({
-  node,
-  inline,
-  className,
-  children,
-  ...props
-}) => {
+const SyntaxHighlighterr = ({ inline, className, children }) => {
   const match = /language-(\w+)/.exec(className || "");
   const code = String(children).replace(/\n$/, "");
   return !inline && match ? (
-    <Highlight {...defaultProps} theme={theme} code={code} language={match[1]}>
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={{ ...style }}>
-          {tokens.slice(0, -1).map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
+    <>
+      <section className=" code-block-title">
+        <div className="language">{match[1]}</div>
+      </section>
+      <Highlight
+        {...defaultProps}
+        theme={theme}
+        code={code}
+        language={match[1]}
+      >
+        {({ className, tokens, getLineProps, getTokenProps }) => (
+          <>
+            {tokens.slice(0, -1).map((line, i) => (
+              <div {...getLineProps({ line, key: i })} className={className}>
+                {line.map((token, key) => (
+                  <span {...getTokenProps({ token, key })} />
+                ))}
+              </div>
+            ))}
+          </>
+        )}
+      </Highlight>
+    </>
   ) : (
     <code>{children}</code>
   );
-};
-
-const MarkdownImage = ({ alt, src }) => {
-  return <Image alt={alt} src={src} placeholder="blur" className="w-full" />;
 };

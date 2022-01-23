@@ -17,7 +17,7 @@ export default function Profile() {
 
         <section className="image">
           <img
-            src="/images/logos/me.jpg"
+            src="/images/me.jpg"
             alt="Profile iamge"
             height={100}
             width={100}

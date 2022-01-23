@@ -1,29 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap");
+@import url("http://fonts.cdnfonts.com/css/league-mono");
+
 * {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
+  line-height: 1.8;
   @apply dark:text-white;
-
-  &:not(pre) {
-    div {
-      code {
-        span {
-          font-family: "IBM Plex Mono", Menlo, Monaco, "Courier New", monospace;
-        }
-      }
-    }
-  }
-  &:not(pre) {
-    pre {
-      div {
-        span {
-          font-family: "Fira  Mono", Menlo, Monaco, "Courier New", monospace;
-          font-size: 16px;
-        }
-      }
-    }
-  }
 }
 
 body {

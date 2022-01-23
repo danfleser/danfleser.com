@@ -20,7 +20,7 @@ export default function Post({ post }) {
       </header>
 
       <section>
-        <p>{post.frontmatter.excerpt}</p>
+        <p>{post.frontmatter.tags}</p>
       </section>
     </article>
   );

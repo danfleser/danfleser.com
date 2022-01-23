@@ -15,7 +15,7 @@ const setTheme = () => {
 };
 
 export default function MyApp({ Component, pageProps }) {
-  // setTimeout(setTheme);
+  setTimeout(setTheme);
 
   return (
     <div className="app">

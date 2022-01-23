@@ -1,6 +1,10 @@
 .app-post {
   .btn {
     @apply cursor-pointer;
+
+    .title {
+      @apply hover:text-indigo-600;
+    }
   }
 
   .read-more {

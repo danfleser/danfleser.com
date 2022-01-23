@@ -1,0 +1,44 @@
+.blog-post {
+  article {
+    header {
+      @apply mb-4;
+
+      .post-title {
+        @apply text-4xl font-extrabold;
+      }
+    }
+
+    .blog-content {
+      @apply prose prose-slate dark:prose-invert max-w-none;
+
+      pre {
+        .code-block-title {
+          @apply -mt-4 -mb-6 w-full flex justify-end;
+
+          .language {
+            @apply py-1 px-4 uppercase bg-indigo-600 rounded-b-md font-extrabold cursor-default select-none;
+          }
+        }
+
+        code,
+        .token {
+          font-family: "League Mono", monospace !important;
+          font-size: 16px !important;
+          @apply text-white;
+        }
+      }
+    }
+  }
+
+  nav {
+    @apply flex flex-wrap justify-between mb-10 mx-10;
+
+    a {
+      @apply text-lg font-bold flex-1 hover:text-indigo-600;
+    }
+
+    a:last-child {
+      @apply text-right;
+    }
+  }
+}
