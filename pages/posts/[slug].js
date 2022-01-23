@@ -203,9 +203,13 @@ const SyntaxHighlighterr = ({ inline, className, children }) => {
         {({ className, tokens, getLineProps, getTokenProps }) => (
           <>
             {tokens.slice(0, -1).map((line, i) => (
-              <div {...getLineProps({ line, key: i })} className={className}>
+              <div
+                key={i}
+                {...getLineProps({ line, key: i })}
+                className={className}
+              >
                 {line.map((token, key) => (
-                  <span {...getTokenProps({ token, key })} />
+                  <span key={key} {...getTokenProps({ token, key })} />
                 ))}
               </div>
             ))}

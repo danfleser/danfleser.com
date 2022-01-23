@@ -1,9 +1,7 @@
 {
   "extends": ["next", "next/core-web-vitals"],
   "rules": {
-    "@next/next/no-img-element": "off"
-  },
-  "editor.quickSuggestions": {
-    "strings": true
+    "@next/next/no-img-element": "off",
+    "react/no-children-prop": "off"
   }
 }

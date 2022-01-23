@@ -33,14 +33,14 @@ export default function Profile() {
           <div>
             <p>Master of Software Engineering, Computer Science</p>
             <p className="detail">
-              "Babeș-Bolyai" University of Cluj-Napoca, 2017 - 2019
+              Babes-Bolyai University of Cluj-Napoca, 2017 - 2019
             </p>
           </div>
 
           <div>
             <p>Bachelor’s Degree, Computer Science</p>
             <p className="detail">
-              "Babeș-Bolyai" University of Cluj-Napoca, 2013 - 2017
+              Babes-Bolyai University of Cluj-Napoca, 2013 - 2017
             </p>
           </div>
         </section>

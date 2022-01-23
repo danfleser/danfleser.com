@@ -7,6 +7,7 @@
     "build": "next build && next export",
     "prod": "next start",
     "lint": "next lint",
+    "export": "next export",
     "gen-post": "node scripts/generate-post.js"
   },
   "dependencies": {
@@ -21,7 +22,10 @@
     "sass": "1.48.0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "12.0.8",
     "autoprefixer": "10.4.2",
+    "eslint": "8.7.0",
+    "eslint-config-next": "^12.0.8",
     "gray-matter": "4.0.3",
     "node-fetch": "3.1.1",
     "postcss": "8.4.5",
