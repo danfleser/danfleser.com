@@ -1,5 +1,6 @@
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
+import "../assets/scss/main.scss";
 
 const setTheme = () => {
   if (
