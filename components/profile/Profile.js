@@ -1,5 +1,6 @@
 import Image from "next/Image";
 import SocialLinks from "../common/SocialLinks";
+import { prefix } from "../../utils/prefix";
 
 export default function Profile() {
   return (
@@ -20,7 +21,7 @@ export default function Profile() {
 
         <section className="image">
           <Image
-            src="/images/me.jpg"
+            src={`${prefix}/images/me.jpg`}
             alt="Profile iamge"
             height={100}
             width={100}
