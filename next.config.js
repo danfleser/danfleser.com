@@ -1,9 +1,15 @@
 const path = require("path");
-const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
+const withPlugins = require("next-compose-plugins");
 
+const isDev = process.env.NODE_ENV !== "production";
 module.exports = withPlugins([
-  [optimizedImages],
+  [
+    optimizedImages,
+    {
+      assetPrefix: isDev ? "" : "/danfleser-blog/docs/",
+    },
+  ],
   {
     reactStrictMode: true,
     sassOptions: {
@@ -15,7 +21,8 @@ module.exports = withPlugins([
       loader: "imgix",
       path: "",
     },
-    basePath: "/danfleser-blog/docs",
-    assetPrefix: "/danfleser-blog/docs/", // assetPrefix requires the trailing slash
+    trailingSlash: true,
+    basePath: isDev ? "" : "/danfleser-blog/docs",
+    assetPrefix: isDev ? "" : "/danfleser-blog/docs/",
   },
 ]);
