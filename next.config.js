@@ -15,5 +15,6 @@ module.exports = withPlugins([
       loader: "imgix",
       path: "",
     },
+    basePath: "/docs",
   },
 ]);
