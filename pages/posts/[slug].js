@@ -5,7 +5,7 @@ import Highlight, { defaultProps } from "prism-react-renderer";
 import Seo from "../../components/common/Seo";
 import Profile from "../../components/profile/Profile";
 import { getPostBySlug, getPostsSlugs } from "../../utils/posts";
-import { prefix } from "../../utils/prefix";
+import { prefix } from "../../utils/prefix.js";
 
 const theme = {
   plain: {
@@ -130,10 +130,14 @@ export default function PostPage({
           <p className="date">{frontmatter.date}</p>
 
           {frontmatter.cover_image && (
-            <Image
-              src={`${prefix}/${frontmatter.cover_image}`}
-              alt={post.slug}
-            ></Image>
+            <div className="w-full h-96 relative">
+              <Image
+                src={require("../../public/images/" + frontmatter.cover_image)}
+                alt={post.slug}
+                layout="fill"
+                objectFit="contain"
+              ></Image>
+            </div>
           )}
         </header>
 

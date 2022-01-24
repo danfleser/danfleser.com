@@ -2,7 +2,7 @@
 title: "Running A Youtube Channel - 10 Ways Developers Make Money Working from Home - E01"
 date: "2022-01-23T04:32:11.959Z"
 tags: "ADD_EXCERPT_HERE"
-cover_image: "20220123043211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01/20220123043211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01.png"
+cover_image: "20220123043211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01.png"
 ---
 
 YouTube is a great platform where you can make money by making videos on different topics or about things that you know or are passionate about.

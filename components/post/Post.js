@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { prefix } from "../../utils/prefix.js";
 
 export default function Post({ post }) {
   return (
@@ -7,7 +8,10 @@ export default function Post({ post }) {
         <section
           className="bg-center h-48 lg:h-auto lg:w-48 flex-none bg-cover"
           style={{
-            backgroundImage: `url('posts/${post.frontmatter.cover_image}')`,
+            backgroundImage:
+              "url(" +
+              require(`../../public/images/${post.frontmatter.cover_image}`) +
+              ")",
           }}
           title={post.frontmatter.title}
         ></section>

@@ -1,5 +1,5 @@
 import Image from "next/Image";
-import { prefix } from "../../utils/prefix";
+import { prefix } from "../../utils/prefix.js";
 
 export default function SocialLinks() {
   return (
