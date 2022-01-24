@@ -1,9 +1,9 @@
+import Image from "next/Image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import Seo from "../../components/common/Seo";
 import Profile from "../../components/profile/Profile";
-import Image from "../../components/common/Image";
 import { getPostBySlug, getPostsSlugs } from "../../utils/posts";
 
 const theme = {
@@ -129,7 +129,7 @@ export default function PostPage({
           <p className="date">{frontmatter.date}</p>
 
           {frontmatter.cover_image && (
-            <img src={frontmatter.cover_image} alt={post.slug}></img>
+            <Image src={frontmatter.cover_image} alt={post.slug}></Image>
           )}
         </header>
 

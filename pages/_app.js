@@ -1,21 +1,20 @@
+import { useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import "../assets/scss/main.scss";
 
-const setTheme = () => {
-  if (
-    localStorage.theme === "dark" ||
-    (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-  }
-};
-
 export default function MyApp({ Component, pageProps }) {
-  setTimeout(setTheme);
+  useEffect(() => {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [])
 
   return (
     <div className="app">

@@ -1,3 +1,4 @@
+import Image from "next/Image";
 import SocialLinks from "../common/SocialLinks";
 
 export default function Profile() {
@@ -18,7 +19,7 @@ export default function Profile() {
         </section>
 
         <section className="image">
-          <img
+          <Image
             src="/images/me.jpg"
             alt="Profile iamge"
             height={100}

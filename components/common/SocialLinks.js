@@ -1,10 +1,12 @@
+import Image from "next/Image";
+
 export default function SocialLinks() {
   return (
     <section className="app-social-links">
       <ul>
         <li>
           <a href="https://hashnode.com/@danfleser">
-            <img
+            <Image
               src="/images/hashnode.svg"
               alt="Hashnode logo"
               height={24}
@@ -14,7 +16,7 @@ export default function SocialLinks() {
         </li>
         <li>
           <a href="https://danfleser.medium.com/">
-            <img
+            <Image
               src="/images/medium.svg"
               alt="Medium logo"
               height={24}
@@ -24,7 +26,7 @@ export default function SocialLinks() {
         </li>
         <li>
           <a href="https://dev.to/danfleser">
-            <img
+            <Image
               src="/images/devto.svg"
               alt="Dev.to logo"
               height={24}
@@ -34,7 +36,7 @@ export default function SocialLinks() {
         </li>
         <li>
           <a href="https://hackernoon.com/u/danfleser">
-            <img
+            <Image
               src="/images/hackernoon.jpeg"
               alt="Hackernoon logo"
               height={24}
@@ -44,7 +46,7 @@ export default function SocialLinks() {
         </li>
         <li>
           <a href="https://twitter.com/danfleser">
-            <img
+            <Image
               src="/images/twitter.svg"
               alt="Twitter logo"
               height={24}
@@ -54,7 +56,7 @@ export default function SocialLinks() {
         </li>
         <li>
           <a href="https://www.facebook.com/fleser.dan">
-            <img
+            <Image
               src="/images/facebook.svg"
               alt="Facebook logo"
               height={24}
@@ -64,7 +66,7 @@ export default function SocialLinks() {
         </li>
         <li>
           <a href="https://www.linkedin.com/in/danfleser/">
-            <img
+            <Image
               src="/images/linkedin-icon.svg"
               alt="Linkedin logo"
               height={24}
@@ -74,7 +76,7 @@ export default function SocialLinks() {
         </li>
         <li>
           <a href="https://www.instagram.com/danfleser/">
-            <img
+            <Image
               src="/images/instagram-icon.svg"
               alt="Instagram logo"
               height={24}
@@ -84,7 +86,7 @@ export default function SocialLinks() {
         </li>
         <li>
           <a href="https://github.com/danfleser">
-            <img
+            <Image
               className="dark:invert"
               src="/images/github-icon.svg"
               alt="GitHub logo"
