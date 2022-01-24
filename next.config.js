@@ -28,6 +28,17 @@ module.exports = withPlugins([
   ],
   {
     webpack: (config, { isServer }) => {
+      config.module.rules.push({
+        test: /\.svg$/,
+        issuer: {
+          test: /\.(js|ts)x?$/,
+         // for webpack 5 use
+         // { and: [/\.(js|ts)x?$/] }
+        },
+
+        use: ['@svgr/webpack'],
+      });
+      
       if (!isServer) {
         // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
         config.resolve.fallback = {

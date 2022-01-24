@@ -10,7 +10,7 @@ export default function Post({ post }) {
           style={{
             backgroundImage:
               "url(" +
-              require(`../../public/images/${post.frontmatter.cover_image}`) +
+              require(`${prefix}../../public/images/${post.frontmatter.cover_image}`) +
               ")",
           }}
           title={post.frontmatter.title}

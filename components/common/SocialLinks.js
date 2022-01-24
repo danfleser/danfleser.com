@@ -9,6 +9,7 @@ export default function SocialLinks() {
           <a href="https://hashnode.com/@danfleser">
             <Image
               src={`${prefix}/images/hashnode.svg`}
+              src={require(prefix + "../../public/images/" + frontmatter.cover_image)}
               alt="Hashnode logo"
               height={24}
               width={24}

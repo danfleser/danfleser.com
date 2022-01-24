@@ -11,6 +11,7 @@
     "gen-post": "node scripts/generate-post.js"
   },
   "dependencies": {
+    "@svgr/webpack": "^6.2.0",
     "@tailwindcss/typography": "0.5.0",
     "feed": "4.2.2",
     "imagemin-mozjpeg": "9.0.0",

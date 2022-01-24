@@ -132,7 +132,7 @@ export default function PostPage({
           {frontmatter.cover_image && (
             <div className="w-full h-96 relative">
               <Image
-                src={require("../../public/images/" + frontmatter.cover_image)}
+                src={require(prefix + "../../public/images/" + frontmatter.cover_image)}
                 alt={post.slug}
                 layout="fill"
                 objectFit="contain"
