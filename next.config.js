@@ -15,7 +15,7 @@ module.exports = withPlugins([
       loader: "imgix",
       path: "",
     },
-    basePath: "/danfleser-blog",
-    assetPrefix: "/danfleser-blog/", // assetPrefix requires the trailing slash
+    basePath: "/danfleser-blog/docs",
+    assetPrefix: "/danfleser-blog/docs/", // assetPrefix requires the trailing slash
   },
 ]);
