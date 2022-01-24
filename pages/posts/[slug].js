@@ -1,11 +1,9 @@
-import Image from "next/Image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import Seo from "../../components/common/Seo";
 import Profile from "../../components/profile/Profile";
 import { getPostBySlug, getPostsSlugs } from "../../utils/posts";
-import { prefix } from "../../utils/prefix.js";
 
 const theme = {
   plain: {
@@ -131,12 +129,10 @@ export default function PostPage({
 
           {frontmatter.cover_image && (
             <div className="w-full h-96 relative">
-              <Image
-                src={require(prefix + "../../public/images/" + frontmatter.cover_image)}
+              <img
+                src={require("../../public/images/" + frontmatter.cover_image)}
                 alt={post.slug}
-                layout="fill"
-                objectFit="contain"
-              ></Image>
+              ></img>
             </div>
           )}
         </header>
@@ -144,7 +140,7 @@ export default function PostPage({
         <section className="blog-content typography">
           <ReactMarkdown
             children={post.content}
-            components={{ code: SyntaxHighlighterr, image: Image }}
+            components={{ code: SyntaxHighlighterr }}
           />
         </section>
       </article>

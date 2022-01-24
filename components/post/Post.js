@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { prefix } from "../../utils/prefix.js";
 
 export default function Post({ post }) {
   return (
@@ -10,7 +9,7 @@ export default function Post({ post }) {
           style={{
             backgroundImage:
               "url(" +
-              require(`${prefix}../../public/images/${post.frontmatter.cover_image}`) +
+              require(`../../public/images/${post.frontmatter.cover_image}`) +
               ")",
           }}
           title={post.frontmatter.title}

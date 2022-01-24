@@ -1,20 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-    <channel>
-        <title>Dev vlog</title>
-        <link>https://danfleser.com</link>
-        <description>undefined</description>
-        <lastBuildDate>Mon, 24 Jan 2022 23:21:42 GMT</lastBuildDate>
-        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-        <generator>https://github.com/jpmonette/feed</generator>
-        <language>en-US</language>
-        <copyright>Copyright © 2022 Dan Fleser</copyright>
-        <item>
-            <title><![CDATA[Running A Youtube Channel - 10 Ways Developers Make Money Working from Home - E01]]></title>
-            <link>https://danfleser.composts/20220123043211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01</link>
-            <guid>20220123043211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01</guid>
-            <pubDate>Sat, 22 Jan 2022 22:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
+---
+title: "Running A Youtube Channel - 10 Ways Developers Make Money Working from Home - E01"
+date: "2022-01-23T04:32:11.959Z"
+tags: "ADD_EXCERPT_HERE"
+cover_image: "20220123043211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01.png"
+---
+
 YouTube is a great platform where you can make money by making videos on different topics or about things that you know or are passionate about.
 
 If you're a web developer and know how to educate others on how to build websites, then it's time for you to start earning money by running a Youtube Channel.
@@ -169,80 +159,3 @@ Other parts:
     What is Freemium software
 
 Tags: upwork freelancer,work from home freelancing,freelance web developer salary,make money as a developer,make money coding,make money coding from home,how to make money coding,software developer freelance jobs,freelancing software developer,how developers make money,freelance developer tips,make money programming,ways to make money coding,how to make money as a programmer,how to make money as a software developer,make money programming online,freelancing
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[How I made my static blog with Next.js and React using Markdown files]]></title>
-            <link>https://danfleser.composts/20220122191731-demo-post</link>
-            <guid>20220122191731-demo-post</guid>
-            <pubDate>Fri, 21 Jan 2022 22:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-In this tutorial we’ll be building a blog using React and Next.js.
-
-Each post of this blog is written in markdown file.
-
-Starting this blog from scratch was a great learning experience and didn't take too long to build(2 days).
-
-Let’s get started by creating a new Next.js application:
-
-    npx create-next-app next-md-blog
-
-We’ll also need a couple of dependencies so let’s go ahead and install those as well:
-
-    npm install gray-matter marked
-
-- `gray-matter` – Parses front-matter from markdown files.
-- `marked` – Compiles markdown into HTML.
-
-Next let’s create a layout component that’ll load a global header and footer as is common practice when building a blog or websites in general. Create a new `components` folder with a `Layout.js`, `Header.js` and `Footer.js` files.
-
-`components/Layout.js`
-
-```jsx
-export default function Header() {
-  return (
-    <header className="app-header">
-      <div className="app-container">
-        <div className="content">
-          <Link href="/" passHref>
-            <h2 className="logo">Dev blog</h2>
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-```
-
-`components/Header.js`
-xxx
-
-`components/Footer.js`
-xxx
-
-Next let’s create a sample markdown file for a blog post. This along with all subsequent blog post markdown files will need to be saved inside a new `posts` folder.
-
-`posts/hello-world.md`
-xxx
-
-The images folder for the thumbnails should be located within the `public` folder in the root of the application.
-
-Create a couple more files like this and then we’re ready to create a `Post.js` component that’ll display a preview for each of blog posts on the homepage.
-
-`components/Post.js`
-xxx
-
-Now we parse the static markdown file(title, excerpt, create data, thumbnail), loop over them and display post previews.
-
-Now to start pulling everything together by updating the `pages/index.js` file as follows:
-
-Now all that’s left it to create the file to display the individual blog posts.
-
-`pages/blog/[slug].js`
-xxx
-
-You should now have a functioning blog using Next.js which you can easily add new posts using markdown files.
-]]></content:encoded>
-        </item>
-    </channel>
-</rss>
