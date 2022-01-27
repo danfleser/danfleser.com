@@ -7,7 +7,7 @@ module.exports = withPlugins([
   [
     optimizedImages,
     {
-      assetPrefix: isDev ? "" : "/danfleser-blog/docs/",
+      assetPrefix: isDev ? "" : "/danfleser-blog/",
     },
   ],
   {
@@ -22,7 +22,7 @@ module.exports = withPlugins([
       path: "",
     },
     trailingSlash: true,
-    basePath: isDev ? "" : "/danfleser-blog/docs",
-    assetPrefix: isDev ? "" : "/danfleser-blog/docs/",
+    basePath: isDev ? "" : "/danfleser-blog",
+    assetPrefix: isDev ? "" : "/danfleser-blog/",
   },
 ]);
