@@ -5,9 +5,10 @@ export default function ResponsiveImage(props) {
     <section
       className={"responsive-image" + (props.showshadow ? " add-shadow" : "")}
     >
-      <img
+      <Image
         className="w-full"
         alt={props.alt}
+        placeholder="blur"
         layout="responsive"
         width="128"
         height="72"

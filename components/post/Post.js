@@ -11,8 +11,9 @@ export default function Post({ post }) {
     >
       <section className=" w-full md:max-w-full md:flex">
         <section className="h-48 md:h-auto md:w-64 flex-none relative rounded-lg overflow-hidden">
-          <img
+          <Image
             alt={post.frontmatter.title}
+            placeholder="blur"
             layout="fill"
             objectFit="cover"
             src={require(`../../public/images/${post.frontmatter.cover_image}`)}

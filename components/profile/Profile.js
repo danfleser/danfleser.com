@@ -19,9 +19,10 @@ export default function Profile() {
         </section>
 
         <section className="image">
-          <img
+          <Image
             src={require("../../public/images/me.jpg")}
             alt="Profile iamge"
+            placeholder="blur"
             width={200}
             height={200}
           />
