@@ -10,17 +10,18 @@ export default function Post({ post }) {
       data-tags={post.frontmatter.tags}
     >
       <section className=" w-full md:max-w-full md:flex">
-        <section className="h-48 md:h-auto md:w-64 flex-none relative rounded-lg overflow-hidden">
-          <Image
+        <section className="h-48 md:h-auto md:w-64 flex-none relative">
+          <img
+            className="rounded-lg overflow-hidden"
             alt={post.frontmatter.title}
-            placeholder="blur"
+            // placeholder="blur"
             layout="fill"
             objectFit="cover"
             src={require(`../../public/images/${post.frontmatter.cover_image}`)}
           />
         </section>
         <section className="p-4 pr-0 flex flex-col justify-between leading-normal">
-          <header className="mb-8">
+          <header>
             <h3>
               <Link href={"/posts/[slug]"} as={`/posts/${post.slug}`}>
                 <a className="title">{post.frontmatter.title}</a>

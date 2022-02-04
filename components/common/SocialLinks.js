@@ -11,7 +11,7 @@ export default function SocialLinks() {
             target="_blank"
             className="flex items-center justify-center"
           >
-            <Image
+            <img
               src={require("../../public/images/hashnode.svg")}
               alt="Hashnode logo"
               height={30}
@@ -26,7 +26,7 @@ export default function SocialLinks() {
             target="_blank"
             className="flex items-center justify-center"
           >
-            <Image
+            <img
               src={require("../../public/images/medium.svg")}
               alt="Medium logo"
               height={30}
@@ -41,7 +41,7 @@ export default function SocialLinks() {
             target="_blank"
             className="flex items-center justify-center"
           >
-            <Image
+            <img
               src={require("../../public/images/devto.svg")}
               alt="Dev.to logo"
               height={30}
@@ -56,7 +56,7 @@ export default function SocialLinks() {
             target="_blank"
             className="flex items-center justify-center"
           >
-            <Image
+            <img
               src={require("../../public/images/hackernoon.png")}
               alt="Hackernoon logo"
               height={30}
@@ -71,7 +71,7 @@ export default function SocialLinks() {
             target="_blank"
             className="flex items-center justify-center"
           >
-            <Image
+            <img
               src={require("../../public/images/twitter.svg")}
               alt="Twitter logo"
               height={30}
@@ -86,7 +86,7 @@ export default function SocialLinks() {
             target="_blank"
             className="flex items-center justify-center"
           >
-            <Image
+            <img
               src={require("../../public/images/facebook.svg")}
               alt="Facebook logo"
               height={30}
@@ -101,7 +101,7 @@ export default function SocialLinks() {
             target="_blank"
             className="flex items-center justify-center"
           >
-            <Image
+            <img
               src={require("../../public/images/linkedin-icon.svg")}
               alt="Linkedin logo"
               height={30}
@@ -116,7 +116,7 @@ export default function SocialLinks() {
             target="_blank"
             className="flex items-center justify-center"
           >
-            <Image
+            <img
               src={require("../../public/images/instagram-icon.svg")}
               alt="Instagram logo"
               height={30}
@@ -131,7 +131,7 @@ export default function SocialLinks() {
             target="_blank"
             className="flex items-center justify-center"
           >
-            <Image
+            <img
               src={require("../../public/images/github-icon.svg")}
               className="dark:invert"
               alt="GitHub logo"
