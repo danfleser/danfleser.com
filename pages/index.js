@@ -18,8 +18,8 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  generateRssPostsFeed();
-  const posts = getSortedPosts();
+  const posts = await getSortedPosts();
+  generateRssPostsFeed(posts);
 
   return {
     props: {

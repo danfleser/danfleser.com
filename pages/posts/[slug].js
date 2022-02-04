@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
+import { MDXRemote } from "next-mdx-remote";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import Seo from "../../components/common/Seo";
 import Profile from "../../components/profile/Profile";
@@ -138,9 +138,11 @@ export default function PostPage({
         </header>
 
         <section className="blog-content typography">
-          <ReactMarkdown
-            children={post.content}
-            components={{ code: SyntaxHighlighterr }}
+          <MDXRemote
+            {...post.content}
+            components={{
+              code: SyntaxHighlighter,
+            }}
           />
         </section>
       </article>
@@ -177,7 +179,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const postData = getPostBySlug(slug);
+  const postData = await getPostBySlug(slug);
 
   if (!postData.previousPost) {
     postData.previousPost = null;
@@ -190,7 +192,7 @@ export async function getStaticProps({ params: { slug } }) {
   return { props: postData };
 }
 
-const SyntaxHighlighterr = ({ inline, className, children }) => {
+const SyntaxHighlighter = ({ inline, className, children }) => {
   const match = /language-(\w+)/.exec(className || "");
   const code = String(children).replace(/\n$/, "");
   return !inline && match ? (

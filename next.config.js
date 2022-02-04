@@ -1,9 +1,21 @@
 const path = require("path");
 const optimizedImages = require("next-optimized-images");
 const withPlugins = require("next-compose-plugins");
+const withMDX = require("@next/mdx")();
 
 const isDev = process.env.NODE_ENV !== "production";
 module.exports = withPlugins([
+  [
+    withMDX,
+    {
+      extension: /\.mdx?$/,
+      options: {
+        remarkPlugins: [],
+        rehypePlugins: [],
+      },
+      pageExtensions: ["js", "jsx", "md", "mdx"],
+    },
+  ],
   [
     optimizedImages,
     {
@@ -13,7 +25,7 @@ module.exports = withPlugins([
   {
     reactStrictMode: true,
     sassOptions: {
-      includePaths: [path.join(__dirname, "assets/scss")],
+      includePaths: [path.join(__dirname, "styles")],
     },
     esModule: true,
     images: {

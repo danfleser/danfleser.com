@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
-import "../assets/scss/main.scss";
+import "../styles/main.scss";
 
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {

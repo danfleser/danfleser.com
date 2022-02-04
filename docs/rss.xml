@@ -2,33 +2,22 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Dev vlog</title>
-        <link>https://danfleser.com</link>
+        <link>https://danfleser.github.io/danfleser-blog/</link>
         <description>undefined</description>
-        <lastBuildDate>Thu, 27 Jan 2022 19:13:30 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 03 Feb 2022 23:41:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <copyright>Copyright © 2022 Dan Fleser</copyright>
         <item>
             <title><![CDATA[Running A Youtube Channel - 10 Ways Developers Make Money Working from Home - E01]]></title>
-            <link>https://danfleser.composts/20220123043211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01</link>
+            <link>https://danfleser.github.io/danfleser-blog/posts/20220123043211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01</link>
             <guid>20220123043211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01</guid>
             <pubDate>Sat, 22 Jan 2022 22:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-YouTube is a great platform where you can make money by making videos on different topics or about things that you know or are passionate about.
-
-If you're a web developer and know how to educate others on how to build websites, then it's time for you to start earning money by running a Youtube Channel.
-
-The process is simple:
+            <content:encoded><![CDATA[var c=Object.defineProperty,h=Object.defineProperties;var m=Object.getOwnPropertyDescriptors;var n=Object.getOwnPropertySymbols;var i=Object.prototype.hasOwnProperty,s=Object.prototype.propertyIsEnumerable;var l=(e,o,t)=>o in e?c(e,o,{enumerable:!0,configurable:!0,writable:!0,value:t}):e[o]=t,a=(e,o)=>{for(var t in o||(o={}))i.call(o,t)&&l(e,t,o[t]);if(n)for(var t of n(o))s.call(o,t)&&l(e,t,o[t]);return e},u=(e,o)=>h(e,m(o));var p=(e,o)=>{var t={};for(var r in e)i.call(e,r)&&o.indexOf(r)<0&&(t[r]=e[r]);if(e!=null&&n)for(var r of n(e))o.indexOf(r)<0&&s.call(e,r)&&(t[r]=e[r]);return t};const layoutProps={},MDXLayout="wrapper";function MDXContent(t){var r=t,{components:e}=r,o=p(r,["components"]);return mdx(MDXLayout,u(a(a({},layoutProps),o),{components:e,mdxType:"MDXLayout"}),mdx("p",null,"I recently switched from working at a company to freelancing and had a lot of my friends asking me: how's that going."),mdx("p",null,"I'll tell you what I told everyone: It's going great, and I am really surprised I succeeded in this. The minimum salary I've got till now is $500/day."),mdx("p",null,"You have to be good in order to switch to freelancing and get to those numbers, but is not that hard, so don't overthink, just start."),mdx("p",null,"Because I successfully managed to convert 2 of my friend from 8\u20135 jobs to freelancing, and more of my friends want me to help them, I decided to create a video series about that later this year. It will be free on YouTube, so be sure you Subscribe here."),mdx("p",null,mdx("strong",{parentName:"p"},"Running A Youtube Channel - 10 Ways Developers Make Money Working from Home - E01")),mdx("iframe",{className:"w-full",height:"400",src:"https://www.youtube.com/embed/gTWTMhi668U",title:"YouTube video player",frameBorder:"0",allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",allowFullScreen:!0}),mdx("p",null,"YouTube is a great platform where you can make money by making videos on different topics or about things that you know or are passionate about."),mdx("p",null,"If you're a web developer and know how to educate others on how to build websites, then it's time for you to start earning money by running a Youtube Channel."),mdx("p",null,`The process is simple:
 Create interesting content for the viewers.
 Post your videos regularly & share them with your audience on social media.
-Once, you'll start getting love from the audience in the shape of subscribers, likes & views. You can then monetize your channel from google AdSense, bring sponsors & do affiliate marketing.
-
-In this video series, I share the best ways and how to increase your money income as a web developer while working from home.
-
-👉 Subscribe to Dan Later - [click here](https://bit.ly/31SdiZv)
-
-Timeline - Running A Youtube Channel
+Once, you'll start getting love from the audience in the shape of subscribers, likes & views. You can then monetize your channel from google AdSense, bring sponsors & do affiliate marketing.`),mdx("p",null,"In this video series, I share the best ways and how to increase your money income as a web developer while working from home."),mdx("p",null,"\u{1F449} Subscribe to my youtube channel - ",mdx("a",a({parentName:"p"},{href:"https://bit.ly/31SdiZv"}),"click here")),mdx("p",null,`Timeline - Running A Youtube Channel
 00:00 Intro
 00:24 Running A Youtube Channel
 00:58 Live Coding & Streaming
@@ -40,166 +29,133 @@ Timeline - Running A Youtube Channel
 04:40 Working As A Professional Developer
 05:13 Mentoring
 05:18 Contributing To Open Source
-05:26 Outro
-
-Other parts:
-
-1. Running A Youtube Channel - [https://youtu.be/MMbp6eNk4Q8](https://youtu.be/MMbp6eNk4Q8)
-   How did I start YouTube?
-   MrBeast YouTube Growth Success
-   YouTube Niches
-   Recording software for YouTube videos - Obs is free
-   Video editing software for YouTube videos - Davinci Resolve is Free
-   Increase YouTube content engagement
-2. Live Coding & Streaming - [https://youtu.be/d7jczFpBKl0](https://youtu.be/d7jczFpBKl0)
-   Make money coding live
-   Set goals for your audience
-   Mentoring sessions
-3. Courses - [https://youtu.be/zs4abEW9nNk](https://youtu.be/zs4abEW9nNk)
-   Why create a course?
-   Youtube videos
-   How to create a course?
-   Create a course outline
-   Grow an audience
-   Platforms to sell a course
-   Publish course to your own website
-   Create your own Newsletter
-   Ways to Get People to Buy Your Products
-   Post-launch Discounts
-4. Digital Products - [https://youtu.be/ORbLO2rjHaQ](https://youtu.be/ORbLO2rjHaQ)
-   What products to create?
-   Why digital products?
-   Instant access
-   Where to sell?
-   How to create a product?
-   How to write a book Google Docs
-   Create page templates/Create page themes
-   What to do when you don’t have ideas? - boost ideas
-   Build an MVP
-   Create your own Newsletter
-   Growing Your Audience
-   Sell anything by Creating a Bundle
-5. Software-as-a-service - [https://youtu.be/lnwifUqJ7HU](https://youtu.be/lnwifUqJ7HU)
-   What the hell is SaaS?
-   How to build a SaaS?
-   Ways to start
-   How to deal with competitors
-   Lean thinking
-   Build features that people actually use
-   How to Validate Feature and Product Ideas Before You Build
-   Choosing the Right Tech Stack for Your Project
-   Scaling tips
-   Trending Tech Stack
-   Choosing the Pricing model for your business
-   A typical validated learning process
-   Analysis Data
-   What is User testing?
-   What is Split testing?
-   Saas Marketing Examples
-6. Why&how To Blog - [https://youtu.be/E5XNUr04p7k](https://youtu.be/E5XNUr04p7k)
-   Why start blogging?
-   Write articles
-   How to increase Motivation as a Blogger
-   Stop thinking and start doing
-   Find your audience
-   What do you need to start blogging?
-   How to create a blog?
-   How to grow an audience
-   Create an email newsletter
-   How to make money blogging?
-   How to add Ads on the blog
-   How to Affiliate and Market a blog?
-   Make money via Sponsored posts
-   How to promote services and products?
-   Create content and get paid
-7. Freelancing - [https://youtu.be/JjGTrdJkiJs](https://youtu.be/JjGTrdJkiJs)
-   How to create a website
-   Be Professional - Register an LLC
-   Why choose Freelancing?
-   How to start freelancing
-   Outsourcing
-   How to create a good portfolio
-   What a great portfolio should contain
-   How to charge for a website
-   Hourly Pricing
-   Project-based Pricing
-   Value-based Pricing
-   How to get clients?
-   Tips - how to get more clients
-   What are Google Ads
-   Keywords to bid as a freelancer
-   How to get more sales/conversions
-   Linkedin Ads Tips
-   Linkedin InMail Ads Tips
-   Build your own website
-   Freelancing platforms
-   Get clients fast as a freelancer
-8. Working As A Professional Developer - [https://youtu.be/uJKVk7cv3Dw](https://youtu.be/uJKVk7cv3Dw)
-   Opportunities When Starting Out
-   How to Prepare for a Job
-   Take Online Courses?
-   What College Taught Me
-   How to Learn Faster
-   Make Your Free Time Count
-   Effective Way to Improve Your Code by Reviewing Open Source Code
-   Start Creating an Mvp
-   Get Others Opinions
-   Find a Mentor
-   Create a Portfolio
-   Portfolio Website Checklist
-   Think Outside the Box
-   Be Professional
-   Job Application Tips
-   Tips for Great Job Interviews
-   Make Linkedin Profile Impressive
-9. Mentoring - [https://youtu.be/Ni6Jlkj4Xuo](https://youtu.be/Ni6Jlkj4Xuo)
-   Monetize tutoring
-   Practice your skills
-   How much to Charge for online mentoring?
-   Provide value mentoring and people will come like a stream
-10. Contributing To Open Source - [https://youtu.be/qVN9FIY0j4Y](https://youtu.be/qVN9FIY0j4Y)
-    What is Open Source?
-    Can you make money with Open Source?
-    Github Sponsors
-    How to Engage people to Finance your work?
-    Start a Patreon
-    Set monthly audience goals
-    Benefits of Open Source as a web developer
-    Create a premium version of the Open Source project
-    What is Freemium software
-
-Tags: upwork freelancer,work from home freelancing,freelance web developer salary,make money as a developer,make money coding,make money coding from home,how to make money coding,software developer freelance jobs,freelancing software developer,how developers make money,freelance developer tips,make money programming,ways to make money coding,how to make money as a programmer,how to make money as a software developer,make money programming online,freelancing
+05:26 Outro`),mdx("p",null,"Other parts:"),mdx("ol",null,mdx("li",{parentName:"ol"},mdx("p",{parentName:"li"},"Running A Youtube Channel - ",mdx("a",a({parentName:"p"},{href:"https://youtu.be/MMbp6eNk4Q8"}),"https://youtu.be/MMbp6eNk4Q8"),`
+How did I start YouTube?
+MrBeast YouTube Growth Success
+YouTube Niches
+Recording software for YouTube videos - Obs is free
+Video editing software for YouTube videos - Davinci Resolve is Free
+Increase YouTube content engagement`)),mdx("li",{parentName:"ol"},mdx("p",{parentName:"li"},"Live Coding & Streaming - ",mdx("a",a({parentName:"p"},{href:"https://youtu.be/d7jczFpBKl0"}),"https://youtu.be/d7jczFpBKl0"),`
+Make money coding live
+Set goals for your audience
+Mentoring sessions`)),mdx("li",{parentName:"ol"},mdx("p",{parentName:"li"},"Courses - ",mdx("a",a({parentName:"p"},{href:"https://youtu.be/zs4abEW9nNk"}),"https://youtu.be/zs4abEW9nNk"),`
+Why create a course?
+Youtube videos
+How to create a course?
+Create a course outline
+Grow an audience
+Platforms to sell a course
+Publish course to your own website
+Create your own Newsletter
+Ways to Get People to Buy Your Products
+Post-launch Discounts`)),mdx("li",{parentName:"ol"},mdx("p",{parentName:"li"},"Digital Products - ",mdx("a",a({parentName:"p"},{href:"https://youtu.be/ORbLO2rjHaQ"}),"https://youtu.be/ORbLO2rjHaQ"),`
+What products to create?
+Why digital products?
+Instant access
+Where to sell?
+How to create a product?
+How to write a book Google Docs
+Create page templates/Create page themes
+What to do when you don\u2019t have ideas? - boost ideas
+Build an MVP
+Create your own Newsletter
+Growing Your Audience
+Sell anything by Creating a Bundle`)),mdx("li",{parentName:"ol"},mdx("p",{parentName:"li"},"Software-as-a-service - ",mdx("a",a({parentName:"p"},{href:"https://youtu.be/lnwifUqJ7HU"}),"https://youtu.be/lnwifUqJ7HU"),`
+What the hell is SaaS?
+How to build a SaaS?
+Ways to start
+How to deal with competitors
+Lean thinking
+Build features that people actually use
+How to Validate Feature and Product Ideas Before You Build
+Choosing the Right Tech Stack for Your Project
+Scaling tips
+Trending Tech Stack
+Choosing the Pricing model for your business
+A typical validated learning process
+Analysis Data
+What is User testing?
+What is Split testing?
+Saas Marketing Examples`)),mdx("li",{parentName:"ol"},mdx("p",{parentName:"li"},"Why&how To Blog - ",mdx("a",a({parentName:"p"},{href:"https://youtu.be/E5XNUr04p7k"}),"https://youtu.be/E5XNUr04p7k"),`
+Why start blogging?
+Write articles
+How to increase Motivation as a Blogger
+Stop thinking and start doing
+Find your audience
+What do you need to start blogging?
+How to create a blog?
+How to grow an audience
+Create an email newsletter
+How to make money blogging?
+How to add Ads on the blog
+How to Affiliate and Market a blog?
+Make money via Sponsored posts
+How to promote services and products?
+Create content and get paid`)),mdx("li",{parentName:"ol"},mdx("p",{parentName:"li"},"Freelancing - ",mdx("a",a({parentName:"p"},{href:"https://youtu.be/JjGTrdJkiJs"}),"https://youtu.be/JjGTrdJkiJs"),`
+How to create a website
+Be Professional - Register an LLC
+Why choose Freelancing?
+How to start freelancing
+Outsourcing
+How to create a good portfolio
+What a great portfolio should contain
+How to charge for a website
+Hourly Pricing
+Project-based Pricing
+Value-based Pricing
+How to get clients?
+Tips - how to get more clients
+What are Google Ads
+Keywords to bid as a freelancer
+How to get more sales/conversions
+Linkedin Ads Tips
+Linkedin InMail Ads Tips
+Build your own website
+Freelancing platforms
+Get clients fast as a freelancer`)),mdx("li",{parentName:"ol"},mdx("p",{parentName:"li"},"Working As A Professional Developer - ",mdx("a",a({parentName:"p"},{href:"https://youtu.be/uJKVk7cv3Dw"}),"https://youtu.be/uJKVk7cv3Dw"),`
+Opportunities When Starting Out
+How to Prepare for a Job
+Take Online Courses?
+What College Taught Me
+How to Learn Faster
+Make Your Free Time Count
+Effective Way to Improve Your Code by Reviewing Open Source Code
+Start Creating an Mvp
+Get Others Opinions
+Find a Mentor
+Create a Portfolio
+Portfolio Website Checklist
+Think Outside the Box
+Be Professional
+Job Application Tips
+Tips for Great Job Interviews
+Make Linkedin Profile Impressive`)),mdx("li",{parentName:"ol"},mdx("p",{parentName:"li"},"Mentoring - ",mdx("a",a({parentName:"p"},{href:"https://youtu.be/Ni6Jlkj4Xuo"}),"https://youtu.be/Ni6Jlkj4Xuo"),`
+Monetize tutoring
+Practice your skills
+How much to Charge for online mentoring?
+Provide value mentoring and people will come like a stream`)),mdx("li",{parentName:"ol"},mdx("p",{parentName:"li"},"Contributing To Open Source - ",mdx("a",a({parentName:"p"},{href:"https://youtu.be/qVN9FIY0j4Y"}),"https://youtu.be/qVN9FIY0j4Y"),`
+What is Open Source?
+Can you make money with Open Source?
+Github Sponsors
+How to Engage people to Finance your work?
+Start a Patreon
+Set monthly audience goals
+Benefits of Open Source as a web developer
+Create a premium version of the Open Source project
+What is Freemium software`))),mdx("p",null,"Tags: upwork freelancer,work from home freelancing,freelance web developer salary,make money as a developer,make money coding,make money coding from home,how to make money coding,software developer freelance jobs,freelancing software developer,how developers make money,freelance developer tips,make money programming,ways to make money coding,how to make money as a programmer,how to make money as a software developer,make money programming online,freelancing"))}MDXContent.isMDXComponent=!0;
 ]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[How I made my static blog with Next.js and React using Markdown files]]></title>
-            <link>https://danfleser.composts/20220122191731-demo-post</link>
+            <link>https://danfleser.github.io/danfleser-blog/posts/20220122191731-demo-post</link>
             <guid>20220122191731-demo-post</guid>
             <pubDate>Fri, 21 Jan 2022 22:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-In this tutorial we’ll be building a blog using React and Next.js.
+            <content:encoded><![CDATA[var m=Object.defineProperty,c=Object.defineProperties;var h=Object.getOwnPropertyDescriptors;var i=Object.getOwnPropertySymbols;var l=Object.prototype.hasOwnProperty,p=Object.prototype.propertyIsEnumerable;var s=(e,a,n)=>a in e?m(e,a,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[a]=n,t=(e,a)=>{for(var n in a||(a={}))l.call(a,n)&&s(e,n,a[n]);if(i)for(var n of i(a))p.call(a,n)&&s(e,n,a[n]);return e},r=(e,a)=>c(e,h(a));var d=(e,a)=>{var n={};for(var o in e)l.call(e,o)&&a.indexOf(o)<0&&(n[o]=e[o]);if(e!=null&&i)for(var o of i(e))a.indexOf(o)<0&&p.call(e,o)&&(n[o]=e[o]);return n};const layoutProps={},MDXLayout="wrapper";function MDXContent(n){var o=n,{components:e}=o,a=d(o,["components"]);return mdx(MDXLayout,r(t(t({},layoutProps),a),{components:e,mdxType:"MDXLayout"}),mdx("p",null,"In this tutorial we\u2019ll be building a blog using React and Next.js."),mdx("h3",null,"This is a Markdown sub-heading"),mdx("p",null,"We just used a ",mdx("inlineCode",{parentName:"p"},"###")," subheading in our blog post."),mdx("pre",null,mdx("code",t({parentName:"pre"},{className:"language-js"}),`// this is a code block
+const doSomething = () => {
+  return console.log("hey");
+};
 
-Each post of this blog is written in markdown file.
-
-Starting this blog from scratch was a great learning experience and didn't take too long to build(2 days).
-
-Let’s get started by creating a new Next.js application:
-
-    npx create-next-app next-md-blog
-
-We’ll also need a couple of dependencies so let’s go ahead and install those as well:
-
-    npm install gray-matter marked
-
-- `gray-matter` – Parses front-matter from markdown files.
-- `marked` – Compiles markdown into HTML.
-
-Next let’s create a layout component that’ll load a global header and footer as is common practice when building a blog or websites in general. Create a new `components` folder with a `Layout.js`, `Header.js` and `Footer.js` files.
-
-`components/Layout.js`
-
-```jsx
-export default function Header() {
+`)),mdx("pre",null,mdx("code",t({parentName:"pre"},{className:"language-jsx"}),`export default function Header() {
   return (
     <header className="app-header">
       <div className="app-container">
@@ -212,36 +168,28 @@ export default function Header() {
     </header>
   );
 }
-```
 
-`components/Header.js`
-xxx
-
-`components/Footer.js`
-xxx
-
-Next let’s create a sample markdown file for a blog post. This along with all subsequent blog post markdown files will need to be saved inside a new `posts` folder.
-
-`posts/hello-world.md`
-xxx
-
-The images folder for the thumbnails should be located within the `public` folder in the root of the application.
-
-Create a couple more files like this and then we’re ready to create a `Post.js` component that’ll display a preview for each of blog posts on the homepage.
-
-`components/Post.js`
-xxx
-
-Now we parse the static markdown file(title, excerpt, create data, thumbnail), loop over them and display post previews.
-
-Now to start pulling everything together by updating the `pages/index.js` file as follows:
-
-Now all that’s left it to create the file to display the individual blog posts.
-
-`pages/blog/[slug].js`
-xxx
-
-You should now have a functioning blog using Next.js which you can easily add new posts using markdown files.
+`)),mdx("p",null,"Each post of this blog is written in markdown file."),mdx("p",null,"Starting this blog from scratch was a great learning experience and didn't take too long to build(2 days)."),mdx("p",null,"Let\u2019s get started by creating a new Next.js application:"),mdx("pre",null,mdx("code",t({parentName:"pre"},{}),`npx create-next-app next-md-blog
+`)),mdx("p",null,"We\u2019ll also need a couple of dependencies so let\u2019s go ahead and install those as well:"),mdx("pre",null,mdx("code",t({parentName:"pre"},{}),`npm install gray-matter marked
+`)),mdx("ul",null,mdx("li",{parentName:"ul"},mdx("inlineCode",{parentName:"li"},"gray-matter")," \u2013 Parses front-matter from markdown files."),mdx("li",{parentName:"ul"},mdx("inlineCode",{parentName:"li"},"marked")," \u2013 Compiles markdown into HTML.")),mdx("p",null,"Next let\u2019s create a layout component that\u2019ll load a global header and footer as is common practice when building a blog or websites in general. Create a new ",mdx("inlineCode",{parentName:"p"},"components")," folder with a ",mdx("inlineCode",{parentName:"p"},"Layout.js"),", ",mdx("inlineCode",{parentName:"p"},"Header.js")," and ",mdx("inlineCode",{parentName:"p"},"Footer.js")," files."),mdx("p",null,mdx("inlineCode",{parentName:"p"},"components/Layout.js")),mdx("pre",null,mdx("code",t({parentName:"pre"},{className:"language-jsx"}),`export default function Header() {
+  return (
+    <header className="app-header">
+      <div className="app-container">
+        <div className="content">
+          <Link href="/" passHref>
+            <h2 className="logo">Dev blog</h2>
+          </Link>
+        </div>
+      </div>
+    </header>
+  );
+}
+`)),mdx("p",null,mdx("inlineCode",{parentName:"p"},"components/Header.js"),`
+xxx`),mdx("p",null,mdx("inlineCode",{parentName:"p"},"components/Footer.js"),`
+xxx`),mdx("p",null,"Next let\u2019s create a sample markdown file for a blog post. This along with all subsequent blog post markdown files will need to be saved inside a new ",mdx("inlineCode",{parentName:"p"},"posts")," folder."),mdx("p",null,mdx("inlineCode",{parentName:"p"},"posts/hello-world.md"),`
+xxx`),mdx("p",null,"The images folder for the thumbnails should be located within the ",mdx("inlineCode",{parentName:"p"},"public")," folder in the root of the application."),mdx("p",null,"Create a couple more files like this and then we\u2019re ready to create a ",mdx("inlineCode",{parentName:"p"},"Post.js")," component that\u2019ll display a preview for each of blog posts on the homepage."),mdx("p",null,mdx("inlineCode",{parentName:"p"},"components/Post.js"),`
+xxx`),mdx("p",null,"Now we parse the static markdown file(title, excerpt, create data, thumbnail), loop over them and display post previews."),mdx("p",null,"Now to start pulling everything together by updating the ",mdx("inlineCode",{parentName:"p"},"pages/index.js")," file as follows:"),mdx("p",null,"Now all that\u2019s left it to create the file to display the individual blog posts."),mdx("p",null,mdx("inlineCode",{parentName:"p"},"pages/blog/[slug].js"),`
+xxx`),mdx("p",null,"You should now have a functioning blog using Next.js which you can easily add new posts using markdown files."))}MDXContent.isMDXComponent=!0;
 ]]></content:encoded>
         </item>
     </channel>

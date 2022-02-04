@@ -1,3 +1,4 @@
+import { serialize } from "next-mdx-remote/serialize";
 import matter from "gray-matter";
 import fs from "fs";
 
@@ -7,7 +8,7 @@ export function getPostsFolders() {
     .readdirSync(`${process.cwd()}/public/posts`)
     .map((folderName) => ({
       directory: folderName,
-      filename: `${folderName}.md`,
+      filename: `${folderName}.mdx`,
     }));
 
   return postsFolders;
@@ -21,39 +22,36 @@ function getFormattedDate(date) {
   return formattedDate;
 }
 
-export function getSortedPosts() {
+export async function getSortedPosts() {
   const postFolders = getPostsFolders();
 
-  const posts = postFolders
-    .map(({ filename, directory }) => {
-      // Get raw content from file
-      const markdownWithMetadata = fs
-        .readFileSync(`public/posts/${directory}/${filename}`, "utf-8")
-        .toString();
+  const posts = [];
+  for await (const post of postFolders) {
+    const { filename, directory } = post;
 
-      // Parse markdown, get frontmatter data and content.
-      const { data, content } = matter(markdownWithMetadata);
+    // Get raw content from file
+    const markdownWithMetadata = fs
+      .readFileSync(`public/posts/${directory}/${filename}`, "utf-8")
+      .toString();
 
-      const frontmatter = {
+    // Parse markdown, get frontmatter data and content.
+    const { data, content } = matter(markdownWithMetadata);
+
+    posts.push({
+      // Remove .mdx file extension from post name
+      slug: filename.replace(".mdx", ""),
+      frontmatter: {
         ...data,
         date: getFormattedDate(data.date),
-        tags: data.tags.split(", ").map((t) => `#${t}`)
-      };
+        tags: data.tags.split(", ").map((t) => `#${t}`),
+      },
+      content: await serialize(content),
+    });
+  }
 
-      // Remove .md file extension from post name
-      const slug = filename.replace(".md", "");
-
-      return {
-        slug,
-        frontmatter,
-        content
-      };
-    })
-    .sort(
-      (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
-    );
-
-  return posts;
+  return posts.sort(
+    (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+  );
 }
 
 export function getPostsSlugs() {
@@ -61,15 +59,15 @@ export function getPostsSlugs() {
 
   const paths = postFolders.map(({ filename }) => ({
     params: {
-      slug: filename.replace(".md", ""),
+      slug: filename.replace(".mdx", ""),
     },
   }));
 
   return paths;
 }
 
-export function getPostBySlug(slug) {
-  const posts = getSortedPosts();
+export async function getPostBySlug(slug) {
+  const posts = await getSortedPosts();
 
   const postIndex = posts.findIndex(({ slug: postSlug }) => postSlug === slug);
 

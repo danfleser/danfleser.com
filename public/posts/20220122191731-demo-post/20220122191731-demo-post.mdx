@@ -7,6 +7,35 @@ cover_image: "20220122191731-demo-post.jpg"
 
 In this tutorial we’ll be building a blog using React and Next.js.
 
+### This is a Markdown sub-heading
+
+We just used a `###` subheading in our blog post.
+
+```js
+// this is a code block
+const doSomething = () => {
+  return console.log("hey");
+};
+
+```
+
+```jsx
+export default function Header() {
+  return (
+    <header className="app-header">
+      <div className="app-container">
+        <div className="content">
+          <Link href="/" passHref>
+            <h2 className="logo">Dev blog</h2>
+          </Link>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+```
+
 Each post of this blog is written in markdown file.
 
 Starting this blog from scratch was a great learning experience and didn't take too long to build(2 days).

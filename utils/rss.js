@@ -1,13 +1,9 @@
 import fs from "fs";
-
 import { Feed } from "feed";
-
 import { getSiteMetaData } from "./helpers";
-import { getSortedPosts } from "./posts";
 
-export function generateRssPostsFeed() {
+export function generateRssPostsFeed(posts) {
   const { title, siteUrl, language, author } = getSiteMetaData();
-  const posts = getSortedPosts();
 
   const feed = new Feed({
     title,
@@ -32,7 +28,7 @@ export function generateRssPostsFeed() {
         date: new Date(date),
         id: slug,
         link: `${siteUrl}posts/${slug}`,
-        content: content,
+        content: content.compiledSource,
       });
     }
   );
