@@ -1,0 +1,9 @@
+.responsive-image {
+  @apply w-full relative overflow-hidden rounded-lg;
+
+  &.add-shadow {
+    @apply shadow-lg shadow-indigo-500/50;
+    // dark mode
+    @apply dark:shadow-emerald-500/20;
+  }
+}

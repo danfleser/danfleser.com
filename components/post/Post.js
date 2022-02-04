@@ -1,20 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
+import { getFormattedDate } from "../../utils/helpers";
 
 export default function Post({ post }) {
   return (
-    <article className="app-post card">
-      <section className=" w-full lg:max-w-full lg:flex">
-        <section
-          className="bg-center h-48 lg:h-auto lg:w-48 flex-none bg-cover"
-          style={{
-            backgroundImage:
-              "url(" +
-              require(`../../public/images/${post.frontmatter.cover_image}`) +
-              ")",
-          }}
-          title={post.frontmatter.title}
-        ></section>
-
+    <article
+      className="app-post card"
+      data-name={post.frontmatter.title}
+      data-tags={post.frontmatter.tags}
+    >
+      <section className=" w-full md:max-w-full md:flex">
+        <section className="h-48 md:h-auto md:w-64 flex-none relative rounded-lg overflow-hidden">
+          <Image
+            alt={post.frontmatter.title}
+            layout="fill"
+            objectFit="cover"
+            src={require(`../../public/images/${post.frontmatter.cover_image}`)}
+          />
+        </section>
         <section className="p-4 pr-0 flex flex-col justify-between leading-normal">
           <header className="mb-8">
             <h3>
@@ -22,7 +25,9 @@ export default function Post({ post }) {
                 <a className="title">{post.frontmatter.title}</a>
               </Link>
             </h3>
-            <div className="date">{post.frontmatter.date}</div>
+            <div className="date">
+              {getFormattedDate(post.frontmatter.date)}
+            </div>
           </header>
 
           <footer className="flex items-center">

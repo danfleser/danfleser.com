@@ -1,5 +1,4 @@
 const path = require("path");
-const optimizedImages = require("next-optimized-images");
 const withPlugins = require("next-compose-plugins");
 const withMDX = require("@next/mdx")();
 
@@ -16,22 +15,10 @@ module.exports = withPlugins([
       pageExtensions: ["js", "jsx", "md", "mdx"],
     },
   ],
-  [
-    optimizedImages,
-    {
-      assetPrefix: isDev ? "" : "/danfleser-blog/",
-    },
-  ],
   {
     reactStrictMode: true,
     sassOptions: {
       includePaths: [path.join(__dirname, "styles")],
-    },
-    esModule: true,
-    images: {
-      disableStaticImages: true,
-      loader: "imgix",
-      path: "",
     },
     trailingSlash: true,
     basePath: isDev ? "" : "/danfleser-blog",

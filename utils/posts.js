@@ -14,14 +14,6 @@ export function getPostsFolders() {
   return postsFolders;
 }
 
-// Get day in format: Month day, Year. e.g. April 19, 2020
-function getFormattedDate(date) {
-  const options = { year: "numeric", month: "long", day: "numeric" };
-  const formattedDate = new Date(date).toLocaleDateString("en-US", options);
-
-  return formattedDate;
-}
-
 export async function getSortedPosts() {
   const postFolders = getPostsFolders();
 
@@ -42,7 +34,7 @@ export async function getSortedPosts() {
       slug: filename.replace(".mdx", ""),
       frontmatter: {
         ...data,
-        date: getFormattedDate(data.date),
+        date: data.date,
         tags: data.tags.split(", ").map((t) => `#${t}`),
       },
       content: await serialize(content),

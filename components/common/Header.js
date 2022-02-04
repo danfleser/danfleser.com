@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import Link from "next/link";
+import { NO_RESULTS_ID } from "../../utils/helpers";
 
 const toggleDarkMode = () => {
   localStorage.theme = localStorage.theme === "light" ? "dark" : "light";
@@ -7,6 +9,42 @@ const toggleDarkMode = () => {
 };
 
 export default function Header() {
+  let input;
+  const filterPosts = (term) => {
+    if (term) {
+      console.log("The term searched for was " + term);
+
+      const docs = document.querySelectorAll("[data-name]");
+      let count = docs.length;
+      docs.forEach((p) => {
+        if (!p.dataset.name.toLowerCase().includes(term)) {
+          p.style.display = "none";
+          count--;
+        }
+      });
+
+      // show no results card
+      if (!count) {
+        document.getElementById(NO_RESULTS_ID).style.display = "block";
+      }
+    } else {
+      // revert back posts
+      document.querySelectorAll("[data-name]").forEach((p) => {
+        p.style.display = "block";
+      });
+
+      // hide no results card
+      document.getElementById(NO_RESULTS_ID).style.display = "none";
+    }
+  };
+
+  const searchPost = () => input && filterPosts(input.value);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    input = document.querySelector('input[type="search"]');
+    input.addEventListener("search", searchPost);
+  });
+
   return (
     <header className="app-header">
       <div className="app-container">
@@ -17,8 +55,8 @@ export default function Header() {
 
           <div className="content">
             <div className="search">
-              <input type="text" placeholder="Search..." />
-              <button>
+              <input type="search" placeholder="Search..." />
+              <button onClick={searchPost}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
