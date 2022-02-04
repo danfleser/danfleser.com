@@ -19,7 +19,7 @@ export default function Profile() {
         </section>
 
         <section className="image">
-          <Image
+          <img
             src={require("../../public/images/me.jpg")}
             alt="Profile iamge"
             width={200}

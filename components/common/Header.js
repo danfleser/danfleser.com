@@ -10,10 +10,19 @@ const toggleDarkMode = () => {
 
 export default function Header() {
   let input;
-  const filterPosts = (term) => {
-    if (term) {
-      console.log("The term searched for was " + term);
+  const resetPosts = () => {
+    // revert back posts
+    document.querySelectorAll("[data-name]").forEach((p) => {
+      p.style.display = "block";
+    });
 
+    // hide no results card
+    document.getElementById(NO_RESULTS_ID).style.display = "none";
+  };
+  const filterPosts = (term) => {
+    resetPosts();
+    if (term) {
+      // hide unmatched posts
       const docs = document.querySelectorAll("[data-name]");
       let count = docs.length;
       docs.forEach((p) => {
@@ -27,14 +36,6 @@ export default function Header() {
       if (!count) {
         document.getElementById(NO_RESULTS_ID).style.display = "block";
       }
-    } else {
-      // revert back posts
-      document.querySelectorAll("[data-name]").forEach((p) => {
-        p.style.display = "block";
-      });
-
-      // hide no results card
-      document.getElementById(NO_RESULTS_ID).style.display = "none";
     }
   };
 

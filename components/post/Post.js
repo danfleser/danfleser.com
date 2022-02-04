@@ -11,7 +11,7 @@ export default function Post({ post }) {
     >
       <section className=" w-full md:max-w-full md:flex">
         <section className="h-48 md:h-auto md:w-64 flex-none relative rounded-lg overflow-hidden">
-          <Image
+          <img
             alt={post.frontmatter.title}
             layout="fill"
             objectFit="cover"
