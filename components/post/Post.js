@@ -10,7 +10,7 @@ export default function Post({ post }) {
       data-tags={post.frontmatter.tags}
     >
       <section className=" w-full md:max-w-full md:flex">
-        <section className="h-48 md:h-auto md:w-64 flex-none relative">
+        <section className="h-48 mb-4 md:h-auto md:w-64 md:mb-0 flex-none relative">
           <img
             className="rounded-lg overflow-hidden"
             alt={post.frontmatter.title}
