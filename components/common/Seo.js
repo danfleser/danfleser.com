@@ -11,6 +11,10 @@ export default function Seo({ title, description = "" }) {
       <title>
         {title} | {siteMetadata.title}
       </title>
+      <meta
+        name="google-site-verification"
+        content="CYUr6YB1g5gsOX7NuyHIqFhYqiX3A0QJC-9-dvOuVxc"
+      />
       <meta name="description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta name="og:title" property="og:title" content={title} />
