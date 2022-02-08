@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote";
 import Highlight, { defaultProps } from "prism-react-renderer";
+import theme from "prism-react-renderer/themes/vsDark";
 import Seo from "../../components/common/Seo";
 import ResponsiveImage from "../../components/common/Image";
 import Profile from "../../components/profile/Profile";
@@ -91,140 +92,47 @@ export async function getStaticProps({ params: { slug } }) {
   return { props: postData };
 }
 
-const theme = {
-  plain: {
-    color: "#2A2A2A",
-    backgroundColor: "#F6F6F6",
-    borderRadius: 10,
-  },
-  styles: [
-    {
-      types: ["prolog", "comment", "doctype", "cdata"],
-      style: {
-        color: "#B0BEC5",
-      },
-    },
-    {
-      types: ["property", "tag", "deleted", "constant", "symbol"],
-      style: { color: "#f40088" },
-    },
-    {
-      types: ["boolean", "number"],
-      style: { color: "#FF9100" },
-    },
-    {
-      types: ["attr-name", "tag"],
-      style: { fontWeight: "700" },
-    },
-    {
-      types: ["string", "attr-value"],
-      style: {
-        color: "#78909C",
-      },
-    },
-    {
-      types: [
-        "operator",
-        "entity",
-        "url",
-        "string",
-        "variable",
-        "language-css",
-        "keyword",
-      ],
-      style: {
-        color: "#651fff",
-      },
-    },
-    {
-      types: [
-        "selector",
-        "attr-name",
-        "char",
-        "builtin",
-        "insert",
-        "script-punctuation",
-      ],
-      style: {
-        color: "#AA00FF",
-      },
-    },
-    {
-      types: ["deleted"],
-      style: {
-        color: "rgb(255, 85, 85)",
-      },
-    },
-    {
-      types: ["italic"],
-      style: {
-        fontStyle: "italic",
-      },
-    },
-    {
-      types: ["important", "bold"],
-      style: {
-        fontWeight: "bold",
-      },
-    },
-    {
-      types: ["regex", "important"],
-      style: {
-        color: "#ffd700",
-      },
-    },
-    {
-      types: ["atrule", "function"],
-      style: {
-        color: "#3D5AFE",
-      },
-    },
-    {
-      types: ["symbol"],
-      style: {
-        opacity: "0.7",
-      },
-    },
-    {
-      types: ["string", "comment"],
-      style: {
-        fontWeight: 500,
-      },
-    },
-  ],
-};
-
 const SyntaxHighlighter = ({ inline, className, children }) => {
   const match = /language-(\w+)/.exec(className || "");
   const code = String(children).replace(/\n$/, "");
   return !inline && match ? (
-    <>
-      <section className="code-block-title">
-        <div className="language">{match[1]}</div>
-      </section>
-      <Highlight
-        {...defaultProps}
-        theme={theme}
-        code={code}
-        language={match[1]}
-      >
-        {({ className, tokens, getLineProps, getTokenProps }) => (
-          <>
-            {tokens.slice(0, -1).map((line, i) => (
-              <div
-                key={i}
-                {...getLineProps({ line, key: i })}
-                className={className}
-              >
-                {line.map((token, key) => (
-                  <span key={key} {...getTokenProps({ token, key })} />
-                ))}
-              </div>
-            ))}
-          </>
-        )}
-      </Highlight>
-    </>
+    <section className="syntax-highlighter">
+      <div className="window-bar">
+        <div className="windows-buttons">
+          <div className="window-btn btn-close"></div>
+          <div className="window-btn btn-minimize"></div>
+          <div className="window-btn btn-zoom"></div>
+        </div>
+        <section className="code-block-title">
+          <div className="language">{match[1]}</div>
+        </section>
+      </div>
+
+      <div>
+        <Highlight
+          {...defaultProps}
+          code={code}
+          language={match[1]}
+          theme={theme}
+        >
+          {({ className, tokens, getLineProps, getTokenProps }) => (
+            <>
+              {tokens.map((line, i) => (
+                <div
+                  key={i}
+                  {...getLineProps({ line, key: i })}
+                  className={className}
+                >
+                  {line.map((token, key) => (
+                    <span key={key} {...getTokenProps({ token, key })} />
+                  ))}
+                </div>
+              ))}
+            </>
+          )}
+        </Highlight>
+      </div>
+    </section>
   ) : (
     <code>{children}</code>
   );

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { getFormattedDate } from "../../utils/helpers";
 
 export default function Post({ post }) {
@@ -16,7 +15,7 @@ export default function Post({ post }) {
             alt={post.frontmatter.title}
             // placeholder="blur"
             layout="fill"
-            objectFit="cover"
+            // objectFit="cover"
             src={require(`../../public/images/${post.frontmatter.cover_image}`)}
           />
         </section>
