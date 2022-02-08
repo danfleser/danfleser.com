@@ -3,6 +3,7 @@ const optimizedImages = require("next-optimized-images");
 const withPlugins = require("next-compose-plugins");
 const withMDX = require("@next/mdx")();
 
+const repoName = "blog";
 const isDev = process.env.NODE_ENV !== "production";
 module.exports = withPlugins([
   [
@@ -19,7 +20,7 @@ module.exports = withPlugins([
   [
     optimizedImages,
     {
-      assetPrefix: isDev ? "" : "/danfleser-blog/",
+      assetPrefix: isDev ? "" : `/${repoName}/`,
       handleImages: ["jpeg", "jpg", "png", "svg"],
     },
   ],
@@ -35,7 +36,7 @@ module.exports = withPlugins([
       path: "",
     },
     trailingSlash: true,
-    basePath: isDev ? "" : "/danfleser-blog",
-    assetPrefix: isDev ? "" : "/danfleser-blog/",
+    basePath: isDev ? "" : `/${repoName}`,
+    assetPrefix: isDev ? "" : `/${repoName}/`,
   },
 ]);
