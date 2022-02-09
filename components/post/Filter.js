@@ -2,7 +2,7 @@ import useSound from "use-sound";
 import { filterPostsByTag } from "../../utils/filters";
 
 export default function Filter({ tags }) {
-  const [blur] = useSound("/sounds/blur.mp3");
+  const [blur] = useSound("../../public/sounds/blur.mp3");
 
   return (
     <article className="app-post card">

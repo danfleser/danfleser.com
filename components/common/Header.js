@@ -6,8 +6,8 @@ import { isDarkMode } from "../../utils/theme";
 import { filterPosts, getSearchInput } from "../../utils/filters";
 
 export default function Header() {
-  const [playOn] = useSound("/sounds/switch-on.mp3");
-  const [playOff] = useSound("/sounds/switch-off.mp3");
+  const [playOn] = useSound("../../public/sounds/switch-on.mp3");
+  const [playOff] = useSound("../../public/sounds/switch-off.mp3");
 
   const toggleDarkMode = () => {
     if (process.browser) {
