@@ -5,6 +5,7 @@ import PostNoResults from "../components/post/PostNoResults";
 import Profile from "../components/profile/Profile";
 import { getSortedPosts, getAllTags } from "../utils/posts";
 import { generateRssPostsFeed } from "../utils/rss";
+import { generateSitemap } from "../utils/sitemap-generator";
 
 export default function Home({ posts, tags }) {
   return (
@@ -26,6 +27,7 @@ export default function Home({ posts, tags }) {
 
 export async function getStaticProps() {
   generateRssPostsFeed(await getSortedPosts(false));
+  await generateSitemap();
 
   const posts = await getSortedPosts();
 

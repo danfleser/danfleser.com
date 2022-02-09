@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-    <channel>
-        <title>Dev vlog</title>
-        <link>https://danfleser.github.io/blog/</link>
-        <description>undefined</description>
-        <lastBuildDate>Wed, 09 Feb 2022 20:26:51 GMT</lastBuildDate>
-        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-        <generator>https://github.com/jpmonette/feed</generator>
-        <language>en-US</language>
-        <copyright>Copyright © 2022 Dan Fleser</copyright>
-        <item>
-            <title><![CDATA[19 lessons I wish I'd known earlier in my software engineering career]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220208213007-19-lessons-i-wish-id-known-earlier-in-my-software-engineering-career</link>
-            <guid>20220208213007-19-lessons-i-wish-id-known-earlier-in-my-software-engineering-career</guid>
-            <pubDate>Tue, 08 Feb 2022 21:30:07 GMT</pubDate>
-            <content:encoded><![CDATA[
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://danfleser.github.io/blog/</id>
+    <title>Dev vlog</title>
+    <updated>2022-02-09T20:26:51.083Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Dan Fleser</name>
+        <uri>https://danfleser.github.io/blog/</uri>
+    </author>
+    <link rel="alternate" href="https://danfleser.github.io/blog/"/>
+    <rights>Copyright © 2022 Dan Fleser</rights>
+    <entry>
+        <title type="html"><![CDATA[19 lessons I wish I'd known earlier in my software engineering career]]></title>
+        <id>20220208213007-19-lessons-i-wish-id-known-earlier-in-my-software-engineering-career</id>
+        <link href="https://danfleser.github.io/blog/posts/20220208213007-19-lessons-i-wish-id-known-earlier-in-my-software-engineering-career"/>
+        <updated>2022-02-08T21:30:07.709Z</updated>
+        <content type="html"><![CDATA[
 ### 1. Choose a language
 
 You need to start slow. Practice as much as possible.
@@ -90,14 +91,14 @@ Practice makes a man perfect.
 ### 19. Focus on the process, not the outcome
 
 If you have a solid foundation, the rest is easy to crack.
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Contributing To Open Source 10 Ways Developers Make Money Coding Course E10]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204025234-contributing-to-open-source-10-ways-developers-make-money-coding-course-e10</link>
-            <guid>20220204025234-contributing-to-open-source-10-ways-developers-make-money-coding-course-e10</guid>
-            <pubDate>Fri, 04 Feb 2022 02:52:34 GMT</pubDate>
-            <content:encoded><![CDATA[
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Contributing To Open Source 10 Ways Developers Make Money Coding Course E10]]></title>
+        <id>20220204025234-contributing-to-open-source-10-ways-developers-make-money-coding-course-e10</id>
+        <link href="https://danfleser.github.io/blog/posts/20220204025234-contributing-to-open-source-10-ways-developers-make-money-coding-course-e10"/>
+        <updated>2022-02-04T02:52:34.867Z</updated>
+        <content type="html"><![CDATA[
 As a web developer, you have the opportunity to contribute to open-source projects.
 
 You can contribute by fixing bugs or implementing features.
@@ -261,14 +262,14 @@ Other parts:
     - Benefits of Open Source as a web developer
     - Create a premium version of the Open Source project
     - What is Freemium software
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Mentoring 10 Ways Developers Make Money Coding Course E09]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204025140-mentoring-10-ways-developers-make-money-coding-course-e09</link>
-            <guid>20220204025140-mentoring-10-ways-developers-make-money-coding-course-e09</guid>
-            <pubDate>Fri, 04 Feb 2022 02:51:40 GMT</pubDate>
-            <content:encoded><![CDATA[
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Mentoring 10 Ways Developers Make Money Coding Course E09]]></title>
+        <id>20220204025140-mentoring-10-ways-developers-make-money-coding-course-e09</id>
+        <link href="https://danfleser.github.io/blog/posts/20220204025140-mentoring-10-ways-developers-make-money-coding-course-e09"/>
+        <updated>2022-02-04T02:51:40.190Z</updated>
+        <content type="html"><![CDATA[
 Have sharp skills in web development? A good way to make money is to educate others on how to build websites.
 
 In this video series, I share the best ways and how to increase your money income as a web developer while working from home.
@@ -428,14 +429,14 @@ Other parts:
     - Benefits of Open Source as a web developer
     - Create a premium version of the Open Source project
     - What is Freemium software
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Working As A Professional Developer 10 Ways Developers Make Money Coding Course E08]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204025040-working-as-a-professional-developer-10-ways-developers-make-money-coding-course-e08</link>
-            <guid>20220204025040-working-as-a-professional-developer-10-ways-developers-make-money-coding-course-e08</guid>
-            <pubDate>Fri, 04 Feb 2022 02:50:40 GMT</pubDate>
-            <content:encoded><![CDATA[
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Working As A Professional Developer 10 Ways Developers Make Money Coding Course E08]]></title>
+        <id>20220204025040-working-as-a-professional-developer-10-ways-developers-make-money-coding-course-e08</id>
+        <link href="https://danfleser.github.io/blog/posts/20220204025040-working-as-a-professional-developer-10-ways-developers-make-money-coding-course-e08"/>
+        <updated>2022-02-04T02:50:40.390Z</updated>
+        <content type="html"><![CDATA[
 Many companies hire people remotely to create websites and applications for them. If your skill is good, then you can earn up to $500K/year by working full-time in these companies. Traveling and working remotely part-time is another way of living.
 
 In this video series, I share the best ways and how to increase your money income as a web developer while working from home.
@@ -595,14 +596,14 @@ Other parts:
     - Benefits of Open Source as a web developer
     - Create a premium version of the Open Source project
     - What is Freemium software
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Freelancing 10 Ways Developers Make Money Coding Course E07]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204024943-freelancing-10-ways-developers-make-money-coding-course-e07</link>
-            <guid>20220204024943-freelancing-10-ways-developers-make-money-coding-course-e07</guid>
-            <pubDate>Fri, 04 Feb 2022 02:49:43 GMT</pubDate>
-            <content:encoded><![CDATA[
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Freelancing 10 Ways Developers Make Money Coding Course E07]]></title>
+        <id>20220204024943-freelancing-10-ways-developers-make-money-coding-course-e07</id>
+        <link href="https://danfleser.github.io/blog/posts/20220204024943-freelancing-10-ways-developers-make-money-coding-course-e07"/>
+        <updated>2022-02-04T02:49:43.321Z</updated>
+        <content type="html"><![CDATA[
 You can work for different types of clients from different countries while working from home.
 
 You may know that the websites like freelancer, Fiverr & Upwork provide you with such opportunities.
@@ -766,14 +767,14 @@ Other parts:
     - Benefits of Open Source as a web developer
     - Create a premium version of the Open Source project
     - What is Freemium software
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Why&How To Blog 10 Ways Developers Make Money Coding Course E06]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06</link>
-            <guid>20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06</guid>
-            <pubDate>Fri, 04 Feb 2022 02:48:14 GMT</pubDate>
-            <content:encoded><![CDATA[
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why&How To Blog 10 Ways Developers Make Money Coding Course E06]]></title>
+        <id>20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06</id>
+        <link href="https://danfleser.github.io/blog/posts/20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06"/>
+        <updated>2022-02-04T02:48:14.289Z</updated>
+        <content type="html"><![CDATA[
 Web Developers can make a passive income just by writing blog posts. You don't need to be an expert content writer. Just share your thoughts with other developers.
 
 Consider, blog as an asset where you're giving someone a place to rent on a monthly/yearly basis.
@@ -941,14 +942,14 @@ Other parts:
     - Benefits of Open Source as a web developer
     - Create a premium version of the Open Source project
     - What is Freemium software
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Software-as-a-service 10 Ways Developers Make Money from Home E05]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204024621-software-as-a-service-10-ways-developers-make-money-from-home-e05</link>
-            <guid>20220204024621-software-as-a-service-10-ways-developers-make-money-from-home-e05</guid>
-            <pubDate>Fri, 04 Feb 2022 02:46:21 GMT</pubDate>
-            <content:encoded><![CDATA[
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Software-as-a-service 10 Ways Developers Make Money from Home E05]]></title>
+        <id>20220204024621-software-as-a-service-10-ways-developers-make-money-from-home-e05</id>
+        <link href="https://danfleser.github.io/blog/posts/20220204024621-software-as-a-service-10-ways-developers-make-money-from-home-e05"/>
+        <updated>2022-02-04T02:46:21.561Z</updated>
+        <content type="html"><![CDATA[
 Make money by charging users for using your web application.
 
 A SaaS is an application or website that allows people to sign up and pay for the service.
@@ -1116,14 +1117,14 @@ Other parts:
     - Benefits of Open Source as a web developer
     - Create a premium version of the Open Source project
     - What is Freemium software
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Digital Products 10 Ways Developers Make Money Working from Home E04]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204024527-digital-products-10-ways-developers-make-money-working-from-home-e04</link>
-            <guid>20220204024527-digital-products-10-ways-developers-make-money-working-from-home-e04</guid>
-            <pubDate>Fri, 04 Feb 2022 02:45:27 GMT</pubDate>
-            <content:encoded><![CDATA[
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Digital Products 10 Ways Developers Make Money Working from Home E04]]></title>
+        <id>20220204024527-digital-products-10-ways-developers-make-money-working-from-home-e04</id>
+        <link href="https://danfleser.github.io/blog/posts/20220204024527-digital-products-10-ways-developers-make-money-working-from-home-e04"/>
+        <updated>2022-02-04T02:45:27.070Z</updated>
+        <content type="html"><![CDATA[
 No matter what you build, there is a market for it online.
 
 You can create courses, software, ebooks, or any digital product that you later distribute to customers worldwide.
@@ -1285,14 +1286,14 @@ Other parts:
     - Benefits of Open Source as a web developer
     - Create a premium version of the Open Source project
     - What is Freemium software
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Online Courses 10 Ways Developers Make Money Working from Home E03]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204024416-online-courses-10-ways-developers-make-money-working-from-home-e03</link>
-            <guid>20220204024416-online-courses-10-ways-developers-make-money-working-from-home-e03</guid>
-            <pubDate>Fri, 04 Feb 2022 02:44:16 GMT</pubDate>
-            <content:encoded><![CDATA[
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Online Courses 10 Ways Developers Make Money Working from Home E03]]></title>
+        <id>20220204024416-online-courses-10-ways-developers-make-money-working-from-home-e03</id>
+        <link href="https://danfleser.github.io/blog/posts/20220204024416-online-courses-10-ways-developers-make-money-working-from-home-e03"/>
+        <updated>2022-02-04T02:44:16.880Z</updated>
+        <content type="html"><![CDATA[
 Online education has become one of the most popular ways to teach and learn online. With a simple online course, you can build your reputation as an expert, increase your income, attract clients, boost your creativity and grow your community.
 
 Are you passionate about teaching web development? Why not utilize it as a business opportunity and create your online course to start to earn money.
@@ -1454,14 +1455,14 @@ Other parts:
     - Benefits of Open Source as a web developer
     - Create a premium version of the Open Source project
     - What is Freemium software
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Live Coding Streaming 10 Ways Developers Make Money Working from Home E02]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204024041-live-coding-streaming-10-ways-developers-make-money-working-from-home-e02</link>
-            <guid>20220204024041-live-coding-streaming-10-ways-developers-make-money-working-from-home-e02</guid>
-            <pubDate>Fri, 04 Feb 2022 02:40:41 GMT</pubDate>
-            <content:encoded><![CDATA[
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Live Coding Streaming 10 Ways Developers Make Money Working from Home E02]]></title>
+        <id>20220204024041-live-coding-streaming-10-ways-developers-make-money-working-from-home-e02</id>
+        <link href="https://danfleser.github.io/blog/posts/20220204024041-live-coding-streaming-10-ways-developers-make-money-working-from-home-e02"/>
+        <updated>2022-02-04T02:40:41.555Z</updated>
+        <content type="html"><![CDATA[
 Live web development is a new and emerging source of income for web developers with the right skills.
 
 Real-time live demonstrations of building web applications can be a very engaging experience for beginner developers who try to learn how to build web applications.
@@ -1627,14 +1628,14 @@ Other parts:
     - Benefits of Open Source as a web developer
     - Create a premium version of the Open Source project
     - What is Freemium software
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Running A Youtube Channel - 10 Ways Developers Make Money Working from Home - E01]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204003211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01</link>
-            <guid>20220204003211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01</guid>
-            <pubDate>Fri, 04 Feb 2022 00:32:11 GMT</pubDate>
-            <content:encoded><![CDATA[
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Running A Youtube Channel - 10 Ways Developers Make Money Working from Home - E01]]></title>
+        <id>20220204003211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01</id>
+        <link href="https://danfleser.github.io/blog/posts/20220204003211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01"/>
+        <updated>2022-02-04T00:32:11.959Z</updated>
+        <content type="html"><![CDATA[
 YouTube is a great platform where you can make money by making videos on different topics or about things that you know or are passionate about.
 
 If you're a web developer and know how to educate others on how to build websites, then it's time for you to start earning money by running a Youtube Channel.
@@ -1801,14 +1802,14 @@ Other parts:
     - Benefits of Open Source as a web developer
     - Create a premium version of the Open Source project
     - What is Freemium software
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[MEAN/MERN/MEVN vs LAMP vs Serverless]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220203002942-mean-mern-mevn-vs-lamp-vs-serverless</link>
-            <guid>20220203002942-mean-mern-mevn-vs-lamp-vs-serverless</guid>
-            <pubDate>Thu, 03 Feb 2022 00:29:42 GMT</pubDate>
-            <content:encoded><![CDATA[
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MEAN/MERN/MEVN vs LAMP vs Serverless]]></title>
+        <id>20220203002942-mean-mern-mevn-vs-lamp-vs-serverless</id>
+        <link href="https://danfleser.github.io/blog/posts/20220203002942-mean-mern-mevn-vs-lamp-vs-serverless"/>
+        <updated>2022-02-03T00:29:42.241Z</updated>
+        <content type="html"><![CDATA[
 ## Which tech stack to use
 
 MEAN is an open source, high-level, **Javascript-based stack** best used for building dynamic websites and applications.
@@ -1922,7 +1923,6 @@ As a general rule, MEAN is better for smaller-scale modern applications, like pr
 You can use this the website [Stackshare](https://stackshare.io/) to check other companies tech stack.
 
 <img src="/images/stackshare.png" alt="MERN stack" />
-]]></content:encoded>
-        </item>
-    </channel>
-</rss>
+]]></content>
+    </entry>
+</feed>

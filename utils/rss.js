@@ -36,4 +36,5 @@ export function generateRssPostsFeed(posts) {
   // Write the RSS output to a public file, making it
   // accessible at siteUrl/rss.xml
   fs.writeFileSync("public/rss.xml", feed.rss2());
+  fs.writeFileSync("public/atom.xml", feed.atom1());
 }
