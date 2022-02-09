@@ -2,9 +2,8 @@
 @import url("https://fonts.cdnfonts.com/css/league-mono");
 
 * {
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
-  line-height: 1.8;
-  @apply dark:text-white;
+  font-family: "Montserrat", sans-serif;
+  @apply dark:text-zinc-300;
 }
 
 body {

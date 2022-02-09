@@ -1,0 +1,15 @@
+.post-details {
+  .author,
+  .date {
+    @apply leading-none text-sm;
+    font-family: "League Mono", monospace !important;
+  }
+
+  .author {
+    @apply flex items-center;
+
+    img {
+      @apply mr-2;
+    }
+  }
+}

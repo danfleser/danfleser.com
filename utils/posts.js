@@ -14,7 +14,7 @@ export function getPostsFolders() {
   return postsFolders;
 }
 
-export async function getSortedPosts() {
+export async function getSortedPosts(serialized = true) {
   const postFolders = getPostsFolders();
 
   const posts = [];
@@ -36,8 +36,9 @@ export async function getSortedPosts() {
         ...data,
         date: data.date,
         tags: data.tags.split(", ").map((t) => `#${t}`),
+        readingTime: getReadingTime(content)
       },
-      content: await serialize(content),
+      content: serialized ? await serialize(content) : content,
     });
   }
 
@@ -69,4 +70,11 @@ export async function getPostBySlug(slug) {
   const nextPost = posts[postIndex - 1];
 
   return { frontmatter, post: { content }, previousPost, nextPost };
+}
+
+export function getReadingTime(text) {
+  const wpm = 225;
+  const words = text.trim().split(/\s+/).length;
+
+  return Math.ceil(words / wpm);
 }

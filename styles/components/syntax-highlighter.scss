@@ -1,53 +1,55 @@
-.syntax-highlighter {
-  @apply -mt-3;
+pre {
+  .syntax-highlighter {
+    @apply -mt-3;
 
-  .window-bar {
-    @apply flex justify-between items-center;
-  }
-
-  .windows-buttons {
-    width: 60px;
-
-    .window-btn {
-      height: 12px;
-      width: 12px;
-      border-radius: 50%;
-      position: relative;
-      display: inline-block;
+    .window-bar {
+      @apply flex justify-between items-center;
     }
 
-    .btn-close {
-      margin-right: 6px;
-      background-color: #ff3b47;
-      border-color: #9d252b;
+    .windows-buttons {
+      width: 60px;
+
+      .window-btn {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        position: relative;
+        display: inline-block;
+      }
+
+      .btn-close {
+        margin-right: 6px;
+        background-color: #ff3b47;
+        border-color: #9d252b;
+      }
+
+      .btn-minimize {
+        margin-right: 6px;
+        background-color: #ffc100;
+        border-color: #9d802c;
+      }
+
+      .btn-zoom {
+        background-color: #00d742;
+        border-color: #049931;
+      }
     }
 
-    .btn-minimize {
-      margin-right: 6px;
-      background-color: #ffc100;
-      border-color: #9d802c;
+    .code-block-title {
+      @apply w-full flex justify-end;
+
+      .language {
+        @apply py-1 px-4 uppercase bg-indigo-600 rounded-b-md font-extrabold cursor-default select-none;
+        // dark mode
+        @apply dark:bg-emerald-500;
+      }
     }
 
-    .btn-zoom {
-      background-color: #00d742;
-      border-color: #049931;
+    code,
+    .token {
+      font-family: "League Mono", monospace !important;
+      font-size: 16px !important;
+      @apply text-white;
     }
-  }
-
-  .code-block-title {
-    @apply w-full flex justify-end;
-
-    .language {
-      @apply py-1 px-4 uppercase bg-indigo-600 rounded-b-md font-extrabold cursor-default select-none;
-      // dark mode
-      @apply dark:bg-emerald-500;
-    }
-  }
-
-  code,
-  .token {
-    font-family: "League Mono", monospace !important;
-    font-size: 16px !important;
-    @apply text-white;
   }
 }

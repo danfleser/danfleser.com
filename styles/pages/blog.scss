@@ -4,11 +4,33 @@
       @apply mb-5;
 
       .post-title {
-        @apply text-4xl font-extrabold;
+        @apply mb-3 text-4xl font-black;
       }
 
-      .date {
+      .post-details {
         @apply mb-5;
+      }
+    }
+  }
+
+  .blog-content {
+    &.typography {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @apply font-extrabold;
+        // dark mode
+        @apply dark:text-emerald-500;
+      }
+      p {
+        @apply dark:text-slate-300;
+      }
+
+      li {
+        @apply leading-none;
       }
     }
   }

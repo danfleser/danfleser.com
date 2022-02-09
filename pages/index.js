@@ -21,12 +21,11 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getSortedPosts();
-  generateRssPostsFeed(posts);
+  generateRssPostsFeed(await getSortedPosts(false));
 
   return {
     props: {
-      posts,
+      posts: await getSortedPosts(),
     },
   };
 }

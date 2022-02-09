@@ -5,8 +5,9 @@ import theme from "prism-react-renderer/themes/vsDark";
 import Seo from "../../components/common/Seo";
 import ResponsiveImage from "../../components/common/Image";
 import Profile from "../../components/profile/Profile";
+import Comments from "../../components/common/Comments";
+import PostDetails from "../../components/common/PostDetails";
 import { getPostBySlug, getPostsSlugs } from "../../utils/posts";
-import { getFormattedDate } from "../../utils/helpers";
 
 export default function PostPage({
   post,
@@ -25,7 +26,10 @@ export default function PostPage({
         <header>
           <h1 className="post-title">{frontmatter.title}</h1>
 
-          <p className="date">{getFormattedDate(frontmatter.date)}</p>
+          <PostDetails
+            date={frontmatter.date}
+            readingTime={frontmatter.readingTime}
+          />
 
           {frontmatter.cover_image && (
             <ResponsiveImage
@@ -65,6 +69,8 @@ export default function PostPage({
           <div />
         )}
       </nav>
+
+      <Comments />
     </section>
   );
 }

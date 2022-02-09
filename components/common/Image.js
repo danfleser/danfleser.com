@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function ResponsiveImage(props) {
   return (
     <section
@@ -8,7 +6,6 @@ export default function ResponsiveImage(props) {
       <img
         className="w-full"
         alt={props.alt}
-        // placeholder="blur"
         layout="responsive"
         width="128"
         height="72"

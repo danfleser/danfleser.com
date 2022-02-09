@@ -2,7 +2,7 @@
   @apply flex flex-col;
 
   .block {
-    @apply flex flex-row justify-between;
+    @apply flex justify-between;
 
     &:not(:last-child) {
       @apply mb-6;
@@ -10,18 +10,63 @@
   }
 
   .info {
-    @apply mr-8;
+    @apply flex justify-between items-center;
 
-    section {
-      &:not(:last-child) {
-        @apply mb-4;
+    .name {
+      h1 {
+        @apply text-7xl dark:text-white font-black;
+
+        .wave {
+          animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+          animation-duration: 2.5s; /* Change to speed up or slow down */
+          animation-iteration-count: infinite; /* Never stop waving :) */
+          transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+          display: inline-block;
+        }
+
+        @keyframes wave-animation {
+          0% {
+            transform: rotate(0deg);
+          }
+          10% {
+            transform: rotate(14deg);
+          } /* The following five values can be played with to make the waving more or less extreme */
+          20% {
+            transform: rotate(-8deg);
+          }
+          30% {
+            transform: rotate(14deg);
+          }
+          40% {
+            transform: rotate(-4deg);
+          }
+          50% {
+            transform: rotate(10deg);
+          }
+          60% {
+            transform: rotate(0deg);
+          } /* Reset for the last half to pause */
+          100% {
+            transform: rotate(0deg);
+          }
+        }
       }
 
-      .name {
-        @apply text-2xl font-bold text-indigo-600;
+      .highlight {
+        @apply px-2 ml-1 w-max bg-black text-white;
+        box-shadow: -3px 3px 0 rgb(79 70 229);
+
         // dark mode
-        @apply dark:text-emerald-500;
+        @apply dark:bg-white dark:text-black;
       }
+    }
+
+    .image {
+      @apply overflow-hidden rounded-full;
+      min-width: 150px;
+      min-height: 150px;
+      max-width: 150px;
+      max-height: 150px;
     }
   }
 
@@ -32,12 +77,10 @@
   .detail {
     @apply ml-4 text-sm text-gray-400;
   }
+}
 
-  .image {
-    @apply overflow-hidden rounded-full;
-    min-width: 100px;
-    min-height: 100px;
-    max-width: 100px;
-    max-height: 100px;
+.dark {
+  .highlight {
+    box-shadow: -3px 3px 0 rgb(16 185 129) !important;
   }
 }

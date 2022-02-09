@@ -28,7 +28,7 @@ export function generateRssPostsFeed(posts) {
         date: new Date(date),
         id: slug,
         link: `${siteUrl}posts/${slug}`,
-        content: content.compiledSource,
+        content: content,
       });
     }
   );

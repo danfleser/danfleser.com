@@ -1,5 +1,5 @@
 .responsive-image {
-  @apply w-full relative overflow-hidden rounded-lg;
+  @apply w-full relative overflow-hidden;
 
   &.add-shadow {
     @apply shadow-lg shadow-indigo-500/50;

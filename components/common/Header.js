@@ -1,11 +1,17 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { NO_RESULTS_ID } from "../../utils/helpers";
+import { updateCommentsTheme } from "../../utils/comments";
+import { isDarkMode } from "../../utils/theme";
 
 const toggleDarkMode = () => {
-  localStorage.theme = localStorage.theme === "light" ? "dark" : "light";
+  const darkMode = isDarkMode();
+
+  localStorage.theme = darkMode ? "light" : "dark";
 
   document.documentElement.classList = localStorage.theme;
+
+  updateCommentsTheme(!darkMode);
 };
 
 export default function Header() {

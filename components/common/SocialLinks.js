@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function SocialLinks() {
   return (
     <section className="app-social-links">

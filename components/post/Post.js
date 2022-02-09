@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getFormattedDate } from "../../utils/helpers";
+import PostDetails from "../common/PostDetails";
 
 export default function Post({ post }) {
   return (
@@ -8,37 +8,35 @@ export default function Post({ post }) {
       data-name={post.frontmatter.title}
       data-tags={post.frontmatter.tags}
     >
-      <section className=" w-full md:max-w-full md:flex">
-        <section className="h-48 mb-4 md:h-auto md:w-64 md:mb-0 flex-none relative">
+      <section className="app-post-content">
+        <section className="app-post-image">
           <img
-            className="rounded-lg overflow-hidden"
             alt={post.frontmatter.title}
-            // placeholder="blur"
             layout="fill"
-            // objectFit="cover"
             src={require(`../../public/images/${post.frontmatter.cover_image}`)}
           />
         </section>
-        <section className="p-4 pr-0 flex flex-col justify-between leading-normal">
+
+        <section className="app-post-info">
           <header>
             <h3>
               <Link href={"/posts/[slug]"} as={`/posts/${post.slug}`}>
                 <a className="title">{post.frontmatter.title}</a>
               </Link>
             </h3>
-            <div className="date">
-              {getFormattedDate(post.frontmatter.date)}
-            </div>
+
+            <PostDetails
+              date={post.frontmatter.date}
+              readingTime={post.frontmatter.readingTime}
+            />
           </header>
 
-          <footer className="flex items-center">
-            <div className="text-sm">
-              {post.frontmatter.tags.map((tag) => (
-                <span key={tag} className="tag">
-                  {tag}
-                </span>
-              ))}
-            </div>
+          <footer>
+            {post.frontmatter.tags.map((tag) => (
+              <span key={tag} className="tag">
+                {tag}
+              </span>
+            ))}
           </footer>
         </section>
       </section>

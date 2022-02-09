@@ -1,23 +1,33 @@
-# Personal blog
-Personal static blog using markdown, React and Next.js.
+# Dev blog
+
+Personal static blog using mdx, React and Next.js.
 Can be used as a template.
 
-# How to add a new post?
+# Install dependencies
+
+```bash
+npm install
+```
+
+# Run server locally
+
+```bash
+npm run dev
+```
+
+# Build for prod and export static website
+
+```bash
+npm run build
+```
+
+# Add a post
+
 ```bash
 # run
 npm run gen-post My new article
 
 git add .
-git commit -m "new post"
+git commit -m "feat: new post"
 git push
-
-## Usage
-```bash
-# Install dependencies
-npm install
-
-# Run dev server
-npm run dev
-
-# Build for prod and export static website
-npm run build
+```

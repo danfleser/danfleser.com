@@ -1,4 +1,28 @@
 .app-post {
+  .app-post-content {
+    @apply w-full md:max-w-full md:flex;
+
+    .app-post-image {
+      @apply h-48 mb-4 md:h-auto md:w-64 md:mb-0 flex-none relative;
+
+      img {
+        @apply overflow-hidden;
+      }
+    }
+
+    .app-post-info {
+      @apply pl-4 flex flex-col justify-between leading-normal;
+
+      h3 {
+        @apply mb-2;
+      }
+
+      .post-details {
+        @apply mb-2;
+      }
+    }
+  }
+
   .title {
     @apply cursor-pointer hover:text-indigo-600;
     // dark mode
@@ -6,7 +30,7 @@
   }
 
   .tag {
-    @apply rounded p-1 mr-2 cursor-pointer select-none transition-colors;
+    @apply rounded p-1 mr-2 mb-2 cursor-pointer select-none transition-colors leading-none text-sm inline-block;
     @apply hover:bg-zinc-100 border hover:border-indigo-600;
     // dark mode
     @apply dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:border-emerald-500;
