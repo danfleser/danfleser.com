@@ -36,7 +36,7 @@ export async function getSortedPosts(serialized = true) {
         ...data,
         date: data.date,
         tags: data.tags.split(", ").map((t) => `#${t}`),
-        readingTime: getReadingTime(content)
+        readingTime: getReadingTime(content),
       },
       content: serialized ? await serialize(content) : content,
     });
@@ -77,4 +77,18 @@ export function getReadingTime(text) {
   const words = text.trim().split(/\s+/).length;
 
   return Math.ceil(words / wpm);
+}
+
+export function getAllTags(posts) {
+  const tags = [];
+
+  posts.forEach((post) => {
+    post.frontmatter.tags.forEach((tag) => {
+      if (!tags.find((t) => t === tag)) {
+        tags.push(tag);
+      }
+    });
+  });
+
+  return tags;
 }

@@ -1,54 +1,37 @@
 import { useEffect } from "react";
+import useSound from "use-sound";
 import Link from "next/link";
-import { NO_RESULTS_ID } from "../../utils/helpers";
 import { updateCommentsTheme } from "../../utils/comments";
 import { isDarkMode } from "../../utils/theme";
-
-const toggleDarkMode = () => {
-  const darkMode = isDarkMode();
-
-  localStorage.theme = darkMode ? "light" : "dark";
-
-  document.documentElement.classList = localStorage.theme;
-
-  updateCommentsTheme(!darkMode);
-};
+import { filterPosts, getSearchInput } from "../../utils/filters";
 
 export default function Header() {
-  let input;
-  const resetPosts = () => {
-    // revert back posts
-    document.querySelectorAll("[data-name]").forEach((p) => {
-      p.style.display = "block";
-    });
+  const [playOn] = useSound("/sounds/switch-on.mp3");
+  const [playOff] = useSound("/sounds/switch-off.mp3");
 
-    // hide no results card
-    document.getElementById(NO_RESULTS_ID).style.display = "none";
-  };
-  const filterPosts = (term) => {
-    resetPosts();
-    if (term) {
-      // hide unmatched posts
-      const docs = document.querySelectorAll("[data-name]");
-      let count = docs.length;
-      docs.forEach((p) => {
-        if (!p.dataset.name.toLowerCase().includes(term)) {
-          p.style.display = "none";
-          count--;
-        }
-      });
+  const toggleDarkMode = () => {
+    if (process.browser) {
+      const darkMode = isDarkMode();
 
-      // show no results card
-      if (!count) {
-        document.getElementById(NO_RESULTS_ID).style.display = "block";
+      localStorage.theme = darkMode ? "light" : "dark";
+
+      document.documentElement.classList = localStorage.theme;
+
+      updateCommentsTheme(!darkMode);
+
+      if (darkMode) {
+        playOn();
+      } else {
+        playOff();
       }
     }
   };
 
+  let input;
   const searchPost = () => input && filterPosts(input.value);
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    input = document.querySelector('input[type="search"]');
+    input = getSearchInput();
     input.addEventListener("search", searchPost);
   });
 
@@ -81,7 +64,7 @@ export default function Header() {
               </button>
             </div>
 
-            <div className="darkMode" onClick={toggleDarkMode}>
+            <div className="darkMode" onClick={() => toggleDarkMode()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"

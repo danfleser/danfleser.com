@@ -8,6 +8,8 @@
 
 body {
   @apply bg-zinc-50 dark:bg-slate-800;
+
+  min-width: 375px;
 }
 
 .app {

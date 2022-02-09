@@ -3,11 +3,7 @@
     @apply w-full md:max-w-full md:flex;
 
     .app-post-image {
-      @apply h-48 mb-4 md:h-auto md:w-64 md:mb-0 flex-none relative;
-
-      img {
-        @apply overflow-hidden;
-      }
+      @apply h-40 mb-4 md:h-auto md:w-64 md:mb-0 flex-none relative overflow-hidden;
     }
 
     .app-post-info {
@@ -34,5 +30,11 @@
     @apply hover:bg-zinc-100 border hover:border-indigo-600;
     // dark mode
     @apply dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:border-emerald-500;
+
+    &.selected-tag {
+      @apply bg-zinc-100 border-indigo-600;
+      // dark mode
+      @apply dark:bg-slate-800 dark:border-emerald-500;
+    }
   }
 }

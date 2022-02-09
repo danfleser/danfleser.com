@@ -33,6 +33,10 @@
         @apply leading-none;
       }
     }
+
+    iframe {
+      @apply h-40 md:h-96;
+    }
   }
 
   nav {

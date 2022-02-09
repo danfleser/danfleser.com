@@ -10,11 +10,13 @@
   }
 
   .info {
-    @apply flex justify-between items-center;
+    @apply flex flex-wrap-reverse justify-center md:flex-nowrap md:justify-between items-center;
 
     .name {
+      @apply flex-1;
+
       h1 {
-        @apply text-7xl dark:text-white font-black;
+        @apply text-5xl md:text-7xl dark:text-white font-black;
 
         .wave {
           animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
@@ -62,6 +64,7 @@
     }
 
     .image {
+      @apply flex-1 mb-4 md:mb-0;
       @apply overflow-hidden rounded-full;
       min-width: 150px;
       min-height: 150px;
