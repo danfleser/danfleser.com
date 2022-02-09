@@ -59,7 +59,6 @@ export function filterPostsByTag(tag, blur) {
     document.querySelectorAll("[data-tag]").forEach((filterTag) => {
       if (filterTag.dataset.tag.includes(tag)) {
         filterTag.classList.add("selected-tag");
-        console.log("asda");
       }
     });
   } else {
