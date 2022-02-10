@@ -6,7 +6,7 @@ export default function Contact() {
       </header>
 
       <section className="card">
-        <form>
+        {/* <form>
           <div className="form-item">
             <label>Email address</label>
             <input type="email" placeholder="ex: danfleser.dev@gmail.com" />
@@ -18,7 +18,7 @@ export default function Contact() {
           </div>
 
           <button type="submit">Send</button>
-        </form>
+        </form> */}
       </section>
     </article>
   );

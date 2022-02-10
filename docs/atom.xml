@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://danfleser.com/</id>
     <title>Dev vlog</title>
-    <updated>2022-02-10T17:37:10.737Z</updated>
+    <updated>2022-02-10T21:49:39.289Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Dan Fleser</name>
@@ -11,14 +11,17 @@
     <link rel="alternate" href="https://danfleser.com/"/>
     <rights>Copyright © 2022 Dan Fleser</rights>
     <entry>
-        <title type="html"><![CDATA[Top 3 Hardest FAANG Interviews Coding Questions]]></title>
-        <id>20220209205657-top-3-hardest-faang-interviews-coding-questions</id>
-        <link href="https://danfleser.com/posts/20220209205657-top-3-hardest-faang-interviews-coding-questions"/>
+        <title type="html"><![CDATA[Top 6 Hardest FAANG Interviews Coding Questions]]></title>
+        <id>20220209205657-top-6-hardest-faang-interviews-coding-questions</id>
+        <link href="https://danfleser.com/posts/20220209205657-top-6-hardest-faang-interviews-coding-questions"/>
         <updated>2022-02-09T20:56:57.046Z</updated>
         <content type="html"><![CDATA[
-- How to design a garbage collector
-- The dining philosophers problem (multi-threading)
-- How to implement an LRU cache
+- How would you improve shopping experience via Alexa?
+- How to design a garbage collector?
+- How would you design a YouTube for senior citizens?
+- How to implement an LRU cache?
+- How would you design a library for future?
+- How would you design toothbrush for young children?
 ]]></content>
     </entry>
     <entry>

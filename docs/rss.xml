@@ -4,20 +4,23 @@
         <title>Dev vlog</title>
         <link>https://danfleser.com/</link>
         <description>undefined</description>
-        <lastBuildDate>Thu, 10 Feb 2022 17:37:10 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 10 Feb 2022 21:49:39 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <copyright>Copyright © 2022 Dan Fleser</copyright>
         <item>
-            <title><![CDATA[Top 3 Hardest FAANG Interviews Coding Questions]]></title>
-            <link>https://danfleser.com/posts/20220209205657-top-3-hardest-faang-interviews-coding-questions</link>
-            <guid>20220209205657-top-3-hardest-faang-interviews-coding-questions</guid>
+            <title><![CDATA[Top 6 Hardest FAANG Interviews Coding Questions]]></title>
+            <link>https://danfleser.com/posts/20220209205657-top-6-hardest-faang-interviews-coding-questions</link>
+            <guid>20220209205657-top-6-hardest-faang-interviews-coding-questions</guid>
             <pubDate>Wed, 09 Feb 2022 20:56:57 GMT</pubDate>
             <content:encoded><![CDATA[
-- How to design a garbage collector
-- The dining philosophers problem (multi-threading)
-- How to implement an LRU cache
+- How would you improve shopping experience via Alexa?
+- How to design a garbage collector?
+- How would you design a YouTube for senior citizens?
+- How to implement an LRU cache?
+- How would you design a library for future?
+- How would you design toothbrush for young children?
 ]]></content:encoded>
         </item>
         <item>
