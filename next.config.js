@@ -5,19 +5,6 @@ const withMDX = require("@next/mdx")();
 
 const isDev = process.env.NODE_ENV !== "production";
 module.exports = withPlugins([
-  // [
-  //   {
-  //     webpack(config) {
-  //       config.module.rules.push({
-  //         test: /\.mp3$/,
-  //         use: {
-  //           loader: "file-loader",
-  //         },
-  //       });
-  //       return config;
-  //     },
-  //   },
-  // ],
   [
     withMDX,
     {
