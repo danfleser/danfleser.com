@@ -4,26 +4,25 @@ import fs from "fs";
 
 export function getPostsFolders() {
   // Get all posts folders located in `public/posts`
-  const postsFolders = fs
+  const posts = fs
     .readdirSync(`${process.cwd()}/public/posts`)
-    .map((folderName) => ({
-      directory: folderName,
-      filename: `${folderName}.mdx`,
+    .map((fileName) => ({
+      fileName,
     }));
 
-  return postsFolders;
+  return posts;
 }
 
 export async function getSortedPosts(serialized = true) {
-  const postFolders = getPostsFolders();
+  const postsMdx = getPostsFolders();
 
   const posts = [];
-  for await (const post of postFolders) {
-    const { filename, directory } = post;
+  for await (const post of postsMdx) {
+    const { fileName } = post;
 
     // Get raw content from file
     const markdownWithMetadata = fs
-      .readFileSync(`public/posts/${directory}/${filename}`, "utf-8")
+      .readFileSync(`public/posts/${fileName}`, "utf-8")
       .toString();
 
     // Parse markdown, get frontmatter data and content.
@@ -31,7 +30,7 @@ export async function getSortedPosts(serialized = true) {
 
     posts.push({
       // Remove .mdx file extension from post name
-      slug: filename.replace(".mdx", ""),
+      slug: fileName.replace(".mdx", ""),
       frontmatter: {
         ...data,
         date: data.date,
@@ -48,11 +47,11 @@ export async function getSortedPosts(serialized = true) {
 }
 
 export function getPostsSlugs() {
-  const postFolders = getPostsFolders();
+  const postsMdx = getPostsFolders();
 
-  const paths = postFolders.map(({ filename }) => ({
+  const paths = postsMdx.map(({ fileName }) => ({
     params: {
-      slug: filename.replace(".mdx", ""),
+      slug: fileName.replace(".mdx", ""),
     },
   }));
 
