@@ -1,6 +1,10 @@
+import Seo from "../../components/common/Seo";
+
 export default function Contact() {
   return (
     <article className="contact-card">
+      <Seo title="All posts" />
+
       <header>
         <h1>📬 Contact</h1>
       </header>

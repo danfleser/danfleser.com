@@ -1,0 +1,36 @@
+---
+title: "Best React Hacks For Lazy Devs"
+date: "2022-02-10T23:01:44.602Z"
+tags: "learning, react, javascript"
+cover_image: "20220210230144-react-hacks-for-lazy-devs.jpg"
+---
+
+==============================
+
+## 1. Adding console logs to render expressions
+
+If you wanna log the props to an expression style component but can’t be bothered to convert it, put the log in parentheses then add chopsticks `||`:
+
+<img
+  src="/images/20220210230144-1.png"
+  alt="Adding console logs to render expressions"
+/>
+
+Note. you have to use the _or_ operator because console.log returns undefined.
+
+## 2. Trace a function’s call with the Error object
+
+If you’ve no idea where a function’s being called from, log an `Error` object in it and you’ll get a stack trace in the console:
+
+<img
+  src="/images/20220210230144-2.png"
+  alt="Trace a function’s call with the Error object"
+/>
+
+## 3. Ternary question marks
+
+Want to write more ternary question marks? Most people know that using `||` and `&&` is a super quick way of writing conditions, but did you know there’s a `??` as well?
+
+<img src="/images/20220210230144-3.png" alt="Ternary question marks" />
+
+This says, if `state?.bookings` is undefined return `{}`.
