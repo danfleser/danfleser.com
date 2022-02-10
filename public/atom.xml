@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://danfleser.github.io/blog/</id>
+    <id>https://danfleser.com/</id>
     <title>Dev vlog</title>
-    <updated>2022-02-09T20:54:26.089Z</updated>
+    <updated>2022-02-10T15:56:16.171Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Dan Fleser</name>
-        <uri>https://danfleser.github.io/blog/</uri>
+        <uri>https://danfleser.com/</uri>
     </author>
-    <link rel="alternate" href="https://danfleser.github.io/blog/"/>
+    <link rel="alternate" href="https://danfleser.com/"/>
     <rights>Copyright © 2022 Dan Fleser</rights>
+    <entry>
+        <title type="html"><![CDATA[Top 3 Hardest FAANG Interviews Coding Questions]]></title>
+        <id>20220209205657-top-3-hardest-faang-interviews-coding-questions</id>
+        <link href="https://danfleser.com/posts/20220209205657-top-3-hardest-faang-interviews-coding-questions"/>
+        <updated>2022-02-09T20:56:57.046Z</updated>
+        <content type="html"><![CDATA[
+- How to design a garbage collector
+- The dining philosophers problem (multi-threading)
+- How to implement an LRU cache
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[19 lessons I wish I'd known earlier in my software engineering career]]></title>
         <id>20220208213007-19-lessons-i-wish-id-known-earlier-in-my-software-engineering-career</id>
-        <link href="https://danfleser.github.io/blog/posts/20220208213007-19-lessons-i-wish-id-known-earlier-in-my-software-engineering-career"/>
+        <link href="https://danfleser.com/posts/20220208213007-19-lessons-i-wish-id-known-earlier-in-my-software-engineering-career"/>
         <updated>2022-02-08T21:30:07.709Z</updated>
         <content type="html"><![CDATA[
 ### 1. Choose a language
@@ -58,7 +69,7 @@ Write blog posts. Many people who are starting their journey today, are definite
 
 ### 11. Earn while you learn
 
-More here - [Make money blogging while learning new things](https://danfleser.github.io/blog/posts/20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06/)
+More here - [Make money blogging while learning new things](https://danfleser.com/posts/20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06/)
 
 ### 12. Define small goals
 
@@ -96,7 +107,7 @@ If you have a solid foundation, the rest is easy to crack.
     <entry>
         <title type="html"><![CDATA[Contributing To Open Source 10 Ways Developers Make Money Coding Course E10]]></title>
         <id>20220204025234-contributing-to-open-source-10-ways-developers-make-money-coding-course-e10</id>
-        <link href="https://danfleser.github.io/blog/posts/20220204025234-contributing-to-open-source-10-ways-developers-make-money-coding-course-e10"/>
+        <link href="https://danfleser.com/posts/20220204025234-contributing-to-open-source-10-ways-developers-make-money-coding-course-e10"/>
         <updated>2022-02-04T02:52:34.867Z</updated>
         <content type="html"><![CDATA[
 As a web developer, you have the opportunity to contribute to open-source projects.
@@ -267,7 +278,7 @@ Other parts:
     <entry>
         <title type="html"><![CDATA[Mentoring 10 Ways Developers Make Money Coding Course E09]]></title>
         <id>20220204025140-mentoring-10-ways-developers-make-money-coding-course-e09</id>
-        <link href="https://danfleser.github.io/blog/posts/20220204025140-mentoring-10-ways-developers-make-money-coding-course-e09"/>
+        <link href="https://danfleser.com/posts/20220204025140-mentoring-10-ways-developers-make-money-coding-course-e09"/>
         <updated>2022-02-04T02:51:40.190Z</updated>
         <content type="html"><![CDATA[
 Have sharp skills in web development? A good way to make money is to educate others on how to build websites.
@@ -434,7 +445,7 @@ Other parts:
     <entry>
         <title type="html"><![CDATA[Working As A Professional Developer 10 Ways Developers Make Money Coding Course E08]]></title>
         <id>20220204025040-working-as-a-professional-developer-10-ways-developers-make-money-coding-course-e08</id>
-        <link href="https://danfleser.github.io/blog/posts/20220204025040-working-as-a-professional-developer-10-ways-developers-make-money-coding-course-e08"/>
+        <link href="https://danfleser.com/posts/20220204025040-working-as-a-professional-developer-10-ways-developers-make-money-coding-course-e08"/>
         <updated>2022-02-04T02:50:40.390Z</updated>
         <content type="html"><![CDATA[
 Many companies hire people remotely to create websites and applications for them. If your skill is good, then you can earn up to $500K/year by working full-time in these companies. Traveling and working remotely part-time is another way of living.
@@ -601,7 +612,7 @@ Other parts:
     <entry>
         <title type="html"><![CDATA[Freelancing 10 Ways Developers Make Money Coding Course E07]]></title>
         <id>20220204024943-freelancing-10-ways-developers-make-money-coding-course-e07</id>
-        <link href="https://danfleser.github.io/blog/posts/20220204024943-freelancing-10-ways-developers-make-money-coding-course-e07"/>
+        <link href="https://danfleser.com/posts/20220204024943-freelancing-10-ways-developers-make-money-coding-course-e07"/>
         <updated>2022-02-04T02:49:43.321Z</updated>
         <content type="html"><![CDATA[
 You can work for different types of clients from different countries while working from home.
@@ -772,7 +783,7 @@ Other parts:
     <entry>
         <title type="html"><![CDATA[Why&How To Blog 10 Ways Developers Make Money Coding Course E06]]></title>
         <id>20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06</id>
-        <link href="https://danfleser.github.io/blog/posts/20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06"/>
+        <link href="https://danfleser.com/posts/20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06"/>
         <updated>2022-02-04T02:48:14.289Z</updated>
         <content type="html"><![CDATA[
 Web Developers can make a passive income just by writing blog posts. You don't need to be an expert content writer. Just share your thoughts with other developers.
@@ -947,7 +958,7 @@ Other parts:
     <entry>
         <title type="html"><![CDATA[Software-as-a-service 10 Ways Developers Make Money from Home E05]]></title>
         <id>20220204024621-software-as-a-service-10-ways-developers-make-money-from-home-e05</id>
-        <link href="https://danfleser.github.io/blog/posts/20220204024621-software-as-a-service-10-ways-developers-make-money-from-home-e05"/>
+        <link href="https://danfleser.com/posts/20220204024621-software-as-a-service-10-ways-developers-make-money-from-home-e05"/>
         <updated>2022-02-04T02:46:21.561Z</updated>
         <content type="html"><![CDATA[
 Make money by charging users for using your web application.
@@ -1122,7 +1133,7 @@ Other parts:
     <entry>
         <title type="html"><![CDATA[Digital Products 10 Ways Developers Make Money Working from Home E04]]></title>
         <id>20220204024527-digital-products-10-ways-developers-make-money-working-from-home-e04</id>
-        <link href="https://danfleser.github.io/blog/posts/20220204024527-digital-products-10-ways-developers-make-money-working-from-home-e04"/>
+        <link href="https://danfleser.com/posts/20220204024527-digital-products-10-ways-developers-make-money-working-from-home-e04"/>
         <updated>2022-02-04T02:45:27.070Z</updated>
         <content type="html"><![CDATA[
 No matter what you build, there is a market for it online.
@@ -1291,7 +1302,7 @@ Other parts:
     <entry>
         <title type="html"><![CDATA[Online Courses 10 Ways Developers Make Money Working from Home E03]]></title>
         <id>20220204024416-online-courses-10-ways-developers-make-money-working-from-home-e03</id>
-        <link href="https://danfleser.github.io/blog/posts/20220204024416-online-courses-10-ways-developers-make-money-working-from-home-e03"/>
+        <link href="https://danfleser.com/posts/20220204024416-online-courses-10-ways-developers-make-money-working-from-home-e03"/>
         <updated>2022-02-04T02:44:16.880Z</updated>
         <content type="html"><![CDATA[
 Online education has become one of the most popular ways to teach and learn online. With a simple online course, you can build your reputation as an expert, increase your income, attract clients, boost your creativity and grow your community.
@@ -1460,7 +1471,7 @@ Other parts:
     <entry>
         <title type="html"><![CDATA[Live Coding Streaming 10 Ways Developers Make Money Working from Home E02]]></title>
         <id>20220204024041-live-coding-streaming-10-ways-developers-make-money-working-from-home-e02</id>
-        <link href="https://danfleser.github.io/blog/posts/20220204024041-live-coding-streaming-10-ways-developers-make-money-working-from-home-e02"/>
+        <link href="https://danfleser.com/posts/20220204024041-live-coding-streaming-10-ways-developers-make-money-working-from-home-e02"/>
         <updated>2022-02-04T02:40:41.555Z</updated>
         <content type="html"><![CDATA[
 Live web development is a new and emerging source of income for web developers with the right skills.
@@ -1633,7 +1644,7 @@ Other parts:
     <entry>
         <title type="html"><![CDATA[Running A Youtube Channel - 10 Ways Developers Make Money Working from Home - E01]]></title>
         <id>20220204003211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01</id>
-        <link href="https://danfleser.github.io/blog/posts/20220204003211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01"/>
+        <link href="https://danfleser.com/posts/20220204003211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01"/>
         <updated>2022-02-04T00:32:11.959Z</updated>
         <content type="html"><![CDATA[
 YouTube is a great platform where you can make money by making videos on different topics or about things that you know or are passionate about.
@@ -1807,7 +1818,7 @@ Other parts:
     <entry>
         <title type="html"><![CDATA[MEAN/MERN/MEVN vs LAMP vs Serverless]]></title>
         <id>20220203002942-mean-mern-mevn-vs-lamp-vs-serverless</id>
-        <link href="https://danfleser.github.io/blog/posts/20220203002942-mean-mern-mevn-vs-lamp-vs-serverless"/>
+        <link href="https://danfleser.com/posts/20220203002942-mean-mern-mevn-vs-lamp-vs-serverless"/>
         <updated>2022-02-03T00:29:42.241Z</updated>
         <content type="html"><![CDATA[
 ## Which tech stack to use

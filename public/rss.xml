@@ -2,16 +2,27 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Dev vlog</title>
-        <link>https://danfleser.github.io/blog/</link>
+        <link>https://danfleser.com/</link>
         <description>undefined</description>
-        <lastBuildDate>Wed, 09 Feb 2022 20:54:26 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 10 Feb 2022 15:56:16 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <copyright>Copyright © 2022 Dan Fleser</copyright>
         <item>
+            <title><![CDATA[Top 3 Hardest FAANG Interviews Coding Questions]]></title>
+            <link>https://danfleser.com/posts/20220209205657-top-3-hardest-faang-interviews-coding-questions</link>
+            <guid>20220209205657-top-3-hardest-faang-interviews-coding-questions</guid>
+            <pubDate>Wed, 09 Feb 2022 20:56:57 GMT</pubDate>
+            <content:encoded><![CDATA[
+- How to design a garbage collector
+- The dining philosophers problem (multi-threading)
+- How to implement an LRU cache
+]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[19 lessons I wish I'd known earlier in my software engineering career]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220208213007-19-lessons-i-wish-id-known-earlier-in-my-software-engineering-career</link>
+            <link>https://danfleser.com/posts/20220208213007-19-lessons-i-wish-id-known-earlier-in-my-software-engineering-career</link>
             <guid>20220208213007-19-lessons-i-wish-id-known-earlier-in-my-software-engineering-career</guid>
             <pubDate>Tue, 08 Feb 2022 21:30:07 GMT</pubDate>
             <content:encoded><![CDATA[
@@ -57,7 +68,7 @@ Write blog posts. Many people who are starting their journey today, are definite
 
 ### 11. Earn while you learn
 
-More here - [Make money blogging while learning new things](https://danfleser.github.io/blog/posts/20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06/)
+More here - [Make money blogging while learning new things](https://danfleser.com/posts/20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06/)
 
 ### 12. Define small goals
 
@@ -94,7 +105,7 @@ If you have a solid foundation, the rest is easy to crack.
         </item>
         <item>
             <title><![CDATA[Contributing To Open Source 10 Ways Developers Make Money Coding Course E10]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204025234-contributing-to-open-source-10-ways-developers-make-money-coding-course-e10</link>
+            <link>https://danfleser.com/posts/20220204025234-contributing-to-open-source-10-ways-developers-make-money-coding-course-e10</link>
             <guid>20220204025234-contributing-to-open-source-10-ways-developers-make-money-coding-course-e10</guid>
             <pubDate>Fri, 04 Feb 2022 02:52:34 GMT</pubDate>
             <content:encoded><![CDATA[
@@ -265,7 +276,7 @@ Other parts:
         </item>
         <item>
             <title><![CDATA[Mentoring 10 Ways Developers Make Money Coding Course E09]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204025140-mentoring-10-ways-developers-make-money-coding-course-e09</link>
+            <link>https://danfleser.com/posts/20220204025140-mentoring-10-ways-developers-make-money-coding-course-e09</link>
             <guid>20220204025140-mentoring-10-ways-developers-make-money-coding-course-e09</guid>
             <pubDate>Fri, 04 Feb 2022 02:51:40 GMT</pubDate>
             <content:encoded><![CDATA[
@@ -432,7 +443,7 @@ Other parts:
         </item>
         <item>
             <title><![CDATA[Working As A Professional Developer 10 Ways Developers Make Money Coding Course E08]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204025040-working-as-a-professional-developer-10-ways-developers-make-money-coding-course-e08</link>
+            <link>https://danfleser.com/posts/20220204025040-working-as-a-professional-developer-10-ways-developers-make-money-coding-course-e08</link>
             <guid>20220204025040-working-as-a-professional-developer-10-ways-developers-make-money-coding-course-e08</guid>
             <pubDate>Fri, 04 Feb 2022 02:50:40 GMT</pubDate>
             <content:encoded><![CDATA[
@@ -599,7 +610,7 @@ Other parts:
         </item>
         <item>
             <title><![CDATA[Freelancing 10 Ways Developers Make Money Coding Course E07]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204024943-freelancing-10-ways-developers-make-money-coding-course-e07</link>
+            <link>https://danfleser.com/posts/20220204024943-freelancing-10-ways-developers-make-money-coding-course-e07</link>
             <guid>20220204024943-freelancing-10-ways-developers-make-money-coding-course-e07</guid>
             <pubDate>Fri, 04 Feb 2022 02:49:43 GMT</pubDate>
             <content:encoded><![CDATA[
@@ -770,7 +781,7 @@ Other parts:
         </item>
         <item>
             <title><![CDATA[Why&How To Blog 10 Ways Developers Make Money Coding Course E06]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06</link>
+            <link>https://danfleser.com/posts/20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06</link>
             <guid>20220204024814-why-how-to-blog-10-ways-developers-make-money-coding-course-e06</guid>
             <pubDate>Fri, 04 Feb 2022 02:48:14 GMT</pubDate>
             <content:encoded><![CDATA[
@@ -945,7 +956,7 @@ Other parts:
         </item>
         <item>
             <title><![CDATA[Software-as-a-service 10 Ways Developers Make Money from Home E05]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204024621-software-as-a-service-10-ways-developers-make-money-from-home-e05</link>
+            <link>https://danfleser.com/posts/20220204024621-software-as-a-service-10-ways-developers-make-money-from-home-e05</link>
             <guid>20220204024621-software-as-a-service-10-ways-developers-make-money-from-home-e05</guid>
             <pubDate>Fri, 04 Feb 2022 02:46:21 GMT</pubDate>
             <content:encoded><![CDATA[
@@ -1120,7 +1131,7 @@ Other parts:
         </item>
         <item>
             <title><![CDATA[Digital Products 10 Ways Developers Make Money Working from Home E04]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204024527-digital-products-10-ways-developers-make-money-working-from-home-e04</link>
+            <link>https://danfleser.com/posts/20220204024527-digital-products-10-ways-developers-make-money-working-from-home-e04</link>
             <guid>20220204024527-digital-products-10-ways-developers-make-money-working-from-home-e04</guid>
             <pubDate>Fri, 04 Feb 2022 02:45:27 GMT</pubDate>
             <content:encoded><![CDATA[
@@ -1289,7 +1300,7 @@ Other parts:
         </item>
         <item>
             <title><![CDATA[Online Courses 10 Ways Developers Make Money Working from Home E03]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204024416-online-courses-10-ways-developers-make-money-working-from-home-e03</link>
+            <link>https://danfleser.com/posts/20220204024416-online-courses-10-ways-developers-make-money-working-from-home-e03</link>
             <guid>20220204024416-online-courses-10-ways-developers-make-money-working-from-home-e03</guid>
             <pubDate>Fri, 04 Feb 2022 02:44:16 GMT</pubDate>
             <content:encoded><![CDATA[
@@ -1458,7 +1469,7 @@ Other parts:
         </item>
         <item>
             <title><![CDATA[Live Coding Streaming 10 Ways Developers Make Money Working from Home E02]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204024041-live-coding-streaming-10-ways-developers-make-money-working-from-home-e02</link>
+            <link>https://danfleser.com/posts/20220204024041-live-coding-streaming-10-ways-developers-make-money-working-from-home-e02</link>
             <guid>20220204024041-live-coding-streaming-10-ways-developers-make-money-working-from-home-e02</guid>
             <pubDate>Fri, 04 Feb 2022 02:40:41 GMT</pubDate>
             <content:encoded><![CDATA[
@@ -1631,7 +1642,7 @@ Other parts:
         </item>
         <item>
             <title><![CDATA[Running A Youtube Channel - 10 Ways Developers Make Money Working from Home - E01]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220204003211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01</link>
+            <link>https://danfleser.com/posts/20220204003211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01</link>
             <guid>20220204003211-running-a-youtube-channel---10-ways-developers-make-money-working-from-home---e01</guid>
             <pubDate>Fri, 04 Feb 2022 00:32:11 GMT</pubDate>
             <content:encoded><![CDATA[
@@ -1805,7 +1816,7 @@ Other parts:
         </item>
         <item>
             <title><![CDATA[MEAN/MERN/MEVN vs LAMP vs Serverless]]></title>
-            <link>https://danfleser.github.io/blog/posts/20220203002942-mean-mern-mevn-vs-lamp-vs-serverless</link>
+            <link>https://danfleser.com/posts/20220203002942-mean-mern-mevn-vs-lamp-vs-serverless</link>
             <guid>20220203002942-mean-mern-mevn-vs-lamp-vs-serverless</guid>
             <pubDate>Thu, 03 Feb 2022 00:29:42 GMT</pubDate>
             <content:encoded><![CDATA[

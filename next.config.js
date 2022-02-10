@@ -3,9 +3,21 @@ const optimizedImages = require("next-optimized-images");
 const withPlugins = require("next-compose-plugins");
 const withMDX = require("@next/mdx")();
 
-const repoName = "blog";
 const isDev = process.env.NODE_ENV !== "production";
 module.exports = withPlugins([
+  // [
+  //   {
+  //     webpack(config) {
+  //       config.module.rules.push({
+  //         test: /\.mp3$/,
+  //         use: {
+  //           loader: "file-loader",
+  //         },
+  //       });
+  //       return config;
+  //     },
+  //   },
+  // ],
   [
     withMDX,
     {
@@ -20,7 +32,7 @@ module.exports = withPlugins([
   [
     optimizedImages,
     {
-      assetPrefix: isDev ? "" : `/${repoName}/`,
+      assetPrefix: isDev ? "" : `/`,
       handleImages: ["jpeg", "jpg", "png", "svg"],
     },
   ],
@@ -36,7 +48,6 @@ module.exports = withPlugins([
       path: "",
     },
     trailingSlash: true,
-    basePath: isDev ? "" : `/${repoName}`,
-    assetPrefix: isDev ? "" : `/${repoName}/`,
+    assetPrefix: isDev ? "" : `/`,
   },
 ]);
