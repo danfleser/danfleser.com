@@ -1,0 +1,102 @@
+---
+title: "Best Practices for REST APIs Architecture"
+date: "2022-02-12T06:23:58.163Z"
+tags: "backend"
+cover_image: "20220212062358-api-architecture.png"
+---
+
+# 1\. Learn the basics of [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+
+- HTTP has **verbs** (actions or methods): GET, POST, PUT, PATCH and DELETE are most common.
+- REST is **resource-oriented** and a resource is represented by an **URI**: `/library/`
+- An **endpoint** is the combination of a verb and an URI, example: `GET: /books/`
+- An endpoint can be interpreted as an _action performed on a resource_**_._** Example: `POST: /books/` may mean "Create a new book".
+- At a high-level, **verbs map to CRUD operations**: `GET` means `Read`, `POST` means `Create`, `PUT` and `PATCH` mean `Update`, and `DELETE` means `Delete`
+- A response’s status is specified by its **status code**: `1xx` for **information**, `2xx` for **success**, `3xx` for **redirection**, `4xx` for **client errors** and `5xx` for **server errors**
+
+# 2\. Do not return plain text
+
+Most REST APIs by convention use JSON as the data format.
+
+You should still **specify the** `**Content-Type: application/json**` **header.**
+
+# 3\. Do not use verbs in URIs
+
+\# Don’t do this
+GET: /books/:slug/getBook/
+\# Do this
+GET: /books/:slug
+
+\# Don’t do this
+POST: /books/createNewBook/
+\# Do this
+POST: /books/
+
+This is because the **HTTP verbs should be sufficient to accurately describe the action being performed on the resource**.
+
+# 4\. Use plural nouns for resources
+
+**My personal advice is to _use the plural form_.**
+
+GET: /books/2/
+POST: /books/
+...
+
+# 5\. Return the error details in the response body
+
+When an API server handles an error, it is convenient (\*and recommended\*) to return **error details** within the JSON body to **help consumers with debugging**. Even better if you include which fields were affected by the error!
+
+{
+"error": "Invalid payload.",
+"detail": {
+"name": "This field is required."
+}
+}
+
+# 6\. Pay special attention to HTTP status codes
+
+> _The worst thing your API could do is_ return an error response _with a_ `_200 OK_` _status code._
+
+**Make use of the HTTP status code, and use the response body to provide error details**.
+
+HTTP/1.1 400 Bad Request
+Content-Type: application/json{
+"error": "Expected at least three items in the list."
+}
+
+# 7\. You should use HTTP status codes consistently
+
+GET: 200 OK
+PUT: 200 OK
+POST: 201 Created
+PATCH: 200 OK
+DELETE: 204 No Content
+
+
+# 8\. Make use of the querystring for filtering and pagination
+
+Your consumers may want to retrieve items that fulfill a specific condition, or retrieve them in small amounts at a time to improve performance.
+
+With **filtering**, consumers can specify parameters (or properties) that the returned items should have.
+
+**Pagination** allows consumers to retrieve _fractions of the set of data_. The simplest kind of pagination is **page number pagination**, which is determined by a `page` and a `page_size`.
+
+GET: /books?page=1&page_size=10
+
+\# Don’t do this
+GET: /books/published/
+\# Do this
+GET: /books?published=true&page=2&page_size=10
+
+# 9\. Do not nest resources
+
+My personal recommendation is to **use query string parameters** to filter the `books` resource directly:
+
+GET: /books?author=Dan
+
+And this clearly means: “Get all books for author name Dan”
+
+# 10\. Know the difference between `401 Unauthorized` and `403 Forbidden`
+
+- Has the consumer not provided authentication credentials? Was their SSO Token invalid/timed out? 👉 `401 Unauthorized`.
+- Was the consumer _correctly authenticated_, but they _don’t have the required permissions/proper clearance_ to access the resource? 👉 `403 Forbidden`.

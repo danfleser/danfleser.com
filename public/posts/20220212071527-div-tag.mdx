@@ -1,0 +1,178 @@
+---
+title: "7 Alternatives to the <div> HTML Tag"
+date: "2022-02-12T07:15:27.508Z"
+tags: "html"
+cover_image: "20220212071527-div-tag.png"
+---
+
+Does your HTML markup look like this 👆?
+
+So you've made a delicious [div soup](https://www.pluralsight.com/blog/software-development/html5-web-components-overview)?, no problem. I'm here to help.
+
+Writing [Semantic HTML](https://www.lifewire.com/why-use-semantic-html-3468271) gives your markup meaning to web browsers and screen readers and helps with SEO which brings your website on top of search engine results.
+
+> “The `div` element has no special meaning at all…Authors are strongly encouraged to view the `div` element as an element of last resort, for when no other element is suitable. Use of more appropriate elements instead of the `div` element leads to better accessibility for readers and easier maintainability for authors.”
+
+# The `Main` Element
+
+The `[main](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)` element indicates to browsers and screen readers which portion of your markup contains the main section of content on a given page. This can help with keyboard command access, zooming on mobile browsers, and more. It should be used only once per page.
+
+```html
+<main>
+  <h1>Most Popular Browsers</h1>
+  <p>Chrome, Firefox, and Edge are the most used browsers today.</p>
+
+  <article>
+    <h2>Google Chrome</h2>
+    <p>
+      Google Chrome is a web browser developed by Google, released in 2008.
+      Chrome is the world's most popular web browser today!
+    </p>
+  </article>
+
+  <article>
+    <h2>Mozilla Firefox</h2>
+    <p>
+      Mozilla Firefox is an open-source web browser developed by Mozilla.
+      Firefox has been the second most popular web browser since January, 2018.
+    </p>
+  </article>
+
+  <article>
+    <h2>Microsoft Edge</h2>
+    <p>
+      Microsoft Edge is a web browser developed by Microsoft, released in 2015.
+      Microsoft Edge replaced Internet Explorer.
+    </p>
+  </article>
+</main>
+```
+
+# The `Section` Element
+
+The `[section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)` element is used to group content by theme and represents a section of a document or application. Sections can have their own `header` and `footer` elements, and there can be multiple `section` elements used on a single page.
+
+```html
+<section>
+  <h2>WWF History</h2>
+  <p>
+    The World Wide Fund for Nature (WWF) is an international organization
+    working on issues regarding the conservation, research and restoration of
+    the environment, formerly named the World Wildlife Fund. WWF was founded in
+    1961.
+  </p>
+</section>
+
+<section>
+  <h2>WWF's Symbol</h2>
+  <p>
+    The Panda has become the symbol of WWF. The well-known panda logo of WWF
+    originated from a panda named Chi Chi that was transferred from the Beijing
+    Zoo to the London Zoo in the same year of the establishment of WWF.
+  </p>
+</section>
+```
+
+# The `Aside` Element
+
+`[aside](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside)` elements are mainly used to represent part of a page containing related content to a given section. Asides are typically used as sidebars.
+
+```html
+<p>
+  My family and I visited The Epcot center this summer. The weather was nice,
+  and Epcot was amazing! I had a great summer together with my family!
+</p>
+
+<aside>
+  <h4>Epcot Center</h4>
+  <p>
+    Epcot is a theme park at Walt Disney World Resort featuring exciting
+    attractions, international pavilions, award-winning fireworks and seasonal
+    special events.
+  </p>
+</aside>
+```
+
+# The `Article` Element
+
+The `[article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)` element can be used for portions of content that could stand on their own. Blog posts, newspaper articles, and user comments are some possible use cases the the `article` element.
+
+```html
+<article>
+  <h2>Google Chrome</h2>
+  <p>
+    Google Chrome is a web browser developed by Google, released in 2008. Chrome
+    is the world's most popular web browser today!
+  </p>
+</article>
+
+<article>
+  <h2>Mozilla Firefox</h2>
+  <p>
+    Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox
+    has been the second most popular web browser since January, 2018.
+  </p>
+</article>
+
+<article>
+  <h2>Microsoft Edge</h2>
+  <p>
+    Microsoft Edge is a web browser developed by Microsoft, released in 2015.
+    Microsoft Edge replaced Internet Explorer.
+  </p>
+</article>
+```
+
+# The `Blockquote` Element
+
+The `[blockquote](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)` element represents content that is being quoted from an external source (a person, document, newspaper, case study, etc.). It is often accompanied by the `cite` element to attribute the quote to its source.
+
+```html
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+  For 50 years, WWF has been protecting the future of nature. The world's
+  leading conservation organization, WWF works in 100 countries and is supported
+  by 1.2 million members in the United States and close to 5 million globally.
+</blockquote>
+```
+
+# The `Nav` Element
+
+As the name implies, `[nav](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)` elements represent the navigation section of a document. The `nav` element should include the primary navigation links for a give page, application, etc.
+
+```html
+<nav>
+  <a href="/html/">HTML</a> | <a href="/css/">CSS</a> |
+  <a href="/js/">JavaScript</a> |
+  <a href="/python/">Python</a>
+</nav>
+```
+
+# The `Header` Element
+
+The `[header](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)` element represents the “header” section of a document or section. In many websites, the `header` element will contain introductory content but also a logo, a search form, an author name.
+
+```html
+<header>
+  <h1>A heading here</h1>
+  <p>Posted by John Doe</p>
+  <p>Some additional information here</p>
+</header>
+```
+
+# The `Footer` Element
+
+The `[footer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)` element represents the “footer” section of a document or section. In many websites, the `footer` element will contain contact and copyright information, a brief “about” blurb, social media logos and links, etc.
+
+```html
+<header>
+  <p>Author: Hege Refsnes</p>
+  <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+</header>
+```
+
+Now that we know about some semantically optimized alternatives to the `div` element, how do we know when to use each of them? And when (if ever) is it ok to still use `div` elements in our markup? [HTML5 Doctor](http://html5doctor.com) has a really handy flowchart to help answer that question:
+
+<img
+  src="/images/20220212071527-div-tag-diagram.png"
+  alt="Adding console logs to render expressions"
+/>

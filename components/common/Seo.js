@@ -32,14 +32,6 @@ export default function Seo({ title, description = "" }) {
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
       <script
-        id="mcjs"
-        dangerouslySetInnerHTML={{
-          __html: `
-        !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/813e252a035658eacc1a786e9/a60c25b80ea6e38a2eecacd86.js");
-        `,
-        }}
-      />
-      <script
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];

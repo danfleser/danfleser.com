@@ -1,0 +1,94 @@
+---
+title: "5 CSS Practices To Avoid as a Web Developer"
+date: "2022-02-12T09:23:33.110Z"
+tags: "css"
+cover_image: "20220212092333-avoid-css-practices.png"
+---
+
+# 1\. Using the Same Rule Repetitively
+
+A lot of beginners use repetitive rules for each element. If you want to create a rule for multiple elements, use a class attribute instead.
+
+Do not do this:
+
+```css
+#intro1 {
+  color: #3498db;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+header {
+  color: #3498db;
+  font-size: 20px;
+  background-color: green;
+}
+
+#banner {
+  color: #3498db;
+  font-size: 30px;
+  background-image: url(images/static.jpg);
+}
+```
+
+You can use:
+
+```css
+.blue {
+  color: #3498db;
+}
+```
+
+# 2\. Shoving everything into one CSS file
+
+Having a 3500 line CSS file is NOT the way to go. Even if you minify at a later date. You should start separating them into the 'views' or 'components' when you are working on a bigger project.
+
+# 3\. Naming your CSS selectors unnecessarily descriptive
+
+'.sqaured-yellow-border-card' when '.card' will be suffice
+
+# 4\. !important this, !important that, !important !important
+
+People who know how to write CSS never use these.
+
+# 5\. Set Margins or Padding and Then Reset Them
+
+I often see people set margins or padding for all elements and then reset them for the first or last element. I don’t know why they use two rules when you can get by with one. It’s much easier to set margins and padding for all the required elements at once.
+
+Use one of the following for simpler and more concise CSS: `nth-child`/`nth-of-type` selectors, the `:not()` pseudo-class, or the adjacent sibling combinator better known as `+`.
+
+Do not do this:
+
+```css
+.item {
+  margin-right: 1.6rem;
+}
+
+.item:last-child {
+  margin-right: 0;
+}
+```
+
+You can use:
+
+```css
+.item:not(:last-child) {
+  margin-right: 1.6rem;
+}
+```
+
+Or
+
+```css
+.item:nth-child(n + 2) {
+  margin-left: 1.6rem;
+}
+```
+
+Or
+
+```css
+.item + .item {
+  margin-left: 1.6rem;
+}
+```

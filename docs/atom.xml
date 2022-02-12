@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://danfleser.com/</id>
     <title>Dev vlog</title>
-    <updated>2022-02-10T23:47:43.598Z</updated>
+    <updated>2022-02-12T10:47:13.962Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Dan Fleser</name>
@@ -10,6 +10,559 @@
     </author>
     <link rel="alternate" href="https://danfleser.com/"/>
     <rights>Copyright © 2022 Dan Fleser</rights>
+    <entry>
+        <title type="html"><![CDATA[7 Tricks To Master the Art of Googling]]></title>
+        <id>20220212095550-master-the-art-of-googling</id>
+        <link href="https://danfleser.com/posts/20220212095550-master-the-art-of-googling"/>
+        <updated>2022-02-12T09:55:50.012Z</updated>
+        <content type="html"><![CDATA[
+# 1\. Use Quotes To Match Exact Phrases
+
+<img src="/images/20220212095550-query.png" alt="Searching for exact phrases" />
+
+# 2\. Use keyword1 AND/OR keyword2
+
+<img
+  src="/images/20220212095550-and.png"
+  alt="Searching with the AND operator"
+/>
+
+<img src="/images/20220212095550-or.png" alt="Searching with the OR operator" />
+
+# 3\. Exclude Certain Terms Using the Minus Sign
+
+<img
+  src="/images/20220212095550-minus.png"
+  alt="Search excluding words to reduce the context to your query"
+/>
+
+# 4\. Use Wild Cards in Your Search Term
+
+When you use an asterisk (\*) in the search terms, this acts as a placeholder that Google automatically fills before delivering the results.
+
+<img
+  src="/images/20220212095550-wild-card.png"
+  alt="Searching using wild cards"
+/>
+
+# 5\. Find Websites Similar to Another Website
+
+<img
+  src="/images/20220212095550-related.png"
+  alt="Searching for related sites"
+/>
+
+# 6\. Search a Website Using Google
+
+Did you know that you can search inside a website using Google? With this feature, you can find articles, blog posts, and pages published on a particular site — especially when it doesn’t have a built-in search feature available.
+
+<img
+  src="/images/20220212095550-search-website.png"
+  alt="Searching within a site"
+/>
+
+# 7\. Gradually Increase the Words in Your Search Term
+
+Google recommends that you start a search with only the basic search terms. For example, if you are trying to find courses for learning Javascript, start with the most basic phrase and gradually increase the number of words in your search term until you find what you are looking for:
+
+- JavaScript courses
+- JavaScript courses for beginners
+- JavaScript courses for beginners Youtube
+
+Following this searching strategy has a few benefits. Using a broader search term first gives you the chance to see the big picture of the topic and the different avenues available to take. It also ensures that you don’t miss any important information by going straight to a refined, focused search term. As you add more words to the search term, you get to see results that are more targeted to your specific needs.
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[5 CSS Practices To Avoid as a Web Developer]]></title>
+        <id>20220212092333-avoid-css-practices</id>
+        <link href="https://danfleser.com/posts/20220212092333-avoid-css-practices"/>
+        <updated>2022-02-12T09:23:33.110Z</updated>
+        <content type="html"><![CDATA[
+# 1\. Using the Same Rule Repetitively
+
+A lot of beginners use repetitive rules for each element. If you want to create a rule for multiple elements, use a class attribute instead.
+
+Do not do this:
+
+```css
+#intro1 {
+  color: #3498db;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+header {
+  color: #3498db;
+  font-size: 20px;
+  background-color: green;
+}
+
+#banner {
+  color: #3498db;
+  font-size: 30px;
+  background-image: url(images/static.jpg);
+}
+```
+
+You can use:
+
+```css
+.blue {
+  color: #3498db;
+}
+```
+
+# 2\. Shoving everything into one CSS file
+
+Having a 3500 line CSS file is NOT the way to go. Even if you minify at a later date. You should start separating them into the 'views' or 'components' when you are working on a bigger project.
+
+# 3\. Naming your CSS selectors unnecessarily descriptive
+
+'.sqaured-yellow-border-card' when '.card' will be suffice
+
+# 4\. !important this, !important that, !important !important
+
+People who know how to write CSS never use these.
+
+# 5\. Set Margins or Padding and Then Reset Them
+
+I often see people set margins or padding for all elements and then reset them for the first or last element. I don’t know why they use two rules when you can get by with one. It’s much easier to set margins and padding for all the required elements at once.
+
+Use one of the following for simpler and more concise CSS: `nth-child`/`nth-of-type` selectors, the `:not()` pseudo-class, or the adjacent sibling combinator better known as `+`.
+
+Do not do this:
+
+```css
+.item {
+  margin-right: 1.6rem;
+}
+
+.item:last-child {
+  margin-right: 0;
+}
+```
+
+You can use:
+
+```css
+.item:not(:last-child) {
+  margin-right: 1.6rem;
+}
+```
+
+Or
+
+```css
+.item:nth-child(n + 2) {
+  margin-left: 1.6rem;
+}
+```
+
+Or
+
+```css
+.item + .item {
+  margin-left: 1.6rem;
+}
+```
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[7 Alternatives to the <div> HTML Tag]]></title>
+        <id>20220212071527-div-tag</id>
+        <link href="https://danfleser.com/posts/20220212071527-div-tag"/>
+        <updated>2022-02-12T07:15:27.508Z</updated>
+        <content type="html"><![CDATA[
+Does your HTML markup look like this 👆?
+
+So you've made a delicious [div soup](https://www.pluralsight.com/blog/software-development/html5-web-components-overview)?, no problem. I'm here to help.
+
+Writing [Semantic HTML](https://www.lifewire.com/why-use-semantic-html-3468271) gives your markup meaning to web browsers and screen readers and helps with SEO which brings your website on top of search engine results.
+
+> “The `div` element has no special meaning at all…Authors are strongly encouraged to view the `div` element as an element of last resort, for when no other element is suitable. Use of more appropriate elements instead of the `div` element leads to better accessibility for readers and easier maintainability for authors.”
+
+# The `Main` Element
+
+The `[main](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)` element indicates to browsers and screen readers which portion of your markup contains the main section of content on a given page. This can help with keyboard command access, zooming on mobile browsers, and more. It should be used only once per page.
+
+```html
+<main>
+  <h1>Most Popular Browsers</h1>
+  <p>Chrome, Firefox, and Edge are the most used browsers today.</p>
+
+  <article>
+    <h2>Google Chrome</h2>
+    <p>
+      Google Chrome is a web browser developed by Google, released in 2008.
+      Chrome is the world's most popular web browser today!
+    </p>
+  </article>
+
+  <article>
+    <h2>Mozilla Firefox</h2>
+    <p>
+      Mozilla Firefox is an open-source web browser developed by Mozilla.
+      Firefox has been the second most popular web browser since January, 2018.
+    </p>
+  </article>
+
+  <article>
+    <h2>Microsoft Edge</h2>
+    <p>
+      Microsoft Edge is a web browser developed by Microsoft, released in 2015.
+      Microsoft Edge replaced Internet Explorer.
+    </p>
+  </article>
+</main>
+```
+
+# The `Section` Element
+
+The `[section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)` element is used to group content by theme and represents a section of a document or application. Sections can have their own `header` and `footer` elements, and there can be multiple `section` elements used on a single page.
+
+```html
+<section>
+  <h2>WWF History</h2>
+  <p>
+    The World Wide Fund for Nature (WWF) is an international organization
+    working on issues regarding the conservation, research and restoration of
+    the environment, formerly named the World Wildlife Fund. WWF was founded in
+    1961.
+  </p>
+</section>
+
+<section>
+  <h2>WWF's Symbol</h2>
+  <p>
+    The Panda has become the symbol of WWF. The well-known panda logo of WWF
+    originated from a panda named Chi Chi that was transferred from the Beijing
+    Zoo to the London Zoo in the same year of the establishment of WWF.
+  </p>
+</section>
+```
+
+# The `Aside` Element
+
+`[aside](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside)` elements are mainly used to represent part of a page containing related content to a given section. Asides are typically used as sidebars.
+
+```html
+<p>
+  My family and I visited The Epcot center this summer. The weather was nice,
+  and Epcot was amazing! I had a great summer together with my family!
+</p>
+
+<aside>
+  <h4>Epcot Center</h4>
+  <p>
+    Epcot is a theme park at Walt Disney World Resort featuring exciting
+    attractions, international pavilions, award-winning fireworks and seasonal
+    special events.
+  </p>
+</aside>
+```
+
+# The `Article` Element
+
+The `[article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)` element can be used for portions of content that could stand on their own. Blog posts, newspaper articles, and user comments are some possible use cases the the `article` element.
+
+```html
+<article>
+  <h2>Google Chrome</h2>
+  <p>
+    Google Chrome is a web browser developed by Google, released in 2008. Chrome
+    is the world's most popular web browser today!
+  </p>
+</article>
+
+<article>
+  <h2>Mozilla Firefox</h2>
+  <p>
+    Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox
+    has been the second most popular web browser since January, 2018.
+  </p>
+</article>
+
+<article>
+  <h2>Microsoft Edge</h2>
+  <p>
+    Microsoft Edge is a web browser developed by Microsoft, released in 2015.
+    Microsoft Edge replaced Internet Explorer.
+  </p>
+</article>
+```
+
+# The `Blockquote` Element
+
+The `[blockquote](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)` element represents content that is being quoted from an external source (a person, document, newspaper, case study, etc.). It is often accompanied by the `cite` element to attribute the quote to its source.
+
+```html
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+  For 50 years, WWF has been protecting the future of nature. The world's
+  leading conservation organization, WWF works in 100 countries and is supported
+  by 1.2 million members in the United States and close to 5 million globally.
+</blockquote>
+```
+
+# The `Nav` Element
+
+As the name implies, `[nav](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)` elements represent the navigation section of a document. The `nav` element should include the primary navigation links for a give page, application, etc.
+
+```html
+<nav>
+  <a href="/html/">HTML</a> | <a href="/css/">CSS</a> |
+  <a href="/js/">JavaScript</a> |
+  <a href="/python/">Python</a>
+</nav>
+```
+
+# The `Header` Element
+
+The `[header](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)` element represents the “header” section of a document or section. In many websites, the `header` element will contain introductory content but also a logo, a search form, an author name.
+
+```html
+<header>
+  <h1>A heading here</h1>
+  <p>Posted by John Doe</p>
+  <p>Some additional information here</p>
+</header>
+```
+
+# The `Footer` Element
+
+The `[footer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)` element represents the “footer” section of a document or section. In many websites, the `footer` element will contain contact and copyright information, a brief “about” blurb, social media logos and links, etc.
+
+```html
+<header>
+  <p>Author: Hege Refsnes</p>
+  <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+</header>
+```
+
+Now that we know about some semantically optimized alternatives to the `div` element, how do we know when to use each of them? And when (if ever) is it ok to still use `div` elements in our markup? [HTML5 Doctor](http://html5doctor.com) has a really handy flowchart to help answer that question:
+
+<img
+  src="/images/20220212071527-div-tag-diagram.png"
+  alt="Adding console logs to render expressions"
+/>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Top Websites for Web Developers]]></title>
+        <id>20220212064149-web-dev-websites</id>
+        <link href="https://danfleser.com/posts/20220212064149-web-dev-websites"/>
+        <updated>2022-02-12T06:41:49.580Z</updated>
+        <content type="html"><![CDATA[
+## 1\. Random Image via API
+
+[Link](https://source.unsplash.com)
+
+The most powerful photo engine in the world. The Unsplash API is a modern JSON API that surfaces all of the info you’ll need to build any experience for your users
+
+## 2\. Carbon
+
+[Link](http://carbon.now.sh)
+
+Create and share beautiful images of your source code. Start typing or drop a file into the text area to get started.
+
+## 3\. Peppertype
+
+[Link](https://peppertype.ai)
+
+Generate better content copies in seconds with the power of Artificial Intelligence. Expanding your content for writing blogs is easier than ever before. Get AI-Generated tweet ideas in seconds.
+
+## 4\. Poet. so
+
+[Link](http://poet.so)
+
+Capture and share Twitter posts as beautiful images. You could use this as social proof on your website.
+
+## 5\. Small Dev tools
+
+[Link](https://smalldev.tools)
+
+Handy developer tools with a delightful interface. Provide 20+ tools that help developers with commonly performed tasks like Encoding/Decoding, Minifying, Test Dummy data set, and a lot more.
+
+## 6\. Show beautiful message in the console
+
+[Link](http://npmjs.com/package/figlet)
+
+FIGlet is a program for making large letters out of ordinary text.
+
+## 7\. A Visual Type Scale
+
+[Link](http://type-scale.com)
+
+Understand and visualize the difference between different font sizes, REM vs. EM Values. Check the preview in real-time to see how it looks
+
+## 8\. Remove Background from Image
+
+[Link](https://remove.bg)
+
+Remove backgrounds 100% automatically in 5 seconds with zero clicks.
+
+## 9\. Responsively
+
+[Link](https://responsively.app)
+
+Develop responsive web apps 5x faster!
+
+## 10\. Metatags
+
+[Link](http://metatags.io)
+
+Meta Tags is a tool to debug and generate meta tag codes for any website. Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter, and more!
+
+## 11\. ReadMe
+
+[Link](https://readme.so)
+The easiest way to create a README file in minutes visually
+
+## 12\. unDraw
+
+[Link](https://undraw.co/illustrations)
+
+High-class illustrations for web and mobile projects. Make your project eye-catching with awesome characters. Use it both for commercial and personal purposes.
+
+## 13\. Profile Pic Maker
+
+[Link](https://pfpmaker.com)
+
+Make an awesome profile picture from any photo
+
+## 14\. SigmaOS
+
+[Link](http://sigmaos.com)
+
+Fly through your work. The browser that makes you faster and better at working on the web.
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Best Practices for REST APIs Architecture]]></title>
+        <id>20220212062358-api-architecture</id>
+        <link href="https://danfleser.com/posts/20220212062358-api-architecture"/>
+        <updated>2022-02-12T06:23:58.163Z</updated>
+        <content type="html"><![CDATA[
+# 1\. Learn the basics of [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+
+- HTTP has **verbs** (actions or methods): GET, POST, PUT, PATCH and DELETE are most common.
+- REST is **resource-oriented** and a resource is represented by an **URI**: `/library/`
+- An **endpoint** is the combination of a verb and an URI, example: `GET: /books/`
+- An endpoint can be interpreted as an _action performed on a resource_**_._** Example: `POST: /books/` may mean "Create a new book".
+- At a high-level, **verbs map to CRUD operations**: `GET` means `Read`, `POST` means `Create`, `PUT` and `PATCH` mean `Update`, and `DELETE` means `Delete`
+- A response’s status is specified by its **status code**: `1xx` for **information**, `2xx` for **success**, `3xx` for **redirection**, `4xx` for **client errors** and `5xx` for **server errors**
+
+# 2\. Do not return plain text
+
+Most REST APIs by convention use JSON as the data format.
+
+You should still **specify the** `**Content-Type: application/json**` **header.**
+
+# 3\. Do not use verbs in URIs
+
+\# Don’t do this
+GET: /books/:slug/getBook/
+\# Do this
+GET: /books/:slug
+
+\# Don’t do this
+POST: /books/createNewBook/
+\# Do this
+POST: /books/
+
+This is because the **HTTP verbs should be sufficient to accurately describe the action being performed on the resource**.
+
+# 4\. Use plural nouns for resources
+
+**My personal advice is to _use the plural form_.**
+
+GET: /books/2/
+POST: /books/
+...
+
+# 5\. Return the error details in the response body
+
+When an API server handles an error, it is convenient (\*and recommended\*) to return **error details** within the JSON body to **help consumers with debugging**. Even better if you include which fields were affected by the error!
+
+{
+"error": "Invalid payload.",
+"detail": {
+"name": "This field is required."
+}
+}
+
+# 6\. Pay special attention to HTTP status codes
+
+> _The worst thing your API could do is_ return an error response _with a_ `_200 OK_` _status code._
+
+**Make use of the HTTP status code, and use the response body to provide error details**.
+
+HTTP/1.1 400 Bad Request
+Content-Type: application/json{
+"error": "Expected at least three items in the list."
+}
+
+# 7\. You should use HTTP status codes consistently
+
+GET: 200 OK
+PUT: 200 OK
+POST: 201 Created
+PATCH: 200 OK
+DELETE: 204 No Content
+
+
+# 8\. Make use of the querystring for filtering and pagination
+
+Your consumers may want to retrieve items that fulfill a specific condition, or retrieve them in small amounts at a time to improve performance.
+
+With **filtering**, consumers can specify parameters (or properties) that the returned items should have.
+
+**Pagination** allows consumers to retrieve _fractions of the set of data_. The simplest kind of pagination is **page number pagination**, which is determined by a `page` and a `page_size`.
+
+GET: /books?page=1&page_size=10
+
+\# Don’t do this
+GET: /books/published/
+\# Do this
+GET: /books?published=true&page=2&page_size=10
+
+# 9\. Do not nest resources
+
+My personal recommendation is to **use query string parameters** to filter the `books` resource directly:
+
+GET: /books?author=Dan
+
+And this clearly means: “Get all books for author name Dan”
+
+# 10\. Know the difference between `401 Unauthorized` and `403 Forbidden`
+
+- Has the consumer not provided authentication credentials? Was their SSO Token invalid/timed out? 👉 `401 Unauthorized`.
+- Was the consumer _correctly authenticated_, but they _don’t have the required permissions/proper clearance_ to access the resource? 👉 `403 Forbidden`.
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to Negotiate for a Better Salary]]></title>
+        <id>20220211001015-negotiate-salary</id>
+        <link href="https://danfleser.com/posts/20220211001015-negotiate-salary"/>
+        <updated>2022-02-11T00:10:15.659Z</updated>
+        <content type="html"><![CDATA[
+## When making a big professional change, you may not feel you’re entitled to ask for more money. Do it anyway.
+
+There’s a lot of excellent negotiating advice available. You can find it in dozens of career books or online. Here’s a quick synopsis:
+
+- Defer the in-depth salary discussion until after you have an official offer in hand.
+- Research your market value and how to relay it to the employer based on what you bring to the role.
+- Focus on your worth in the market, not what you personally want or need or what you were making in the last position.
+- Never accept an offer on the spot, even a seemingly great offer. There’s always something to negotiate.
+- Negotiate directly with the hiring manager (versus the headhunter or human resources).
+- Be confident and respectful, not demanding or entitled.
+- Don’t drag out the negotiations over multiple meetings. Know your negotiating points and alternative options so you can be efficient.
+- Know your BATNA (best alternative to a negotiated agreement) and your walk-away number.
+
+All these steps are important. Just add this one vital strategy: _Go into the negotiation meeting assuming positive intent on the part of the hiring manager._ While it’s advisable to prepare your rationale—it will give you the confidence and data support you need—you’ll end up with a better outcome by going into the discussion expecting success. Hiring managers anticipate that you will negotiate. Unless your requests are completely unreasonable or presented as demands, managers will likely be happy to revise the offer if they’re able. Even if they can’t give you exactly what you want, ask if they can meet you in the middle.
+
+Keep the large view of a compensation package in mind. Look at the _total_ compensation. You may not be losing as much as you think if the company covers tuition reimbursement and your commute requires much less gas. It’s worth the extra effort to think creatively. Perhaps you have experiences that will add additional value. If your desktop publishing skills could save the company $5,000 annually on an external vendor, maybe they could add this amount to your salary when they hire you. Remember, if you don’t ask, the answer is always no.
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Node.js Developer Roadmap for 2022]]></title>
         <id>20220210231236-nodejs-roadmap-2022</id>
@@ -139,8 +692,6 @@ A great alternative to REST, GraphQL uses the APIs that prioritize giving client
         <link href="https://danfleser.com/posts/20220210230144-react-hacks-for-lazy-devs"/>
         <updated>2022-02-10T23:01:44.602Z</updated>
         <content type="html"><![CDATA[
-==============================
-
 ## 1. Adding console logs to render expressions
 
 If you wanna log the props to an expression style component but can’t be bothered to convert it, put the log in parentheses then add chopsticks `||`:
