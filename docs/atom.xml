@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://danfleser.com/</id>
     <title>Dev vlog</title>
-    <updated>2022-02-12T10:47:13.962Z</updated>
+    <updated>2022-02-12T10:51:53.009Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Dan Fleser</name>
@@ -183,7 +183,7 @@ Writing [Semantic HTML](https://www.lifewire.com/why-use-semantic-html-3468271) 
 
 # The `Main` Element
 
-The `[main](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)` element indicates to browsers and screen readers which portion of your markup contains the main section of content on a given page. This can help with keyboard command access, zooming on mobile browsers, and more. It should be used only once per page.
+The [main](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main) element indicates to browsers and screen readers which portion of your markup contains the main section of content on a given page. This can help with keyboard command access, zooming on mobile browsers, and more. It should be used only once per page.
 
 ```html
 <main>
@@ -218,7 +218,7 @@ The `[main](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)` ele
 
 # The `Section` Element
 
-The `[section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)` element is used to group content by theme and represents a section of a document or application. Sections can have their own `header` and `footer` elements, and there can be multiple `section` elements used on a single page.
+The [section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section) element is used to group content by theme and represents a section of a document or application. Sections can have their own `header` and `footer` elements, and there can be multiple `section` elements used on a single page.
 
 ```html
 <section>
@@ -243,7 +243,7 @@ The `[section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section
 
 # The `Aside` Element
 
-`[aside](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside)` elements are mainly used to represent part of a page containing related content to a given section. Asides are typically used as sidebars.
+The [aside](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside) elements are mainly used to represent part of a page containing related content to a given section. Asides are typically used as sidebars.
 
 ```html
 <p>
@@ -263,7 +263,7 @@ The `[section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section
 
 # The `Article` Element
 
-The `[article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)` element can be used for portions of content that could stand on their own. Blog posts, newspaper articles, and user comments are some possible use cases the the `article` element.
+The [article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article) element can be used for portions of content that could stand on their own. Blog posts, newspaper articles, and user comments are some possible use cases the the `article` element.
 
 ```html
 <article>
@@ -293,7 +293,7 @@ The `[article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article
 
 # The `Blockquote` Element
 
-The `[blockquote](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)` element represents content that is being quoted from an external source (a person, document, newspaper, case study, etc.). It is often accompanied by the `cite` element to attribute the quote to its source.
+The [blockquote](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote) element represents content that is being quoted from an external source (a person, document, newspaper, case study, etc.). It is often accompanied by the `cite` element to attribute the quote to its source.
 
 ```html
 <blockquote cite="http://www.worldwildlife.org/who/index.html">
@@ -305,7 +305,7 @@ The `[blockquote](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bloc
 
 # The `Nav` Element
 
-As the name implies, `[nav](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)` elements represent the navigation section of a document. The `nav` element should include the primary navigation links for a give page, application, etc.
+The [nav](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav) elements represent the navigation section of a document. The `nav` element should include the primary navigation links for a give page, application, etc.
 
 ```html
 <nav>
@@ -317,7 +317,7 @@ As the name implies, `[nav](https://developer.mozilla.org/en-US/docs/Web/HTML/El
 
 # The `Header` Element
 
-The `[header](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)` element represents the “header” section of a document or section. In many websites, the `header` element will contain introductory content but also a logo, a search form, an author name.
+The [header](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header) element represents the “header” section of a document or section. In many websites, the `header` element will contain introductory content but also a logo, a search form, an author name.
 
 ```html
 <header>
@@ -329,7 +329,7 @@ The `[header](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)`
 
 # The `Footer` Element
 
-The `[footer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)` element represents the “footer” section of a document or section. In many websites, the `footer` element will contain contact and copyright information, a brief “about” blurb, social media logos and links, etc.
+The [footer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer) element represents the “footer” section of a document or section. In many websites, the `footer` element will contain contact and copyright information, a brief “about” blurb, social media logos and links, etc.
 
 ```html
 <header>
