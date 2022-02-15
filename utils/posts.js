@@ -68,7 +68,7 @@ export async function getPostBySlug(slug) {
   const previousPost = posts[postIndex + 1];
   const nextPost = posts[postIndex - 1];
 
-  return { frontmatter, post: { content }, previousPost, nextPost };
+  return { frontmatter, slug, post: { content }, previousPost, nextPost };
 }
 
 export function getReadingTime(text) {

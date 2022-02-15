@@ -10,8 +10,9 @@ import PostDetails from "../../components/common/PostDetails";
 import { getPostBySlug, getPostsSlugs } from "../../utils/posts";
 
 export default function PostPage({
-  post,
   frontmatter,
+  slug,
+  post,
   nextPost,
   previousPost,
 }) {
@@ -22,7 +23,7 @@ export default function PostPage({
         description={frontmatter.description}
         type="article"
         thumbnail={`images/${frontmatter.cover_image}`}
-        path={`posts/${post.slug}`}
+        path={`posts/${slug}`}
         keywords={post.tags}
       />
 
@@ -38,7 +39,7 @@ export default function PostPage({
           {frontmatter.cover_image && (
             <ResponsiveImage
               src={require("../../public/images/" + frontmatter.cover_image)}
-              alt={post.slug}
+              alt={frontmatter.title}
             ></ResponsiveImage>
           )}
         </header>

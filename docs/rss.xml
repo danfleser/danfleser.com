@@ -4,7 +4,7 @@
         <title>Development blog</title>
         <link>https://danfleser.com/</link>
         <description>undefined</description>
-        <lastBuildDate>Tue, 15 Feb 2022 20:40:32 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 15 Feb 2022 21:00:38 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
@@ -14,6 +14,7 @@
             <link>https://danfleser.com/posts/20220215200104-programmer-jokes-feb-2022</link>
             <guid>20220215200104-programmer-jokes-feb-2022</guid>
             <pubDate>Tue, 15 Feb 2022 20:01:04 GMT</pubDate>
+            <description><![CDATA[In this post, we have collected a handful of jokes, that have been floating around the Web, which showcase a programmer’s sense of humor. Don’t worry if you don’t get all of them — just get a programmer to explain it to you.]]></description>
             <content:encoded><![CDATA[
 # 0\. Idea of a Perfect Date
 
@@ -129,6 +130,7 @@
             <link>https://danfleser.com/posts/20220213171308-rabbitmq-redis-kafka</link>
             <guid>20220213171308-rabbitmq-redis-kafka</guid>
             <pubDate>Sun, 13 Feb 2022 17:13:08 GMT</pubDate>
+            <description><![CDATA[When using asynchronous communication for Microservices, it is common to use a message broker. A broker ensures communication between different microservices is reliable and stable, that the messages are managed and monitored within the system and that messages don’t get lost.]]></description>
             <content:encoded><![CDATA[
 # You should consider a few things:
 
@@ -166,6 +168,7 @@
             <link>https://danfleser.com/posts/20220213165126-learn-react-in-5-min</link>
             <guid>20220213165126-learn-react-in-5-min</guid>
             <pubDate>Sun, 13 Feb 2022 16:51:26 GMT</pubDate>
+            <description><![CDATA[After reading this article, you should be able to start coding React apps given that you’re comfortable with Javascript.]]></description>
             <content:encoded><![CDATA[
 ## Get you started with the popular JavaScript library in just a few minutes.
 
@@ -368,6 +371,7 @@ Congrats! You now have a very basic understanding of the most important concepts
             <link>https://danfleser.com/posts/20220213130620-programmers-side-gigs</link>
             <guid>20220213130620-programmers-side-gigs</guid>
             <pubDate>Sun, 13 Feb 2022 13:06:20 GMT</pubDate>
+            <description><![CDATA[Earning $1,000 to $100,000 per month as a programmer, but requires effort, time, and maybe money to turn active to passive income.]]></description>
             <content:encoded><![CDATA[
 > “If you want to succeed, double your failure rate.”
 
@@ -530,6 +534,7 @@ Please feel free to drop me a line in the comments below! I’d like to hear how
             <link>https://danfleser.com/posts/20220212223056-things-you-should-do-before-8-am</link>
             <guid>20220212223056-things-you-should-do-before-8-am</guid>
             <pubDate>Sat, 12 Feb 2022 22:30:56 GMT</pubDate>
+            <description><![CDATA[If you don't purposefully carve out time every day to progress and improve, without question, your time will get lost in the vacuum of our increasingly crowded lives. Before you know it, you'll be old and withered, wondering where all that time went.]]></description>
             <content:encoded><![CDATA[
 Life is busy. If you don’t purposefully carve time out every day to progress and improve.
 
@@ -646,6 +651,7 @@ Your life will shortly change.
             <link>https://danfleser.com/posts/20220212221019-frontend-end-skills-x100</link>
             <guid>20220212221019-frontend-end-skills-x100</guid>
             <pubDate>Sat, 12 Feb 2022 22:10:19 GMT</pubDate>
+            <description><![CDATA[Learning how to code is best accomplished by solving real-world problems and taking part in real-world projects. Despite the importance of theoretical knowledge, you do not have much chance of progressing without the ability to use it.]]></description>
             <content:encoded><![CDATA[
 # 1\. [Daily UI](https://www.dailyui.co/)
 
@@ -704,6 +710,7 @@ Solve real-world HTML, CSS and JavaScript challenges whilst working to professio
             <link>https://danfleser.com/posts/20220212095550-master-the-art-of-googling</link>
             <guid>20220212095550-master-the-art-of-googling</guid>
             <pubDate>Sat, 12 Feb 2022 09:55:50 GMT</pubDate>
+            <description><![CDATA[Great developers are great at googling. If you've heard it, you've heard right. Googling is a must-know skill for developers. It can help you effectively search for a solution to a problem or an error. If you want to find the right answer to a problem, you need to know how to ask the right question. This lifelong key skill can save a lot of your time and effort.]]></description>
             <content:encoded><![CDATA[
 # 1\. Use Quotes To Match Exact Phrases
 
@@ -766,6 +773,7 @@ Following this searching strategy has a few benefits. Using a broader search ter
             <link>https://danfleser.com/posts/20220212092333-avoid-css-practices</link>
             <guid>20220212092333-avoid-css-practices</guid>
             <pubDate>Sat, 12 Feb 2022 09:23:33 GMT</pubDate>
+            <description><![CDATA[Some people think that CSS is difficult to learn. There are lots of crutches and even some magic, which makes it easy to shoot yourself in the foot. I feel sad about this since I don’t think so.]]></description>
             <content:encoded><![CDATA[
 ## 1\. Using the Same Rule Repetitively
 
@@ -876,6 +884,7 @@ Or
             <link>https://danfleser.com/posts/20220212071527-div-tag</link>
             <guid>20220212071527-div-tag</guid>
             <pubDate>Sat, 12 Feb 2022 07:15:27 GMT</pubDate>
+            <description><![CDATA[In the early stages of learning how to structure an HTML document, it’s not uncommon to end up with what some developers call “div soup.” Need a content section your homepage? Wrap in a div! Building a sidebar? Div it up! Three column layout? Div, div, div!]]></description>
             <content:encoded><![CDATA[
 Does your HTML markup look like this 👆?
 
@@ -1055,6 +1064,7 @@ Now that we know about some semantically optimized alternatives to the `div` ele
             <link>https://danfleser.com/posts/20220212064149-web-dev-websites</link>
             <guid>20220212064149-web-dev-websites</guid>
             <pubDate>Sat, 12 Feb 2022 06:41:49 GMT</pubDate>
+            <description><![CDATA[Web development is a specific field that requires excellent knowledge of coding, UX, web design, and many more skills. Online resources make a significant investment in time when you need to get the latest info on new trends and standards, coding languages, and best practices.]]></description>
             <content:encoded><![CDATA[
 ## 1\. Random Image via API
 
