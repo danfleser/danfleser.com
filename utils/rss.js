@@ -3,12 +3,12 @@ import { Feed } from "feed";
 import { getSiteMetaData } from "./helpers";
 
 export function generateRssPostsFeed(posts) {
-  const { title, siteUrl, language, author } = getSiteMetaData();
+  const { title, url, language, author } = getSiteMetaData();
 
   const feed = new Feed({
     title,
-    id: siteUrl,
-    link: siteUrl,
+    id: url,
+    link: url,
     language,
     copyright: "Copyright © " + new Date().getFullYear() + " " + author.name,
     author: {
@@ -16,7 +16,7 @@ export function generateRssPostsFeed(posts) {
       link: author?.link,
     },
     feedLinks: {
-      rss2: `${siteUrl}rss.xml`,
+      rss2: `${url}rss.xml`,
     },
   });
 
@@ -27,14 +27,14 @@ export function generateRssPostsFeed(posts) {
         description,
         date: new Date(date),
         id: slug,
-        link: `${siteUrl}posts/${slug}`,
+        link: `${url}posts/${slug}`,
         content: content,
       });
     }
   );
 
   // Write the RSS output to a public file, making it
-  // accessible at siteUrl/rss.xml
+  // accessible at url/rss.xml
   fs.writeFileSync("public/rss.xml", feed.rss2());
   fs.writeFileSync("public/atom.xml", feed.atom1());
 }

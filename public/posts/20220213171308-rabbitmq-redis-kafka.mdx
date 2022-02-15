@@ -1,0 +1,36 @@
+---
+title: "RabbitMQ vs Redis vs Kafka"
+date: "2022-02-13T17:13:08.664Z"
+tags: "backend"
+cover_image: "20220213171308-rabbitmq-redis-kafka.jpg"
+---
+
+# You should consider a few things:
+
+- Broker Scale — The number of messages sent per second in the system.
+- Data Persistency — The ability to recover messages.
+- Consumer Capability — Whether the broker is capable of managing one-to-one and/or one-to-many consumers.
+
+# RabbitMQ (AMQP)
+
+- **Scale**: based on configuration and resources, the ballpark here is around 50K msg per second.
+- **Persistency**: both persistent and transient messages are supported.
+- **One-to-one** vs **one-to-many consumers**: both.
+
+# Kafka
+
+- **Scale**: can send up to a million messages per second.
+- **Persistency**: yes.
+- **One-to-one** vs **one-to-many consumers**: only one-to-many.
+
+# Redis
+
+- **Scale**: can send up to a million messages per second.
+- **Persistency**: basically, no — it’s an in-memory datastore.
+- **One-to-one** vs **one-to-many consumers**: both.
+
+# Use Cases
+
+- Short-lived Messages: Redis
+- Large Amounts of Data: Kafka
+- Complex Routing: RabbitMQ

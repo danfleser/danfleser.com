@@ -1,13 +1,16 @@
 {
   "siteMetadata": {
-    "title": "Dev vlog",
+    "title": "Development blog",
     "author": {
       "name": "Dan Fleser",
-      "summary": "8-5 job Web dev switched to freelancing. Follow me in my journey.",
-      "link": "https://danfleser.com/"
+      "email": "danfleser.dev@gmail.com",
+      "summary": "I am a web developer with 8+ years of experience focused on working with the latest technologies, recently switched from 8-5 job to freelancing. Helping companies around the world design and implement top-of-the-line scalable enterprise solutions. Follow me in my journey.",
+      "facebookPageId": "fleser.dan",
+      "twitterId": "@danfleser"
     },
-    "description": "Dan Fleser devblog",
-    "siteUrl": "https://danfleser.com/",
+    "description": "Dan Fleser development blog",
+    "keywords": "webdevelopment, webdesign, webdeveloper, html, website, css, digitalmarketing, coding, programming, javascript, seo, websitedesign, webdesigner, developer, programmer, web, marketing, wordpress, python, design, coder, ecommerce, code, software, php, java, business, softwaredeveloper, graphicdesign, react, angular, linkedin",
+    "url": "https://danfleser.com/",
     "language": "en-US"
   }
 }

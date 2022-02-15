@@ -1,15 +1,704 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://danfleser.com/</id>
-    <title>Dev vlog</title>
-    <updated>2022-02-12T10:51:53.009Z</updated>
+    <title>Development blog</title>
+    <updated>2022-02-15T20:28:00.009Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Dan Fleser</name>
-        <uri>https://danfleser.com/</uri>
     </author>
     <link rel="alternate" href="https://danfleser.com/"/>
     <rights>Copyright © 2022 Dan Fleser</rights>
+    <entry>
+        <title type="html"><![CDATA[Best Programming Jokes February 2022]]></title>
+        <id>20220215200104-programmer-jokes-feb-2022</id>
+        <link href="https://danfleser.com/posts/20220215200104-programmer-jokes-feb-2022"/>
+        <updated>2022-02-15T20:01:04.612Z</updated>
+        <content type="html"><![CDATA[
+# 0\. Idea of a Perfect Date
+
+<img src="/images/20220215200104/1.jpeg" alt="Idea of a Perfect Date" />
+
+# 1\. This website doesn’t use cookies
+
+<img
+  src="/images/20220215200104/2.jpeg"
+  alt="This website doesn’t use cookies"
+/>
+
+# 2\. Behind the scenes
+
+<img src="/images/20220215200104/3.jpeg" alt="Behind the scenes" />
+
+# 3\. I don’t know what to do
+
+<img src="/images/20220215200104/4.jpeg" alt="I don’t know what to do" />
+
+# 4\. Finding a big problem while solving small ones
+
+<img
+  src="/images/20220215200104/5.jpeg"
+  alt="Finding a big problem while solving small ones"
+/>
+
+# 5\. Maybe it doesn’t want to listen to me
+
+<img
+  src="/images/20220215200104/6.jpeg"
+  alt="Maybe it doesn’t want to listen to me"
+/>
+
+# 6\. A serious crime
+
+<img src="/images/20220215200104/7.jpeg" alt="A serious crime" />
+
+# 7\. Oops! Something went wrong
+
+<img src="/images/20220215200104/8.jpeg" alt="Oops! Something went wrong" />
+
+# 8\. When you date a programmer
+
+<img src="/images/20220215200104/9.jpeg" alt="When you date a programmer" />
+
+# 9\. Blame Game
+
+<img src="/images/20220215200104/10.jpeg" alt="Blame Game" />
+
+# 10\. Every single time. Ctrl S Ctrl S
+
+<img
+  src="/images/20220215200104/11.jpeg"
+  alt="Every single time. Ctrl S Ctrl S"
+/>
+
+# 11\. When you are serving notice period
+
+<img
+  src="/images/20220215200104/12.jpeg"
+  alt="When you are serving notice period"
+/>
+
+# 12\. You gonna regret it later
+
+<img src="/images/20220215200104/13.jpeg" alt="You gonna regret it later" />
+
+# 13\. The ultimate excuse that works every time
+
+<img
+  src="/images/20220215200104/14.jpeg"
+  alt="The ultimate excuse that works every time"
+/>
+
+# 14\. Strong security policy, seriously?
+
+<img
+  src="/images/20220215200104/15.jpeg"
+  alt="Strong security policy, seriously?"
+/>
+
+# 15\. Hell for the developers
+
+<img src="/images/20220215200104/16.jpeg" alt="Hell for the developers" />
+
+# 16\. Oh No.
+
+<img src="/images/20220215200104/17.jpeg" alt="Oh No." />
+
+# 17\. What!?
+
+<img src="/images/20220215200104/18.jpeg" alt="What!?" />
+
+# 18\. Sending a Mail
+
+<img src="/images/20220215200104/19.jpeg" alt="Sending a Mail" />
+
+# 19\. An honest interview
+
+<img src="/images/20220215200104/20.jpeg" alt="An honest interview" />
+
+# 20\. Developer’s Life in a Nutshell
+
+<img
+  src="/images/20220215200104/21.jpeg"
+  alt="Developer’s Life in a Nutshell"
+/>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RabbitMQ vs Redis vs Kafka]]></title>
+        <id>20220213171308-rabbitmq-redis-kafka</id>
+        <link href="https://danfleser.com/posts/20220213171308-rabbitmq-redis-kafka"/>
+        <updated>2022-02-13T17:13:08.664Z</updated>
+        <content type="html"><![CDATA[
+# You should consider a few things:
+
+- Broker Scale — The number of messages sent per second in the system.
+- Data Persistency — The ability to recover messages.
+- Consumer Capability — Whether the broker is capable of managing one-to-one and/or one-to-many consumers.
+
+# RabbitMQ (AMQP)
+
+- **Scale**: based on configuration and resources, the ballpark here is around 50K msg per second.
+- **Persistency**: both persistent and transient messages are supported.
+- **One-to-one** vs **one-to-many consumers**: both.
+
+# Kafka
+
+- **Scale**: can send up to a million messages per second.
+- **Persistency**: yes.
+- **One-to-one** vs **one-to-many consumers**: only one-to-many.
+
+# Redis
+
+- **Scale**: can send up to a million messages per second.
+- **Persistency**: basically, no — it’s an in-memory datastore.
+- **One-to-one** vs **one-to-many consumers**: both.
+
+# Use Cases
+
+- Short-lived Messages: Redis
+- Large Amounts of Data: Kafka
+- Complex Routing: RabbitMQ
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Learn React JS in 7 minutes — Beginners Tutorial]]></title>
+        <id>20220213165126-learn-react-in-5-min</id>
+        <link href="https://danfleser.com/posts/20220213165126-learn-react-in-5-min"/>
+        <updated>2022-02-13T16:51:26.666Z</updated>
+        <content type="html"><![CDATA[
+## Get you started with the popular JavaScript library in just a few minutes.
+
+When getting started with React, you should use the simplest setup possible: an HTML file which imports the `React` and the `ReactDOM` libraries using script tags.
+
+It looks like this:
+
+```jsx
+<html>
+  <head>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">REACT_CODE</script>
+  </body>
+</html>
+```
+
+We’ve also imported Babel, as React uses something called JSX to write markup. We’ll need to transform the JSX into plain JavaScript, so that the browser can understand it.
+
+There are more two things I want you to notice:
+
+1.  The `<div>` with the id of `#root`. This is the entry point for our app. This is where our entire app will live.
+2.  The `<script type="text/babel">` tag in the body. This is where we’ll write our React code.
+
+# Components
+
+Everything in React is a component, and these usually take the form of JavaScript classes. You create a component by extending upon the `React-Component` class. Let’s create a component called `Hello`:
+
+```jsx
+class Hello extends React.Component {
+  render() {
+    return <h1>Hello world!</h1>;
+  }
+}
+```
+
+You then define the methods for the component. In our example, we only have one method, and it’s called `render()`.
+
+Inside `render()` you’ll return a description of what you want React to draw on the page. In the case above, we simply want it to display an `h1` tag with the text _Hello world!_ inside it.
+
+To get our tiny application to render on the screen, we also have to use `ReactDOM.render()`:
+
+```jsx
+ReactDOM.render(<Hello />, document.getElementById("root"));
+```
+
+So this is where we connect our `Hello` component with the entry point for the app (`<div id="root"></div>`).
+
+> _So we’re simply saying:_ Hey React! Please render the **Hello** component inside the DOM node with an id of **root**!
+
+# Handling data
+
+There are two types of data in React: **props** and **state**. The difference between the two is a bit tricky to understand in the beginning, so don’t worry if you find it a bit confusing. It’ll become easier once you start working with them.
+
+The key difference is that the **state** is private and can be changed from within the component itself. **Props** are external, and not controlled by the component itself. It’s passed down from components higher up the hierarchy, who also control the data.
+
+**A component can change its internal state directly. It can not change its props directly.**
+
+Let’s take a closer look at props first.
+
+# Props
+
+Our `Hello` component is completely static. It renders out the same message no matter what. However, a big part of React is reusability, meaning the ability to write a component once, and then reuse it in different use cases. For example to display different messages.
+
+To achieve this type of reusability, we’ll add props. This is how you pass props to a component:
+
+```jsx
+ReactDOM.render(
+    <Hello **message="my friend"** />,
+    document.getElementById("root")
+);
+```
+
+This prop is called `message` and has the value “my friend”. We can access this prop inside the Hello component by referencing `this.props.message`, like this:
+
+```jsx
+class Hello extends React.Component {
+    render() {
+        return <h1>Hello {**this.props.message**}!</h1>;
+    }
+}
+```
+
+The reason we’re writing `{this.props.message}` with curly braces is because we need to tell the JSX that we want to add a JavaScript expression. This is called **escaping**_._
+
+However, what if we want the component to be able to change its own data? Then we have to use state instead!
+
+# State
+
+Unlike props — which can’t be changed directly by the component — the state can.
+
+So if you want the data in your app to change — for example based on user interactions — it must be stored in a component’s state somewhere in the app.
+
+## Initializing state
+
+To initialize the state, simply set `this.state` in the `constructor()` method of the class. Our state is an object which in our case only has one key called `message`.
+
+```jsx
+class Hello extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      message: "my friend (from state)!",
+    };
+  }
+
+  render() {
+    return <h1>Hello {this.state.message}!</h1>;
+  }
+}
+```
+
+Before we set the state, we have to call `super()` in the constructor. This is because `this` is uninitialized before `super()` has been called.
+
+## Changing the state
+
+To modify the state, simply call **this.setState(),** passing in the new state object as the argument. We’ll do this inside a method which we’ll call `updateMessage`.
+
+```jsx
+class Hello extends React.Component {
+
+    constructor(){
+        super();
+        this.state = {
+            message: "my friend (from state)!"
+        };
+        **this.updateMessage = this.updateMessage.bind(this);**   }    **updateMessage() {
+        this.setState({
+            message: "my friend (from changed state)!"
+        });
+    }**    render() {
+        return <h1>Hello {this.state.message}!</h1>;
+    }
+
+}
+```
+
+> Note: To make this work, we also had to bind the `this` keyword to the `updateMessage` method. Otherwise we couldn’t have accessed `this` in the method.
+
+# Event Handlers
+
+The next step is to create a button to click on, so that we can trigger the `updateMessage()` method.
+
+So let’s add a button to the `render()` method:
+
+```jsx
+render() {
+    return (
+
+    <div>
+        <h1>Hello {this.state.message}!</h1>
+        <button onClick={this.updateMessage}>Click me!</button>
+    </div>
+    )
+}
+```
+
+Here, we’re hooking an event listener onto the button, listening for the **onClick** event. When this is triggered, we call the **updateMessage** method.
+
+Here’s the entire component:
+
+```jsx
+class Hello extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      message: "my friend (from state)!",
+    };
+    this.updateMessage = this.updateMessage.bind(this);
+  }
+
+  updateMessage() {
+    this.setState({
+      message: "my friend (from changed state)!",
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello {this.state.message}!</h1>
+        <button onClick={this.updateMessage}>Click me!</button>
+      </div>
+    );
+  }
+}
+```
+
+The **updateMessage** method then calls **this.setState()** which changes the `this.state.message` value.
+
+Congrats! You now have a very basic understanding of the most important concepts in React.
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[7 Income Ideas For Programmers(That Actually Work)]]></title>
+        <id>20220213130620-programmers-side-gigs</id>
+        <link href="https://danfleser.com/posts/20220213130620-programmers-side-gigs"/>
+        <updated>2022-02-13T13:06:20.118Z</updated>
+        <content type="html"><![CDATA[
+> “If you want to succeed, double your failure rate.”
+
+# 1\. Freelancing
+
+A strategy would be to work on your LinkedIn profile, contact recruiters and past clients from your network, go to conferences and meetups, and look out for platforms that match up remote workers with companies.
+
+<img
+  src="/images/20220213130620-work-from-home.png"
+  alt="freelancing work from home"
+/>
+
+Take advantage of and leverage Facebook groups. There are dozens of Facebook groups that are designed specifically for freelancers.
+
+- [Jobs for Front-End Developers](https://www.facebook.com/groups/556739801135588/)
+- [Remote and Travel Jobs](https://www.facebook.com/groups/RemoteTravelJobs/)
+- [Remote Jobs, Work Anywhere — Inventive Hub](https://www.facebook.com/groups/inventivehub/)
+- [Guavabean Freelancer Group](https://www.facebook.com/groups/guavabean/)
+
+There is no shortage of Facebook groups you can join and explore. Go ahead type “remote jobs” or “programming jobs” — or be creative about your search terms. You’ll be surprised at how many groups there are.
+
+# 2\. Bounty Programs
+
+Hunting for bugs, or what’s called _bug bounty hunting_, is the process of being paid to find vulnerabilities in software, websites, and web applications.
+
+<img
+  src="/images/20220213130620-bounty-hunt.png"
+  alt="bug bounty hunting program"
+/>
+
+Some programmers make tens of thousands of dollars a year on side-hustling via bounty programs.
+
+- [Google's Bug Hunting](https://bughunters.google.com/)
+- [Facebook Bug Bounty Program](https://www.facebook.com/whitehat/hackerplus)
+- [Fire Bounty](https://firebounty.com/)
+- [Bugcrowd](https://www.bugcrowd.com/bug-bounty-list/)
+- [Vulnerability Lab](https://www.vulnerability-lab.com/list-of-bug-bounty-programs.php)
+- [HackerOne](https://hackerone.com/hacktivity?sort_type=popular&filter=type%3Aall&page=1&range=forever)
+
+# 3\. Coding Contests
+
+Below is a list in no particular order of websites you can start looking into to practice and participate in coding contests with monetary rewards. This way of making money online is not for everyone, and there is no guarantee you’ll win.
+
+<img
+  src="/images/20220213130620-coding-contest.png"
+  alt="coding contests with monetary rewards"
+/>
+
+I would also recommend looking into hackathons that require you to build an application based on ideas. These tend to be less stressful compared to the algorithm-based, problem-solving coding contests. Project-based hackathons are always fun when done with friends as the experience is more engaging.
+
+- [HackerEarth](https://www.hackerearth.com/)
+- [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam)
+- [HackerRank](https://www.hackerrank.com/)
+- [Topcoder](https://www.topcoder.com/)
+- [Coderbyte](https://coderbyte.com/)
+- [InterviewBit](https://www.interviewbit.com/)
+- [Codeforces](https://codeforces.com/)
+- [Sphere Online Judge](https://www.spoj.com/)
+- [CodingBat](http://codingbat.com/java)
+- [Codility](https://www.codility.com/)
+- [Project Euler](https://projecteuler.net/)
+- [CodeChef](https://www.codechef.com/)
+
+# 4\. Become an Online Instructor
+
+- Create a course, upload it to a marketplace, sit back and let the marketplace do all the marketing (the hands-free way).
+- Create a course, host it yourself on a content management platform, and market it yourself.
+- Conduct teaching sessions that foster face-to-face interactions with students. These could be one-on-one or in a group setting.
+
+<img
+  src="/images/20220213130620-youtube-content-creator.png"
+  alt="digital content creator"
+/>
+
+The instructor business can be something that might take up a lot of your time initially. The process of creating courses, editing your content, and preparing lecture material and homework exercises can be quite a bit of a time investment. It could take you anywhere from one to three months' worth of work.
+
+While course creation is great, something to keep in mind is that you have to pay your taxes.
+
+<img src="/images/20220213130620-irs-meme.jpg" alt="pay your taxes IRS meme" />
+
+Below are platforms you can start to look into to sell or teach online to generate some semi-passive revenue. Take note that most of these are open to everyone regardless of which country you come from. There's always PayPal and Payoneer to help facilitate your transferring your profits.
+
+Available for everyone:
+
+- [YouTube](http://www.youtube.com/) for publishing your own video coding tutorials. Revenue is generated through an ads program.
+- [Udemy](https://mikkegoes.com/udemy) for creating and publishing your own online coding courses. The profit-sharing is high at 50% but Udemy brings to the table millions of students and an audience you can directly tap into when you hit the Publish button.
+- [Skillshare](https://www.skillshare.com/teach) is also an alternative to Udemy.
+- [Udacity](https://www.udacity.com/start-mentoring) is another alternative to Udemy.
+- [BitDegree](https://www.bitdegree.org/) is a Udemy alternative for creating and publishing your own online coding courses.
+- [Amazon Kindle Direct Publishing](https://kdp.amazon.com/) for creating and selling your own books
+- Host courses on your own website
+
+High end of the spectrum, invite based:
+
+- [Frontend Masters](https://frontendmasters.com/)
+- [LinkedIn Learning](https://www.linkedin.com/learning/?trk=lynda_redirect_learning)
+- [Pluralsight](https://www.pluralsight.com/)
+
+They are by invite only, but worth the time investment to get into as they have a large audience and some of the best instructors you can get to learn from.
+
+Making consistent high-quality content is what will set you apart from the rest of the pack. Competition is high, and part of the game is marketing. The best instructors constantly update their courses to stay relevant and at the top of their game. The beauty of creating courses is that once you build traction, it’s an endless stream of passive income.
+
+# 5\. YouTube Channel
+
+YouTube still has massive potential for you as a programmer to make some pretty decent passive income through the YouTube Partner Program.
+
+<img
+  src="/images/20220213130620-youtube-content.png"
+  alt="YouTube Channel massive potential"
+/>
+
+The barrier to entry is a bit high if you're trying to join the partner program, though. It requires that your channel have an aggregate total of 4,000 watched hours of video over 12 months and at least 1,000 subscribers, which is no small feat when you’re getting started and you’re a nobody.
+
+There are alternative ways of generating value from your channel, even if they’re small, like blogging or article creation. You need to leverage this platform as a lead and audience generator.
+
+To make some money, you need to build social proof, this requires you to provide valuable content for your YouTube channel.
+
+# 6\. Build an App You Can Sell
+
+Make your own piece of software in order to sell it. It’s no easy feat, but can be incredibly rewarding. One of the things we programmers suck at is understanding how to market our craft.
+
+<img
+  src="/images/20220213130620-build-app.png"
+  alt="startup Build an App You Can Sell"
+/>
+
+You need to come up with a business plan and strategy of how to monetize your application.
+
+Build a software product that the market needs or that helps other people solve their problems.The first steps are to find a problem and solve it with software. This can be as simple as walking down to your local store and having a conversation with the owners to see what pressing issues they’re struggling with, and then providing a solution.
+
+# 7\. Make a Plugin or Theme for WordPress
+
+The market may seem oversaturated, but think for a moment about the number of plugins or apps that haven't been built yet on WordPress. Or the number of restaurants and businesses opening up around your neighborhood that still do not have an online presence. To get started making money with your plugins, you can start posting to various online marketplaces, such as:
+
+- WordPress.org
+- Themeforest
+- CodeCanyon
+- TemplateMonster Marketplace
+- Mojo Marketplace
+- ThemeSnap
+- Creative Market
+- Codester
+
+<img
+  src="/images/20220213130620-plugin-blocks.png"
+  alt="Make a Plugin or Theme for WordPress"
+/>
+
+You can choose to make your plugins and themes premium. Or you can charge perusers, use ad-driven monetization, or accept donations through Patreon. You can also give your plugins and themes away free, to build social proof. Like all things, if no one knows who you are, sometimes it’s good to showcase a few freebies.
+
+# Conclusion
+
+There is no such thing as fast money.
+
+Please feel free to drop me a line in the comments below! I’d like to hear how your journey is going.
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[8 Things You Should Do Before 8 A.M.]]></title>
+        <id>20220212223056-things-you-should-do-before-8-am</id>
+        <link href="https://danfleser.com/posts/20220212223056-things-you-should-do-before-8-am"/>
+        <updated>2022-02-12T22:30:56.819Z</updated>
+        <content type="html"><![CDATA[
+Life is busy. If you don’t purposefully carve time out every day to progress and improve.
+
+- You are the designer of your destiny.
+- You are responsible.
+- You get to decide. You _must_ decide — because if you don’t, someone else will. Indecision is a bad decision.
+- Remember. The goal needs to be long-term sustainability.
+
+With this short morning routine, your life will quickly change.
+
+- Wake up
+- Get in the zone
+- Get moving
+- Put the right food in your body
+- Get ready
+- Get inspired
+- Get perspective
+- Do something to move you forward
+
+# 1\. Get A Healthy 7+ Hours of Sleep
+
+Let’s face it — Sleep is just as important as eating and drinking water. Despite this, millions of people do not sleep enough and experience insane problems as a result.
+
+<img src="/images/20220212223056-sleep.png" alt="Healthy Sleep in bed" />
+
+Getting a healthy amount of sleep is linked to:
+
+- Increased memory
+- Longer life
+- Decreased inflammation
+- Increased creativity
+- Increased attention and focus
+- Decreased fat and increased muscle mass with exercise
+- Lower stress
+- Decreased dependence on stimulants like caffeine
+- Decreased risk of getting into accidents
+- Decreased risk of depression
+- And tons more… google it.
+
+# 2\. Meditation Facilitate Clarity and Abundance
+
+Meditation facilitate intense gratitude for all that you have. Gratitude is having an abundance mindset. When you think abundantly, the world is your oyster. There is limitless opportunity and possibility for you.
+
+<img
+  src="/images/20220212223056-meditate.png"
+  alt="Meditation Facilitate Clarity and Abundance"
+/>
+
+What you think you become. People are magnets. When you’re grateful for what you have, you will attract more of the positive and good. Gratitude is contagious.
+
+# 3\. Hard Physical Activity
+
+Whatever your preference, get your body moving.
+
+If you want to be among the healthy, happy, and productive people in the world, get in the habit of regular exercise. Many people go immediately to the gym to get their body moving. I have lately found that doing yard work in the wee hours of the morning generates an intense inflow of inspiration and clarity.
+
+<img
+  src="/images/20220212223056-focus.png"
+  alt="Hard Physical Activity focus"
+/>
+
+Exercise has been found to decrease your chance of depression, anxiety, and stress. It is also related to higher success in your career.
+
+# 4\. Take A Cold Shower
+
+Cold water immersion radically facilitates physical and mental wellness. When practiced regularly, it provides long-lasting changes to your body’s immune, lymphatic, circulatory and digestive systems that improve the quality of your life. It can also increase weight-loss because it boosts your metabolism.
+
+<img src="/images/20220212223056-shower.jpg" alt="Take A Cold Shower" />
+
+# 5\. Listen to/Read Uplifting Content
+
+It is common for the world’s most successful people to read at least one book per week. They are constantly learning.
+
+<img src="/images/20220212223056-read.png" alt="Read books" />
+
+Over a long enough period of time you’ll think and see the world differently. You’ll be able to make more connections between different topics.
+
+# 6\. Review Your Life Vision
+
+Your goals should be written down — short term and long term. Taking just a few minutes to read your life vision puts your day into perspective.
+
+<img src="/images/20220212223056-plan.png" alt="write your goals" />
+
+If you read your long term goals every day you will think about them every day. If you think about them every day, and spend your days working toward them, they’ll manifest.
+
+Achieving goals is a science. There’s no confusion or ambiguity to it. If you follow a simple pattern, you can accomplish all of your goals, no matter how big they are.
+
+A fundamental aspect of that is writing them down and reviewing them every single day.
+
+# 8\. Eat that Frog! Do At Least One Thing Towards Long-Term Goals
+
+_The worst comes first._ You need to do the hard stuff first thing in the morning.
+
+<img
+  src="/images/20220212223056-eat-the-frog-work.png"
+  alt="Eat that Frog. the worst comes first"
+/>
+
+If you take just one step toward you big goals every day, you’ll realize those goals weren’t really far away.
+
+# Conclusion
+
+After you’ve done this, no matter what you have for the rest of your day, you’ll have done the important stuff first. You’ll have put yourself in a place to succeed.
+
+<img src="/images/20220212223056-checklist.png" alt="life to do list" />
+
+Because you’ll have done all these things, you’ll show up better in life. You’ll be better at your job. You’ll be better in your relationships. You’ll be happier. You’ll be more confident. You’ll be more bold and daring. You’ll have more clarity and vision.
+
+Your life will shortly change.
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[5 Websites To Take Your Front End Skills From ZERO To HERO]]></title>
+        <id>20220212221019-frontend-end-skills-x100</id>
+        <link href="https://danfleser.com/posts/20220212221019-frontend-end-skills-x100"/>
+        <updated>2022-02-12T22:10:19.805Z</updated>
+        <content type="html"><![CDATA[
+# 1\. [Daily UI](https://www.dailyui.co/)
+
+Every challenge is delivered to your mail and you can complete your challenges anytime as you may want.
+
+<img
+  src="/images/20220212221019-daily-ui-challenge.png"
+  alt="greatest collections of designs ui&ux"
+/>
+
+# 2\. [100DaysCSS Challenge](hhttps://100dayscss.com/about/)
+
+Focused to drill down on your CSS skills. You will rise up to be a CSS Guru after taking up this challenge.
+
+_#100DaysChallenge_ is a very popular tag on Twitter. You can document your journey there and gain a lot along with the community there.
+
+<img
+  src="/images/20220212221019-100-days-css.png"
+  alt="100 DAYS CSS CHALLENGE"
+/>
+
+# 3\. [Dribble](http://dribbble.com)
+
+Features one of the greatest collections of designs over the internet. You can leverage these already built designs to code their clones.
+
+<img
+  src="/images/20220212221019-dribble.png"
+  alt="greatest collections of designs ui&ux"
+/>
+
+In _dribble_, you can pick any design you may want to code and start making it.
+
+# 4\. [CodePen Challenges](http://codepen.io)
+
+_Codepen_ also offers a lot of [challenges](https://codepen.io/challenges/) that help you to level up your skills by building things. They have a monthly theme and each week you will be prompted with a new challenge.
+
+<img
+  src="/images/20220212221019-codepen.png"
+  alt="codepen challenge collection"
+/>
+
+There is a huge number of participants and a majority of them share their codepen with others. So, you’ll never feel like you are doing it alone. The community is there to lift you up.
+
+# 5\. [Frontend Mentor](https://www.frontendmentor.io/challenges)
+
+Solve real-world HTML, CSS and JavaScript challenges whilst working to professional designs. Join 303,212 developers building projects, reviewing code, and helping each other get better.
+
+<img
+  src="/images/20220212221019-frontend-mentor-challenge.png"
+  alt="HTML, CSS and JavaScript challenge"
+/>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[7 Tricks To Master the Art of Googling]]></title>
         <id>20220212095550-master-the-art-of-googling</id>
@@ -78,9 +767,14 @@ Following this searching strategy has a few benefits. Using a broader search ter
         <link href="https://danfleser.com/posts/20220212092333-avoid-css-practices"/>
         <updated>2022-02-12T09:23:33.110Z</updated>
         <content type="html"><![CDATA[
-# 1\. Using the Same Rule Repetitively
+## 1\. Using the Same Rule Repetitively
 
 A lot of beginners use repetitive rules for each element. If you want to create a rule for multiple elements, use a class attribute instead.
+
+<img
+  src="/images/20220212092333-gta-rewrite-css-meme.png"
+  alt="rewrite css meme GTA ah shit here we go again"
+/>
 
 Do not do this:
 
@@ -112,21 +806,31 @@ You can use:
 }
 ```
 
-# 2\. Shoving everything into one CSS file
+## 2\. Shoving everything into one CSS file
 
 Having a 3500 line CSS file is NOT the way to go. Even if you minify at a later date. You should start separating them into the 'views' or 'components' when you are working on a bigger project.
 
-# 3\. Naming your CSS selectors unnecessarily descriptive
+## 3\. Naming your CSS selectors unnecessarily descriptive
 
 '.sqaured-yellow-border-card' when '.card' will be suffice
 
-# 4\. !important this, !important that, !important !important
+## 4\. !important this, !important that, !important !important
 
 People who know how to write CSS never use these.
 
-# 5\. Set Margins or Padding and Then Reset Them
+<img
+  src="/images/20220212092333-important-css.jpg"
+  alt="css important meme bad practice"
+/>
+
+## 5\. Set Margins or Padding and Then Reset Them
 
 I often see people set margins or padding for all elements and then reset them for the first or last element. I don’t know why they use two rules when you can get by with one. It’s much easier to set margins and padding for all the required elements at once.
+
+<img
+  src="/images/20220212092333-box-model-css.jpg"
+  alt="css box model margin padding meme"
+/>
 
 Use one of the following for simpler and more concise CSS: `nth-child`/`nth-of-type` selectors, the `:not()` pseudo-class, or the adjacent sibling combinator better known as `+`.
 

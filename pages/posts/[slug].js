@@ -20,6 +20,10 @@ export default function PostPage({
       <Seo
         title={frontmatter.title}
         description={frontmatter.description || post.excerpt}
+        type="article"
+        thumbnail={`images/${frontmatter.cover_image}`}
+        path={`posts/${post.slug}`}
+        keywords={post.tags}
       />
 
       <article className="card">
