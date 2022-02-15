@@ -11,7 +11,7 @@ export default function Seo({
 }) {
   const siteMetadata = getSiteMetaData();
 
-  const metaUrl = siteMetadata.url + path ? path : "";
+  const metaUrl = siteMetadata.url + (path ? path : "");
   const metaTitle = title || siteMetadata.title;
   const metaDescription = description || siteMetadata.description;
   const metaType = type || "website";
