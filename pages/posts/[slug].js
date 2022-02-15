@@ -19,7 +19,7 @@ export default function PostPage({
     <section className="blog-post">
       <Seo
         title={frontmatter.title}
-        description={frontmatter.description || post.excerpt}
+        description={frontmatter.description}
         type="article"
         thumbnail={`images/${frontmatter.cover_image}`}
         path={`posts/${post.slug}`}

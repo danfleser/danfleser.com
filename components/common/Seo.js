@@ -15,7 +15,7 @@ export default function Seo({
   const metaTitle = title || siteMetadata.title;
   const metaDescription = description || siteMetadata.description;
   const metaType = type || "website";
-  const metaThumbnail = thumbnail || "";
+  const metaThumbnail = siteMetadata.url + thumbnail || "";
   const metaKeywords = keywords || siteMetadata.keywords;
 
   return (
