@@ -38,9 +38,9 @@ export default function Seo({
       <meta name="coverage" content="Worldwide" />
       <meta name="distribution" content="Global" />
       <meta name="rating" content="General" />
-      <meta name="subject" content="your website's subject" />
-      <meta name="summary" content={siteMetadata.author.summary}/>
-      <meta name="category" content="" />
+      <meta name="subject" content={metaTitle} />
+      <meta name="summary" content={siteMetadata.author.summary} />
+      <meta name="category" content={siteMetadata.category} />
 
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDescription} />

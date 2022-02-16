@@ -34,7 +34,6 @@ module.exports = withPlugins([
       loader: "imgix",
       path: "",
     },
-    trailingSlash: true,
     assetPrefix: isDev ? "" : `/`,
   },
 ]);

@@ -1,6 +1,7 @@
 {
   "siteMetadata": {
     "title": "Development blog",
+    "category": "Software developers tech news",
     "author": {
       "name": "Dan Fleser",
       "email": "danfleser.dev@gmail.com",
