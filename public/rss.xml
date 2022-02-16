@@ -4,11 +4,438 @@
         <title>Development blog</title>
         <link>https://danfleser.com/</link>
         <description>undefined</description>
-        <lastBuildDate>Wed, 16 Feb 2022 19:24:46 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Feb 2022 21:42:15 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <copyright>Copyright © 2022 Dan Fleser</copyright>
+        <item>
+            <title><![CDATA[🔥The Last Web 3.0 Terms You’ll Ever Need]]></title>
+            <link>https://danfleser.com/posts/20220216211413-top-web-3-terms-for-devs</link>
+            <guid>20220216211413-top-web-3-terms-for-devs</guid>
+            <pubDate>Wed, 16 Feb 2022 21:14:13 GMT</pubDate>
+            <description><![CDATA[Web 3.0 is becoming a hot topic again after hyping around Metaverse. A new architecture of the internet is opening new opportunities, and knowing them, will give you the advantage to pick up some technologies upfront or even inspire you on your own project. The opportunities are limitless and reshape all the industries.]]></description>
+            <content:encoded><![CDATA[
+Attention! This may inspire you to create a million dollar idea. 😜
+
+Hey crypto punks, **Web 3.0** is becoming a hot topic again after hyping around **Metaverse**. A new architecture of the internet is opening new opportunities, and knowing them, will give you the advantage to pick up some technologies upfront or even inspire you on your own project. The opportunities are limitless and reshape all the industries.
+
+<img
+  src="/images/20220216211413-metaverse-meme.jpg"
+  alt="Metaverse meme zuckerberg"
+/>
+
+# Glossary
+
+[**Metaverse**](https://www.usatoday.com/story/tech/2021/11/10/metaverse-what-is-it-explained-facebook-microsoft-meta-vr/6337635001/) —is a network of 3D virtual worlds where people avatars can interact with digital objects and with other people.
+
+[**Blockchain**](https://www.investopedia.com/terms/b/blockchain.asp) — decentralized ledger, that stores data across a network of computers (called **nodes**). The data is split into **blocks** that are linked using cryptography. When new data is pushed into the blockchain, it fills an empty block that is further linked to other blocks, creating a chronological order chain. The data in the blockchain is not revertable, it is stored forever, and anyone can view it.
+
+[**Cryptocurrency**](https://www.investopedia.com/terms/c/cryptocurrency.asp) (“**crypto**”) — a decentralized digital currency, created using cryptographic techniques. Crypto is decentralized, which means, it is independent of a monetary authority like banks and government. Everyone can issue the cryptocurrency (**mine**), buy, sell or trade without limits and control. Transactions are secure and much faster than traditional currency.
+
+[**Crypto Wallet**](https://www.coinbase.com/learn/crypto-basics/what-is-a-crypto-wallet) — software or device for storing cryptocurrency and making **crypto** transactions.
+
+[**Metamask**](https://metamask.io/) — popular browser extension and mobile app. It acts as a crypto wallet and gateway to **blockchain** apps.
+
+[**Miner**](https://www.investopedia.com/tech/how-does-bitcoin-mining-work/) (cryptocurrency) — **nodes** in the **blockchain**. Each of the miners is guessing a 64-digit hexadecimal number, a **token,** that is generated during the transaction (inserting a new record into the blockchain). At the same time, miners are verifying the transactions: checking the source, checking a double-spending of the money, checking if transaction volume is within the allowed range. Miners are rewarded with crypto for verifying the block of transactions that were added to the **blockchain**.
+
+[**Gas Fee**](<https://ethereum.org/en/developers/docs/gas/#:~:text=Gas%20refers%20to%20the%20fee,a%20transaction%20on%20Ethereum%20successfully.&text=Gas%20fees%20are%20paid%20in,(10%2D9%20ETH).>) — the amount of cryptocurrency that users pay miners in order to include their transactions into the **blockchain**.
+
+[**Token**](https://www.investopedia.com/terms/c/crypto-token.asp#:~:text=What%20is%20a%20crypto%20token,for%20investment%20or%20economic%20purposes.) — is usually a random string or a number. In cryptocurrency, it can have different meanings:
+
+- token — any cryptocurrency, but not Bitcoin and Ethereum (they usually called **coins**, but technically, they are tokens too);
+- token — a cryptocurrency that uses other cryptocurrency’s infrastructure (blockchain). The token can become a coin if it has its own blockchain;
+- token — can be a representation of digital asset (**NFT**);
+
+[**NFT**](https://www.investopedia.com/terms/s/smart-contracts.asp) — or Nonfungible token — is a unique token stored in a **blockchain** that represents digital assets, like music, image, art, 3d models. Nonfungible means unique and non-interchangeable.
+
+[**Smart contract**](https://www.investopedia.com/terms/s/smart-contracts.asp) — a decentralized program that is stored in **blockchain**, and called when participants satisfy preconditions. It is similar to a vendor machine. It executes when the buyer inserted the card to pay. It allows you to choose the drink, and after a drink is released, transfers money to the seller. **Automated**, **safe**, and **fast**. A **smart contract** could be any service: money transfer, voting during elections, changing property owner, basically, anything that requires human in between.
+
+[**ICO**](https://www.investopedia.com/terms/i/initial-coin-offering-ico.asp) — Initial Coin Offering, similar to IPO (Initial Public Offering) — is an organization that allows you to raise the funds for products and services based on cryptocurrency.
+
+[**DApp**](https://ethereum.org/en/dapps/) — Decentralized application — are software applications that run inside a **blockchain** network. **DApps** run on a decentralized environment, is public and open-source, doesn’t have a single authority.
+
+[**DeFi**](https://www.investopedia.com/decentralized-finance-defi-5113835) — **decentralized finance** service resided in **blockchain**, which substitutes all the services that banks can provide.
+
+[**DAO**](https://ethereum.org/en/dao/) — Decentralized Autonomous Organization — is an open-source platform running on a blockchain network that allows users, collectively manage the code. The rules are built in the code and enforced through **smart contracts**. In order to vote for proposals, users have to own and lock cryptocurrency into a voting contract. The voting weight is proportional to the amount of cryptocurrency locked. The proposal is finalized after achieving the network **consensus** rule and voters are rewarded with cryptocurrency.
+
+[**Consensus**](https://decrypt.co/resources/consensus-protocols-what-are-they-guide-how-to-explainer) — a set of rules in a blockchain system that has to be verified in order to achieve the agreement on a single data value or a single state of the network.
+
+[**Ethereum**](https://ethereum.org/en/) — an open-source software platform that works in the public blockchain networks and focuses on running **DApps** applications. It also has its own **cryptocurrency** for making payments inside the network, called **Ether**.
+
+[**EVM**](https://ethereum.org/en/developers/docs/evm/) — Ethereum Virtual Machine — runtime environment for executing **smart contracts** in **Ethereum** blockchain. Allows a secure way of running programs that spread between machines around the world.
+
+[**Solidity**](https://docs.soliditylang.org/en/v0.8.11/) — a programming language for writing **smart contracts** in blockchain, such as **Ethereum**. The program has to be compiled in **Ethereum Virtual Machine**.
+
+[**Solana**](https://solana.com/) — a blockchain that solves the major problems of scalability, transaction speed, and price, energy efficiency. It is open-source that encourages to develop the **DApps**.
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Tips for a Killer Resume in 2022]]></title>
+            <link>https://danfleser.com/posts/20220216194128-killer-job-resume-2022</link>
+            <guid>20220216194128-killer-job-resume-2022</guid>
+            <pubDate>Wed, 16 Feb 2022 19:41:28 GMT</pubDate>
+            <description><![CDATA[Most people think that you need a diploma from Harvard or universities alike to be considered for a job in big tech companies. Although that may be partially true, not always though, it seems Apple and Google no longer require you to have a college degree.]]></description>
+            <content:encoded><![CDATA[
+Most people think that you need a diploma from Harvard or universities alike to be considered for a job in big tech companies. Although that may be partially true ([not always though, it seems Apple and Google no longer require you to have a college degree](https://www.cnbc.com/2018/08/16/15-companies-that-no-longer-require-employees-to-have-a-college-degree.html)).
+
+There are CEOs out there looking for loyal people who know how to take orders without questioning, and are ready to do the work, day in and day out, because they need the paycheck at the end of the month.
+
+# General tips
+
+## 1. Make yourself relevant
+
+Before sending your resume, always go through the job description a couple of times and try to understand what is relevant to the job you are applying for.
+
+## 2. Never send a generic CV
+
+You’ll look like “_just the next boring applicant in the list,_” and your chances of getting hired will be significantly reduced.
+
+## 3. Speak to the point
+
+- you need to present only the relevant stuff, the big picture, don’t get caught in details
+- cut off the noise, don’t tell the client small details unless they ask for them
+- just tell that the work is going well
+- if there are some problems, mention them
+
+## 4. Have a good Linkedin profile
+
+## 5. Be Confident
+
+You can inspire from mine: https://www.linkedin.com/in/danfleser/
+
+# What should you list on your resume?
+
+## 1. Have a CV picture, with white background
+
+<img
+  src="/images/20220216194128-linkedin-card.png"
+  alt="Linkedin profile picture"
+/>
+
+## 2. Add clear information in About section
+
+```txt
+About
+
+I am a web developer with 8+ years of experience focused on working with the latest technologies in the field, helping companies around the world design and implement top-of-the-line scalable enterprise solutions.
+
+My key skills:
+Software Architecture
+• Distributed systems, Microservices
+• Domain-Driven-Design, DRY, YAGNI, Layered Architecture
+• SOLID Principles, Clean code
+• Unit testing
+Leadership:
+• Excellent problem-solving abilities
+• Communication, Pair Programming
+Back-end:
+• NodeJS, Python
+• Sql, NoSql, Database Architecture
+• Docker
+Front-end:
+• Modern Javascript, Typescript, Modular Components
+• Angular, Tailwind, Bootstrap, Unity
+
+Is there any way my expertise can make an impact on your business? Drop me a message and let's have a chat!
+
+Only interested in remote work.
+
+📞 Phone: +(XX) XXX XXX XXX
+📬 Email: XXX@XXX.XXX
+💻 Github: https://github.com/XXX
+```
+
+## 3. Add jobs section with good descriptions
+
+Present achievements. An achievement worths 1000 words.
+
+Here are some good examples.
+
+Example 1:
+
+```txt
+Senior Web Developer
+Contract
+Jul 2021 - Present · 8 mos
+Paris, Île-de-France, France
+
+CONSTRUCTION MONITORING SOLUTION
+
+The client, a worldwide leader in the Construction Monitoring industry, managing large amounts of data by millimeter precision, had to automate and orchestrate multiple types of construction sites.
+
+✅ Drastically reduced the development time by 60%-70% by migrating the baseline code to a generic system that can allow unlimited types of construction worksites to be added into the web app.
+✅ Reduced the overall software deployment time by 40% introducing a microservice architecture wrapped in Docker containers orchestrated using Kubernetes.
+✅ Ensured 100% code quality by integrating multiple validation scripts before any developer does some changed to the baseline code.
+✅ Kept users happy by constantly developing new app features and delivering them on time.
+
+
+Skills: Layered Architecture, Clean Architecture, Pair programming, Modular Components, Microservices, Typescript, Angular, NestJs, MongoDB, Docker, Kubernetes, Angular Material, Domain-Driven Driven Design (DDD), SOLID, DRY, YAGNI.
+```
+
+Example 2:
+
+```txt
+Full Stack Developer
+Full-time
+Jul 2019 - Jul 2021 · 2 yrs 1 mo
+Washington, United States
+
+CYBER RISK QUANTIFICATION WEB APPLICATION
+
+The client, a worldwide leader in the Cyber Risk Quantification industry, managing large amounts of data, had to automate and orchestrate risk quantification from days to hours by automating manual processes.
+
+✅ Reduced the overall software development time and increased productivity by 15% by introducing a layered architecture to decouple the business model from the infrastructure code.
+✅ Ensured 100% app usage transparency by integrating means of user interaction analytics, by contributing to both front-end and back-end from a full-stack role.
+✅ Kept users happy by decreasing the page load times, while delivering new features on time.
+✅ Reduced the time to generate statistics and logs up to 50% by implementing an intuitive web app with a high-quality user experience and great overall performance custom-tailored to the client’s needs.
+
+Skills: Layered Architecture, Clean Architecture, Pair programming, Modular Components, Microservices, Typescript, Angular, .NET Core, Entity Framework, PostgreSQL, Bootstrap, Domain-Driven Driven Design (DDD), SOLID, DRY, YAGNI.
+```
+
+Example 3:
+
+```txt
+Senior Web Developer
+Freelance
+Jul 2020 - Dec 2020 · 6 mos
+Los Angeles, California, United States
+
+E-COMMERCE WEBSITES
+
+The clients, dropshipping stores, involved in the e-commerce business, had to update their website user interfaces to match mobile devices, improve search engine optimization, and grow revenue.
+
+✅ Increased the conversion rate by avg. 4%, the user retention increased by avg. 7%, the average order value by avg. 14%, the total revenue of the company by avg. 31% and drastically increase the number of orders on mobile devices by avg. 80%, by designing and implementing a mobile-friendly user interface and ensuring a great overall user experience.
+✅ Drastically reduced page loading time from +5 seconds to 2.1 seconds, by providing a stable behavior of the web app while testing, and fixing 100% of the issues.
+✅ Reached over avg. 100K unique visitors and almost avg. 200K page views in the first 8 months by designing a rock-solid user interface.
+✅ Ensured 100% transparency by applying SCRUM and constantly receiving feedback from the product owner.
+
+Skills: Shopify API, JavaScript, jQuery, HTML5, CSS3, Bootstrap, CDN.
+```
+
+Example 4:
+
+```txt
+Senior Web Developer
+Aug 2018 - Jul 2019 · 1 yr
+London, England, United Kingdom
+
+AML COMPLIANCE SCREENING WEB APPLICATION
+
+The client, a worldwide leader in the AML Compliance industry, managing large amounts of data, had to speed up customer onboarding cycle time and grow revenue by automating manual processes and minimize false-positives.
+
+✅ Skyrocketed annual revenue by increasing user satisfaction and productivity, by designing a user interface that highlights AML data matching and monitoring.
+✅ Achieved 100% data accuracy, with a 40% improvement in screening and monitoring data operations, drastically reduced page loads from 5-7 seconds to 2-3 seconds, by making the web application more consistent and user-friendly, while keeping a very stable & reliable solution for the end-user.
+✅ Achieved colossal time savings, from hours to minutes, with a 99.9999% efficiency increase in reports exporting, by designing a custom fined tuned system exposed through the web application.
+✅ Skyrocketed the communication in task management planning and grooming sessions with 100% commitment, by improving the technical culture through numerous tech meetings and hackathons.
+
+Skills: Domain-Driven Driven Design (DDD), SOLID, DRY, YAGNI, Layered Architecture, Clean Architecture, Pair Programming, Modular Components, Microservices, Typescript, Angular.js, Lazy Load, Web Worker, Caching, Gzip.
+```
+
+Example 5:
+
+```txt
+Web Developer
+Full-time
+Jul 2017 - Aug 2018 · 1 yr 2 mos
+California, United States
+
+EPIDEMIC TRACKER WEB APPLICATION
+
+The client, a worldwide software leader in the epidemics business industry, managing large amounts of data, had to optimize the web application because the legacy code was hard to maintain. Performance needed to be improved fast, for delivering actionable, data-driven insights about global epidemics.
+
+✅ Drastically reduced the time spent in application from 3h to 5min, skyrocketed application performance by 70%, by designing an intuitive eye-popping mobile-friendly UI with increased usability using a clean architecture after an in-depth analysis of the existing code and infrastructure.
+✅ Reduced the employment cost by 30% by automating more than half of the manual statistical work for selecting and rendering only relevant information.
+✅ Reduced errors in the development phase by 98% by introducing unit and integration tests.
+
+Skills: Clean Code, Modular Components, In-House Styles Library, Angular.js, NVD3, Bootstrap, Jasmine, Protractor.
+```
+
+Example 6:
+
+```txt
+Full-stack Developer
+Nov 2015 - Nov 2017 · 2 yrs 1 mo
+Bucharest, Romania
+
+REPORTS AND STATISTICS HEALTHCARE MEDICAL SERVICE
+
+The client, an important software company that provides medical software for public Romanian hospitals, had an outdated desktop application, unscalable with poor optimization, long response times, and unintuitive user interface, resulting in unhappy clients.
+
+✅ Successfully meet the client’s requirements, by creating a new web application with clean architecture, decoupled components that meet the client requirements lowering time spent in the application by an astounding 70% by showing the users only the most relevant data while maintaining a highly efficient communication line with the clients.
+✅ Ensured a rock-solid infrastructure to handle over 4M users by designing resilience microservices and performing stress testing. Delivered a scalable solution ready for a 4M daily active users deploy.
+
+Skills: Clean Code, Microservices, Modular Components, In-House Libraries, Angular, Angular Material, C3.js, Node.js, Koa.js, MongoDB, OAuth 2, FHIR Standard, Git, Jenkins, Redmine.
+```
+
+## 4. Add education section(if applicable)
+
+<img
+  src="/images/20220216194128-education-card.png"
+  alt="Linkedin education section"
+/>
+
+## 5. Add licenses & certifications section(if applicable)
+
+<img
+  src="/images/20220216194128-certificate-card.png"
+  alt="Linkedin licenses & certifications section"
+/>
+
+## Final thoughts
+
+Having a solid foundation in at least two languages will increase your job opportunities by 2X.
+
+Coders can make somewhere from $80,000/yr to $1.200,000/yr([Roblox](https://roblox.com)) and even more depending on their job title and the company they work for.
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[YouTube Channels for Programming Skills]]></title>
+            <link>https://danfleser.com/posts/20220216193455-youtube-channels-for-programmers</link>
+            <guid>20220216193455-youtube-channels-for-programmers</guid>
+            <pubDate>Wed, 16 Feb 2022 19:34:55 GMT</pubDate>
+            <description><![CDATA[To make it in the software development world, you’ll need to dig up some creativity and inject it into your coding skills. The ability to think analytically is highly valued among developers as well.]]></description>
+            <content:encoded><![CDATA[
+[Traversy Media](https://www.youtube.com/user/TechGuyWeb)
+
+<img
+  src="/images/20220216193455/20220216193455-traversy-media.png"
+  alt="Traversy Media Youtube channel"
+/>
+
+[Jason Weimann](https://www.youtube.com/c/Unity3dCollege)
+
+<img
+  src="/images/20220216193455/20220216193455-Unity3dCollege.png"
+  alt="Jason Weimann Youtube channel"
+/>
+
+[DevEd](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q)
+
+<img
+  src="/images/20220216193455/20220216193455-deved.png"
+  alt="DevEd Youtube channel"
+/>
+
+[Ben Awad](https://www.youtube.com/user/99baddawg)
+
+<img
+  src="/images/20220216193455/20220216193455-benawad.png"
+  alt="Ben Awad Youtube channel"
+/>
+
+[3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
+
+<img
+  src="/images/20220216193455/20220216193455-3Blue1Brown.png"
+  alt="3Blue1Brown Youtube channel"
+/>
+
+[ThePrimeagen](https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw)
+
+<img
+  src="/images/20220216193455/20220216193455-ThePrimeagen.png"
+  alt="ThePrimeagen Youtube channel"
+/>
+
+[Fun Fun Function](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)
+
+<img
+  src="/images/20220216193455/20220216193455-fun-fun-function.png"
+  alt="Fun Fun Function Youtube channel"
+/>
+
+[Computerphile](https://www.youtube.com/user/Computerphile)
+
+<img
+  src="/images/20220216193455/20220216193455-Computerphile.png"
+  alt="Computerphile Youtube channel"
+/>
+
+[ThinMatrix](https://www.youtube.com/user/ThinMatrix)
+
+<img
+  src="/images/20220216193455/20220216193455-ThinMatrix.png"
+  alt="ThinMatrix Youtube channel"
+/>
+
+[Google Chrome Developers](https://www.youtube.com/user/ChromeDevelopers)
+
+<img
+  src="/images/20220216193455/20220216193455-google-chrome-developers.png"
+  alt="Google Chrome Developers Youtube channel"
+/>
+
+[Gaurav Sen](https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw)
+
+<img
+  src="/images/20220216193455/20220216193455-Gaurav.png"
+  alt="Gaurav Sen Youtube channel"
+/>
+
+[Jon Gjengset](https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ)
+
+<img
+  src="/images/20220216193455/20220216193455-Gjengset.png"
+  alt="Jon Gjengset Youtube channel"
+/>
+
+[Two Minute Papers](https://www.youtube.com/user/keeroyz)
+
+<img
+  src="/images/20220216193455/20220216193455-2-minute-paper.png"
+  alt="Two Minute Papers Youtube channel"
+/>
+
+[Simple Programmer](https://www.youtube.com/channel/UCRxWW_Ncs308nW4An23Yeig)
+
+<img
+  src="/images/20220216193455/20220216193455-simple-programmer.png"
+  alt="Simple Programmer Youtube channel"
+/>
+
+[The Coding Train](https://www.youtube.com/user/shiffman)
+
+<img
+  src="/images/20220216193455/20220216193455-coding-train.png"
+  alt="The Coding Trai Youtube channel"
+/>
+
+[Academind](https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w)
+
+<img
+  src="/images/20220216193455/20220216193455-Academind.png"
+  alt="Academind Youtube channel"
+/>
+
+[Derek Banas](https://www.youtube.com/user/derekbanas)
+
+<img
+  src="/images/20220216193455/20220216193455-derek-Banas.png"
+  alt="Derek Banas Youtube channel"
+/>
+
+[Mark Lewis](https://www.youtube.com/user/DrMarkCLewis)
+
+<img
+  src="/images/20220216193455/20220216193455-Mark-Lewis.png"
+  alt="Mark Lewis Youtube channel"
+/>
+
+[The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
+
+<img
+  src="/images/20220216193455/20220216193455-net-ninja.png"
+  alt="The Net Ninja Youtube channel"
+/>
+
+# Conclusion
+
+Let me know in the comments which one is your favorite.
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Best Programming Jokes February 2022]]></title>
             <link>https://danfleser.com/posts/20220215200104-programmer-jokes-feb-2022</link>
