@@ -23,7 +23,6 @@ export default function Seo({
       <title>{metaTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="thumbnail" content={metaThumbnail} />
-      <meta name="robots" content="index, follow" />
       <meta name="url" content={metaUrl} />
       <meta name="identifier-URL" content={metaUrl} />
       <meta
