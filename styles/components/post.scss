@@ -3,7 +3,7 @@
     @apply w-full md:max-w-full md:flex;
 
     .app-post-image {
-      @apply h-40 mb-4 md:h-auto md:w-64 md:mb-0 flex-none relative overflow-hidden;
+      @apply h-40 mb-4 md:h-auto md:w-64 md:mb-0 flex-none relative overflow-hidden cursor-pointer;
     }
 
     .app-post-info {

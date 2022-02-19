@@ -10,11 +10,13 @@ export default function Post({ post }) {
     >
       <section className="app-post-content">
         <section className="app-post-image">
-          <img
-            alt={post.frontmatter.title}
-            layout="fill"
-            src={require(`../../public/images/${post.frontmatter.cover_image}`)}
-          />
+          <Link href={"/posts/[slug]"} as={`/posts/${post.slug}`} passHref>
+            <img
+              alt={post.frontmatter.title}
+              layout="fill"
+              src={require(`../../public/images/${post.frontmatter.cover_image}`)}
+            />
+          </Link>
         </section>
 
         <section className="app-post-info">

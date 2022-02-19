@@ -1,0 +1,122 @@
+---
+title: "The 4 ES2022 Features You Should Know About"
+date: "2022-02-18T18:58:32.960Z"
+tags: "javascript"
+description: "ECMAScript 2022 is a new JavaScript standard that is going to be released in June 2022. Let’s overview the most important changes."
+cover_image: "20220218185832-es2022.jpg"
+---
+
+## 1\. Method at() in arrays
+
+Finally! ES2022 will give us a possibility to index array-like objects from the end. That’s a tiny feature, but it improves core readability when dealing with `arrays` or `strings`.
+
+`At()` method with positive number will work the same as indexing by `[]` , but with negative will allow accessing values from the end.
+
+Instead of writing:
+
+```js
+const arr = [1, 2, 3, 4];
+arr[arr.length - 2]; // 3
+arr.slice(-2)[0]; // 3
+
+const str = "1234";
+str[str.length - 2]; // '3'
+str.slice(-2)[0]; // '3'
+```
+
+We would be able to write:
+
+```js
+const arr = [1, 2, 3, 4];
+arr.at(-2); // 3
+
+const str = "1234";
+str.at(-2); // '3'
+```
+
+## 2\. Error cause
+
+`.cause` property on the error object would allow us to specify which error caused the other error.
+
+```js
+try {
+  doSomeComputationThatThrowAnError();
+} catch (error) {
+  throw new Error("I am the result of another error", { cause: error });
+}
+```
+
+## 3\. Top-level await
+
+- It allows to load modules dynamically
+
+```js
+const serviceName = await fetch(
+  "https://example.com/what-service-should-i-use"
+);
+const service = await import(`/services/${serviceName}.js`);
+
+// OR
+
+const params = new URLSearchParams(location.search);
+const theme = params.get("theme");
+const stylingFunctions = await import(`/styling-functions-${theme}.js`);
+```
+
+- It allows to conditionally render modules
+
+```js
+const date = new Date();
+
+if (date.getFullYear() === 2023) {
+  await require("/special-code-for-2023-year.js");
+}
+```
+
+## 4\. Private slots and methods
+
+
+They are private properties of the classes. ES2022 will give us the possibility to create them and get an error when we try to access them outside of the class. The same goes for private methods.
+
+JS team chose to give them `#` prefix.
+
+Here is an example of private slots in action:
+
+```js
+class Human {
+  #name = "John";
+
+  setName(name) {
+    this.#name = name;
+  }
+}
+
+const human = new Human();
+human.#name = "Amy"; // ERROR!
+human.setName("Amy"); // OK
+```
+
+And private method:
+
+```js
+class Human {
+  name = "John";
+
+  constructor(name) {
+    this.#setName("Amy"); // OK
+  }
+
+  #setName(name) {
+    this.name = name;
+  }
+}
+
+const human = new Human();
+human.#setName("Amy"); // ERROR!
+```
+
+# Final notes
+
+You can find all improvements [here](https://exploringjs.com/impatient-js/ch_new-javascript-features.html#new-in-es2022).
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**

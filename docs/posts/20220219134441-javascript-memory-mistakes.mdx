@@ -1,0 +1,35 @@
+---
+title: "These Common JavaScript Mistakes Reduce Performance Drastically"
+date: "2022-02-19T13:44:41.800Z"
+tags: "javascript, optimization"
+description: "JavaScript doesn’t provide any memory management primitives. Instead, memory is managed by the JavaScript VM through a memory reclaim process. That process is known as Garbage Collection. Since we can’t force it to run, how do we know it will work properly? What do we know about it? Script execution is paused during the process. It frees memory for unreachable resources. It is non-deterministic. It will not inspect the whole memory in one go but will run in multiple cycles. It is unpredictable. It will execute when necessary."
+cover_image: "20220219134441-javascript-memory-mistakes.png"
+---
+
+How can we prevent our web app from leaking memory? We have to avoid the retention of unnecessary resources. Let’s look at the most common scenarios where this might happen.
+
+# Timer Listeners
+
+Let’s look at the `setInterval` timer. It is a commonly used Web API feature.
+
+The return of `setInterval` is an interval ID which we can use to cancel the interval. We can call `clearInterval` once the Component unmounts.
+
+# Event Listeners
+
+When using `addEventListener`, we need to use `removeEventListener` to remove it.
+
+# Observers
+
+> “The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document’s [viewport](https://developer.mozilla.org/en-US/docs/Glossary/Viewport).” — [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver)
+
+Once you are done observing the object, you need to cancel out the monitor process.
+
+# Holding DOM References
+
+DOM nodes are not free from memory leaks either. You need to be careful not to hold references of them.
+
+# Conclusion
+
+It is recommended to periodically run the browser profiler tools on your web application. That is the only way to be sure that nothing is leaking and left behind. The Chrome Developer `performance` tab is the place to start detecting some anomalies. After you have spotted an issue, you can dig deeper into it with the `profiler` tab by taking snapshots and comparing them.
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**

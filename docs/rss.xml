@@ -4,11 +4,1273 @@
         <title>Development blog</title>
         <link>https://danfleser.com/</link>
         <description>undefined</description>
-        <lastBuildDate>Wed, 16 Feb 2022 21:46:02 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 19 Feb 2022 14:22:48 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <copyright>Copyright © 2022 Dan Fleser</copyright>
+        <item>
+            <title><![CDATA[Most Developers Lack These Useful JavaScript Features]]></title>
+            <link>https://danfleser.com/posts/20220219140317-modern-javascript-features</link>
+            <guid>20220219140317-modern-javascript-features</guid>
+            <pubDate>Sat, 19 Feb 2022 14:03:17 GMT</pubDate>
+            <description><![CDATA[Write less and do more with JavaScript. With JavaScript, you can do one thing in many different ways. Also, JavaScript is evolving with the release of every new ECMAScript specification, adding new useful methods and operators to make the code shorter, and somewhere more readable.]]></description>
+            <content:encoded><![CDATA[
+# 1. Object.entries
+
+Most developers use `Object.keys` method to iterate over an object. This method only returns an array of the object keys, not values. We can use `Object.entries` to get both key and value.
+
+```js
+const person = {
+  name: "John",
+  age: 20,
+};
+Object.keys(person); // ['name', 'age']
+Object.entries(data); // [['name', 'John'], ['age', 20]]
+```
+
+And to iterate over an object we can do the following:
+
+```js
+Object.keys(person).forEach((key) => {
+  console.log(`${key} is ${person[key]}`);
+});
+// using entries to get key and value both
+Object.entries(person).forEach(([key, value]) => {
+  console.log(`${key} is ${value}`);
+});
+// expected output:
+// name is John
+// age is 20
+```
+
+Both approaches above return the same result but Object.entries makes it easy to get key-value pair.
+
+# 2. String replaceAll Method
+
+In JavaScript, to replace all occurrences of a string with another string, we need to use a Regular Expression like the following:
+
+```js
+const str = "Red-Green-Blue";
+// replaces the first occurrence only
+str.replace("-", " "); // Red Green-Blue
+// use RegEx to replace all occurrences
+str.replace(/-/g, " "); // Red Green Blue
+```
+
+But in ES12, a new method is added to `String.prototype` named `replaceAll` which replaces all occurrences of a string with another string value.
+
+```js
+str.replaceAll("-", " "); // Red Green Blue
+```
+
+# 3. Numeric Separator
+
+You can use an underscore `_` as a numeric separator, which makes it easy to count the number of zeros in a number.
+
+```js
+// difficult to read
+const billion = 1000000000; // easier to read
+const readableBillion = 1000_000_000;
+console.log(readableBillion); // returns 1000000000
+```
+
+The underscore separator can also be used with BigInt numbers, like the following example:
+
+```js
+const trillion = 1000_000_000_000n;
+console.log(trillion); // 1000000000000
+```
+
+# 4. document.designMode
+
+Related to the frontend JavaScript, the design mode lets you edit any of the content on the page. Just open the browser console and type the following:
+
+```js
+document.designMode = "on";
+```
+
+Try yourself
+
+It is helpful for designers as they don’t have to change things in code every time to the change on the screen.
+
+# 5. Logical Assignment Operator
+
+Logical assignment operators are a combination of logical operators `&&`, `||`, `??` and assignment operator `=`.
+
+```js
+const a = 1;
+const b = 2;
+a &&= b;
+console.log(a); // returns 2
+// the above statement is equivalent to
+a && (a = b); // OR another approach
+if (a) {
+  a = b;
+}
+```
+
+We’re checking if the value of `a` is truthy, if it is then we’re updating the value of `a`. The same can be done with logical OR `||` operator.
+
+```js
+const a = null;
+const b = 3;
+a ||= b;
+console.log(a); // returns 3
+// the above statement is equivalent to
+a || (a = b);
+```
+
+And with the Nullish Coalescing operator `??`.
+
+```js
+const a = null;
+const b = 3;
+a ??= b;
+console.log(a); // returns 3
+// the above statement is equivalent to
+if (a === null || a === undefined) {
+  a = b;
+}
+```
+
+The `??` operator only checks for `null` or `undefined` values.
+
+# Conclusion
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[These Common JavaScript Mistakes Reduce Performance Drastically]]></title>
+            <link>https://danfleser.com/posts/20220219134441-javascript-memory-mistakes</link>
+            <guid>20220219134441-javascript-memory-mistakes</guid>
+            <pubDate>Sat, 19 Feb 2022 13:44:41 GMT</pubDate>
+            <description><![CDATA[JavaScript doesn’t provide any memory management primitives. Instead, memory is managed by the JavaScript VM through a memory reclaim process. That process is known as Garbage Collection. Since we can’t force it to run, how do we know it will work properly? What do we know about it? Script execution is paused during the process. It frees memory for unreachable resources. It is non-deterministic. It will not inspect the whole memory in one go but will run in multiple cycles. It is unpredictable. It will execute when necessary.]]></description>
+            <content:encoded><![CDATA[
+How can we prevent our web app from leaking memory? We have to avoid the retention of unnecessary resources. Let’s look at the most common scenarios where this might happen.
+
+# Timer Listeners
+
+Let’s look at the `setInterval` timer. It is a commonly used Web API feature.
+
+The return of `setInterval` is an interval ID which we can use to cancel the interval. We can call `clearInterval` once the Component unmounts.
+
+# Event Listeners
+
+When using `addEventListener`, we need to use `removeEventListener` to remove it.
+
+# Observers
+
+> “The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document’s [viewport](https://developer.mozilla.org/en-US/docs/Glossary/Viewport).” — [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver)
+
+Once you are done observing the object, you need to cancel out the monitor process.
+
+# Holding DOM References
+
+DOM nodes are not free from memory leaks either. You need to be careful not to hold references of them.
+
+# Conclusion
+
+It is recommended to periodically run the browser profiler tools on your web application. That is the only way to be sure that nothing is leaking and left behind. The Chrome Developer `performance` tab is the place to start detecting some anomalies. After you have spotted an issue, you can dig deeper into it with the `profiler` tab by taking snapshots and comparing them.
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[10 Copy-Paste Javascript Snippets Lazy Developers Use]]></title>
+            <link>https://danfleser.com/posts/20220219132839-copy-paste-javascript-snippets</link>
+            <guid>20220219132839-copy-paste-javascript-snippets</guid>
+            <pubDate>Sat, 19 Feb 2022 13:28:39 GMT</pubDate>
+            <description><![CDATA[A list of useful code snippets in front-end web development. Front-end development is one of the popular fields when it comes to software development or programming in general. A lot of people these days are pursuing a career in front-end development.]]></description>
+            <content:encoded><![CDATA[
+# Shuffle an Array
+
+Shuffling an array is super easy with `sort` and `random` methods.
+
+```js
+const shuffleArray = (arr) => arr.sort(() => 0.5 - Math.random());
+console.log(shuffleArray([1, 2, 3, 4]));
+// Result: [ 1, 4, 3, 2 ]
+```
+
+# Check if Date is Valid
+
+Use the following snippet to check if a given date is valid or not.
+
+```js
+const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
+isDateValid("December 17, 1995 03:24:00");
+// Result: true
+```
+
+# Copy to Clipboard
+
+Easily copy any text to clipboard using `navigator.clipboard.writeText`.
+
+```js
+const copyToClipboard = (text) => navigator.clipboard.writeText(text);
+copyToClipboard("Hello World");
+```
+
+# Find the day of the year
+
+Find which is the day by a given date.
+
+```js
+const dayOfYear = (date) =>
+  Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+dayOfYear(new Date());
+// Result: 272
+```
+
+# Capitalize a String
+
+Javascript doesn’t have an inbuilt capitalize function, so we can use the following code for this purpose.
+
+```js
+const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)capitalize("follow for more")
+// Result: Follow for more
+```
+
+# Find the number of days between two days
+
+Find the days between 2 given days using the following snippet.
+
+```js
+const dayDif = (date1, date2) => Math.ceil(Math.abs(date1.getTime() - date2.getTime()) / 86400000)dayDif(new Date("2020-10-21"), new Date("2021-10-22"))
+// Result: 366
+```
+
+# Clear All Cookies
+
+You can easily clear all cookies stored on a web page by accessing the cookie using `document.cookie` and clearing it.
+
+```js
+const clearCookies = document.cookie.split(';').forEach(cookie => document.cookie = cookie.replace(/^ +/, '').replace(/=.\*/, \`=;expires=${new Date(0).toUTCString()};path=/\`));
+```
+
+# Generate Random Hex
+
+You can generate random hex colors with `Math.random` and `padEnd` properties.
+
+```js
+const randomHex = () => \`#${Math.floor(Math.random() \* 0xffffff).toString(16).padEnd(6, "0")}\`;console.log(randomHex());
+// Result: #92b008
+```
+
+# Remove Duplicated from Array
+
+You can easily remove duplicates with `Set` in JavaScript. It's a lifesaver.
+
+```js
+const removeDuplicates = (arr) => [...new Set(arr)];
+console.log(removeDuplicates([1, 2, 3, 3, 4, 4, 5, 5, 6]));
+// Result: [ 1, 2, 3, 4, 5, 6 ]
+```
+
+# Get Query Params from URL
+
+You can easily retrieve query params from a URL either bypassing `window.location` or the raw URL `goole.com?search=easy&page=3`
+
+```js
+const getParameters = (URL) => {
+  URL = JSON.parse(
+    '{"' +
+      decodeURI(URL.split("?")[1])
+        .replace(/"/g, '\\\\"')
+        .replace(/&/g, '","')
+        .replace(/=/g, '":"') +
+      '"}'
+  );
+  return JSON.stringify(URL);
+};
+getParameters(window.location);
+// Result: { search : "easy", page : 3 }
+```
+
+# Log Time from Date
+
+We can log time, in the format `hour::minutes::seconds` from a given date.
+
+```js
+const timeFromDate = (date) => date.toTimeString().slice(0, 8);
+console.log(timeFromDate(new Date(2021, 0, 10, 17, 30, 0)));
+// Result: "17:30:00"
+```
+
+# Check if a number is even or odd
+
+```js
+const isEven = (num) => num % 2 === 0;
+console.log(isEven(2));
+// Result: True
+```
+
+# Find Average of Numbers
+
+Find the average between multiple numbers using `reduce`method.
+
+```js
+const average = (...args) => args.reduce((a, b) => a + b) / args.length;
+average(1, 2, 3, 4);
+// Result: 2.5
+```
+
+# Check if the array is empty
+
+A simple one-liner to check if an array is empty, will return `true`or `false`.
+
+```js
+const isNotEmpty = (arr) => Array.isArray(arr) && arr.length > 0;
+isNotEmpty([1, 2, 3]);
+// Result: true
+```
+
+# Get Selected Text
+
+Get the text the user has selected using inbuilt `getSelection`property.
+
+```js
+const getSelectedText = () => window.getSelection().toString();
+getSelectedText();
+```
+
+# Conclusion
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[The Only Signs To Be Aware Of When Starting A Programming Career]]></title>
+            <link>https://danfleser.com/posts/20220219130405-signs-you-need-to-be-aware-of-when-starting-your-programming-career</link>
+            <guid>20220219130405-signs-you-need-to-be-aware-of-when-starting-your-programming-career</guid>
+            <pubDate>Sat, 19 Feb 2022 13:04:05 GMT</pubDate>
+            <description><![CDATA[A fundamental requirement for learning is an active interest in the thing you are learning. If you do not possess a mind that is curious about technology, you will not have the energy it takes to persist in learning the broad and deep knowledge required to be a successful programmer.]]></description>
+            <content:encoded><![CDATA[
+> Programming is a basic human skill, just like reading, writing and arithmetic. Anyone can learn to program with time and effort.
+
+# 1. Lack of curiosity
+
+If you lack curiosity about computers and how technology works, you will never be successful as a programmer.
+
+<iframe
+  src="https://giphy.com/embed/QqdyVT8H6uJ32"
+  width="100%"
+  height="100%"
+></iframe>
+
+**Find Your Curiosity:** Ask yourself if programming truly interests you. If your honest answer is that it doesn’t, go find something that you are interested in. Save yourself the time and energy. But if your answer is “Yes”, then push yourself find something new that you haven’t noticed before, recognize the vast ocean and dive a little deeper.
+
+# 2. Lack of autonomy and resourcefulness
+
+If you don’t develop the ability to solve problems for yourself, you will never be successful as a programmer.
+
+<iframe
+  src="https://giphy.com/embed/11LK0CKzYtkaic"
+  width="100%"
+  height="100%"
+></iframe>
+
+In the world of development, all the information you need is found in that magical place formerly known as the _Information Super Highway_. This massive library has one huge doorway: [Google](https://www.google.com).
+
+Check this article [7 Tricks To Master the Art of Googling](http://localhost:3000/posts/20220212095550-master-the-art-of-googling) to unlock TOP SECRET ancient googling skills that the masters of the universe have used.
+
+**Use the Resources:** Recognize that all the answers you need really are out there. When you have a question, force yourself to google it before asking someone else for the answer and check the documentation. Save the time of others for when you have tried and truly failed to find the answer you need.
+
+# 3. Lack of persistence in the face of a problem
+
+If you give up easily in the face of problems, you will never be successful as a programmer.
+
+<iframe
+  src="https://giphy.com/embed/5Gq4gdBB0GBGOfM0P4"
+  width="100%"
+  height="100%"
+></iframe>
+
+**Patient Acceptance:** You need to recognize that problems come with the territory and are not problems, but in fact challenges. Every challenge you face and overcome gives you deeper understanding and a better ability to face new challenges, and quickly resolve old ones.
+
+# 4. No feeling of success in overcoming a problem
+
+If you don’t feel a sense of excitement and accomplishment after solving a problem, you will never be successful as a programmer.
+
+<iframe
+  src="https://giphy.com/embed/o75ajIFH0QnQC3nCeD"
+  width="100%"
+  height="100%"
+></iframe>
+
+**Celebrate Your Wins:** Whenever you solve a problem that you struggled with, no matter how small, always take pride in your accomplishment, take a break and congratulate yourself for a job well done. Let the feeling of success sink in and energize you for the next problem you face.
+
+# 5. Impatient about learning and understanding
+
+If you are impatient about learning and expect to master everything quickly and effortlessly, you will never truly be successful at programming.
+
+<iframe
+  src="https://giphy.com/embed/bPCwGUF2sKjyE"
+  width="100%"
+  height="100%"
+></iframe>
+
+**Acknowledge Your Progress:** There is a lot to learn, and the journey of programming never ends. But the knowledge is cumulative, so take pride it what you do know, and trust that every effort you take in your learning will create a strong foundation of knowledge for wherever your career takes you.
+
+# 6. Getting bored/tired from thinking
+
+If you are lazy in your thinking and see concentrated, focused thinking as a chore, you will never truly be successful at programming.
+
+<iframe
+  src="https://giphy.com/embed/F3BeiZNq6VbDwyxzxF"
+  width="100%"
+  height="100%"
+></iframe>
+
+**Your Mind is a Muscle:** Trust that your brain is like a muscle — as you use it, it gets better and more efficient in it’s thinking. As you put pieces together and develop mental concepts, it becomes much easier to discover solutions.
+
+# 7. Inability to think for yourself
+
+If you expect others to think for you, and are unwilling to look at the details of your own situation, you will never be a truly successful programmer.
+
+<iframe
+  src="https://giphy.com/embed/YaSkjOhf16wseqPFkH"
+  width="100%"
+  height="100%"
+></iframe>
+
+**Think for yourself:** Through your experience and critical thinking skills, develop your own perspectives. Make reasonable guesses, take a position, and be willing to change as new information comes to light.
+
+# 8. Rigid, narrow and/or disorganized thinking
+
+If you are rigid in your thinking, and you have difficulty keeping your code organized — and by extension your thoughts organized and focused, you will never be successful at programming.
+
+<iframe
+  src="https://giphy.com/embed/d3mlE7uhX8KFgEmY"
+  width="100%"
+  height="100%"
+></iframe>
+
+**Self Reflection:** You need to take a step back, and look at the bigger picture of how you are approaching things. How can you do this better? Is there anything you can do to make your life easier? What are you missing that could help you?
+
+# 9. Needing the “right” answer instead of recognizing a spectrum of “good” and “bad” answers
+
+If you see the end goal of programming as finding the right solution, rather than a spectrum of solutions, you will never truly be successful as a programmer.
+
+<iframe
+  src="https://giphy.com/embed/3oriNVcPynBHr0urUk"
+  width="100%"
+  height="100%"
+></iframe>
+
+**Get Creative:** Recognize that there are numerous ways to solve a problem, and through experience and exposure, you will develop a nuanced understanding overtime about which solutions feel better than others. Looking at the big picture, imagining different possibilities and trusting your gut will lead to better solutions that are more satisfying.
+
+# 10. Not paying careful attention to details
+
+If you gloss over details, and overlook little things, you will never be a truly successful programmer.
+
+<iframe
+  src="https://giphy.com/embed/BXOEmFSzNkOObZhIA3"
+  width="100%"
+  height="100%"
+></iframe>
+
+**Pay Attention to the Details:** The details matter and you have to accept that. Once you do, you can begin to always be scanning your code for anything that is out of place. You can organize your code and use tools that help you identify issues quickly.
+
+# Conclusion
+
+If you are interested in learning to program, I encourage you to begin the journey. Keep the above list in mind, and start exploring the many resources available online that can get you moving forward quickly. You won’t regret it.
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Every Full-Stack Developer Should Use This Tech Stack In 2022]]></title>
+            <link>https://danfleser.com/posts/20220219124057-full-stack-dev-tech-stack-jump-start</link>
+            <guid>20220219124057-full-stack-dev-tech-stack-jump-start</guid>
+            <pubDate>Sat, 19 Feb 2022 12:40:57 GMT</pubDate>
+            <description><![CDATA[After having lots of interviews and reading through countless job descriptions on job boards I think this is a great modern tech stack for JavaScript developers in 2022. My framework of choice is React however you can swap it out for Vue, Angular or Svelte.]]></description>
+            <content:encoded><![CDATA[
+# Project Management
+
+<iframe
+  src="https://giphy.com/embed/8xEA3sa0uxPuLFXaXA"
+  width="100%"
+  height="100%"
+></iframe>
+
+- [Notion](https://www.notion.so/) — For overall project management, documentation, notes and wikis
+- [Clubhouse](https://clubhouse.io/) / [Monday](https://monday.com/) — Clubhouse or Monday to manage the development process itself. Both can be Incorporated into a CI/CD workflow so builds are done automatically and changes are reflected in the staging and production CI/CD branches
+- [Discord](https://discord.com/) — For communication between teams
+
+# Design
+
+<iframe
+  src="https://giphy.com/embed/sbxbdNiIKHFyo"
+  width="100%"
+  height="100%"
+></iframe>
+
+- [Figma](https://www.figma.com/) — Figma is a modern cross platform design tool with sharing and collaboration built in
+- [Photoshop](https://www.photoshop.com/) / [Canva](https://www.canva.com/) — Photoshop is the industry standard for doing graphic design work and Canva is a great image editing tool
+
+# Back-End
+
+<iframe
+  src="https://giphy.com/embed/WTO8QA0mX2Cfw5vhkp"
+  width="100%"
+  height="100%"
+></iframe>
+
+- [Node.js](https://nodejs.org/en/) — A popular modern back-end framework
+- [PostgreSQL](https://www.postgresql.org/) — A popular SQL Database
+- [MongoDB](https://www.mongodb.com/) — A popular NoSQL Database
+
+# Front-End
+
+<iframe
+  src="https://giphy.com/embed/1RkDDoIVs3ntm"
+  width="100%"
+  height="100%"
+></iframe>
+
+- [NextJS](https://nextjs.org/) — NextJS for generating a static website
+- [Tailwind](https://tailwindcss.com/) — Tailwind for writing the CSS, as its a modern popular framework basically allowing you to avoid writing your own custom CSS from scratch leading to faster development workflows
+- [CSS/SASS](https://sass-lang.com/) / [styled-components](https://styled-components.com/) — This can be used as a different option to Tailwind, giving you more customization options for the components in React
+- [Storybook](https://storybook.js.org/) — This is the main build process for creating the components because it allows for modularity. With Storybook components are created in isolation inside of a dynamic library that can be updated and shared across the business
+- [Jest](https://jestjs.io/) and [Enzyme](https://enzymejs.github.io/enzyme/), [React Testing Library](https://testing-library.com/) and [Cypress](https://www.cypress.io/) — TDD using unit tests for the code and components before they are sent to production and Cypress for end to end testing
+- [Sanity](https://www.sanity.io/) / [Strapi](https://strapi.io/) — Sanity and Strapi are headless CMS, and are used to publish the content with the use of a GUI (optional tools)
+- [Vercel](https://vercel.com/) / [Netlify](https://www.netlify.com/) / [AWS](https://aws.amazon.com/) — The CI/CD provider combined with GitHub, it makes it easy to review and promote changes as they’re developed
+
+# Mobile
+
+<iframe
+  src="https://giphy.com/embed/nmE8YkDIaB1OE"
+  width="100%"
+  height="100%"
+></iframe>
+
+- [Ionic](https://ionicframework.com/) — Cross-platform apps
+- [React Native](https://reactnative.dev/) / [Redux](https://redux.js.org/) — React Native for creating cross platform mobile apps and Redux for state management
+- [Flutter/Dart](https://flutter.dev/) — Flutter and Dart for creating cross platform mobile apps
+
+# Final notes
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[The 15 Lightweight React Component Hooks Every Developer Needs Knows]]></title>
+            <link>https://danfleser.com/posts/20220219121810-lightweight-react-component-hooks</link>
+            <guid>20220219121810-lightweight-react-component-hooks</guid>
+            <pubDate>Sat, 19 Feb 2022 12:18:10 GMT</pubDate>
+            <description><![CDATA[React hooks is the trending word in the React community. I hope every React developer knows what hooks are. In simple words, hooks give the advantage to use lifecycle methods in functional components and also encourages us to write functional components.]]></description>
+            <content:encoded><![CDATA[
+
+**1\. useIdle**
+===============
+
+The useIdle hook tracks if the user on the page is idle. You can pass two params — `ms` is time to consider idle and `initialState`, which allows the user to set idle initially.
+
+```jsx
+import {useIdle} from 'react-use';
+
+const Demo = () => {
+  const isIdle = useIdle(3e3);
+
+  return (
+    <div>
+      <div>User is idle: {isIdle ? 'Yes 😴' : 'Nope'}</div>
+    </div>
+  );
+};
+```
+
+**2\. useInterval**
+===============
+
+This hook to use for interval-related functionalities. Which handles `clearInterval`on component unmount automatically. It also allows pausing the interval by setting the delay to null.
+```jsx
+import * as React from 'react';
+import {useInterval} from 'react-use';
+
+const Demo = () => {
+  const [count, setCount] = React.useState(0);
+  const [delay, setDelay] = React.useState(1000);
+  const [isRunning, toggleIsRunning] = useBoolean(true);
+  useInterval(
+    () => {
+      setCount(count + 1);
+    },
+    isRunning ? delay : null
+  );
+
+  return (
+    <div>
+      <div>
+        delay: <input value={delay} onChange={event => setDelay(Number(event.target.value))} />
+      </div>
+      <h1>count: {count}</h1>
+      <div>
+        <button onClick={toggleIsRunning}>{isRunning ? 'stop' : 'start'}</button>
+      </div>
+    </div>
+  );
+};
+```
+**3\. useScroll**
+=============
+
+This hook is used to listen to the scroll event of the element and rerenders on scrolling. Not required to add the JavaScript event listeners manually.
+```jsx
+import {useScroll} from 'react-use';
+
+const Demo = () => {
+  const scrollRef = React.useRef(null);
+  const {x, y} = useScroll(scrollRef);
+
+  return (
+    <div ref={scrollRef}>
+      <div>x: {x}</div>
+      <div>y: {y}</div>
+    </div>
+  );
+};
+```
+**4\. useToggle**
+=============
+
+This hook is used to toggle between two states like TRUE, FALSE. This approach reduces the manual logic.
+```jsx
+import {useToggle} from 'react-use';
+
+const Demo = () => {
+  const [on, toggle] = useToggle(true);
+
+  return (
+    <div>
+      <div>{on ? 'ON' : 'OFF'}</div>
+      <button onClick={toggle}>Toggle</button>
+      <button onClick={() => toggle(true)}>set ON</button>
+      <button onClick={() => toggle(false)}>set OFF</button>
+    </div>
+  );
+};
+```
+**5\. useTitle**
+================
+
+This hook is used to set the page title.
+```jsx
+import {useTitle} from 'react-use';
+
+const Demo = () => {
+  useTitle('Hello world!');return null;
+};
+```
+**6\. usePrevious**
+===============
+
+This hook is used to get the previous state. We might not require to write custom logic to get the previous state.
+```jsx
+import {usePrevious} from 'react-use';
+
+const Demo = () => {
+  const [count, setCount] = React.useState(0);
+
+  const prevCount = usePrevious(count);return (
+    <p>
+      <button onClick={() => setCount(count + 1)}>+</button>
+      <button onClick={() => setCount(count - 1)}>-</button>
+      <p>
+        Now: {count}, before: {prevCount}
+      </p>
+    </p>
+  );
+};
+```
+**7\. useSetState**
+===================
+
+This hook is used to merge objects into their current state, similar to the `this.setState`in the class component. If you are using multiple states, it can be brought down to a single object state using `useSetState`
+```jsx
+import {useSetState} from 'react-use';
+
+const Demo = () => {
+  const [state, setState] = useSetState({});
+
+  return (
+    <div>
+      <pre>{JSON.stringify(state, null, 2)}</pre>
+      <button onClick={() => setState({hello: 'world'})}>hello</button>
+      <button onClick={() => setState({foo: 'bar'})}>foo</button>
+      <button
+        onClick={() => {
+          setState((prevState) => ({
+            count: (prevState.count || 0) + 1,
+          }))
+        }}
+      >
+        count
+      </button>
+    </div>
+  );
+};
+```
+**8\. useCookie**
+=============
+
+This hook is used to return the current value of a `cookie`, a callback to update the `cookie` and a callback to delete the `cookie.`
+```jsx
+import { useCookie } from "react-use";
+
+const Demo = () => {
+  const [value, updateCookie, deleteCookie] = useCookie("my-cookie");
+  const [counter, setCounter] = useState(1);useEffect(() => {
+    deleteCookie();
+  }, []);
+  const updateCookieHandler = () => {
+    updateCookie(`my-awesome-cookie-${counter}`);
+    setCounter(c => c + 1);
+  };
+
+  return (
+    <div>
+      <p>Value: {value}</p>
+      <button onClick={updateCookieHandler}>Update Cookie</button>
+      <br />
+      <button onClick={deleteCookie}>Delete Cookie</button>
+    </div>
+  );
+};
+```
+**9\. usePermission**
+=================
+
+This hook is used to get the permission status of the browser API. Pass the API name to get the permission status.
+```jsx
+import {usePermission} from 'react-use';
+
+const Demo = () => {
+  const state = usePermission({ name: 'microphone' });return (
+    <pre>
+      {JSON.stringify(state, null, 2)}
+    </pre>
+  );
+};
+```
+**10\. useDebounce**
+================
+
+This hook is used to delay the event until the wait time is completed. In the below code, the setState is performed after the wait time is completed.
+```jsx
+const Demo = () => {
+  const [state, setState] = React.useState('Typing stopped');
+  const [val, setVal] = React.useState('');
+  const [debouncedValue, setDebouncedValue] = React.useState('');
+  const [cancel] = useDebounce(
+    () => {
+      setState('Typing stopped');
+      setDebouncedValue(val);
+    },
+    2000, [val]
+  );
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={val}
+        placeholder="Debounced input"
+        onChange={({ currentTarget }) => {
+          setState('Waiting for typing to stop...');
+          setVal(currentTarget.value);
+        }}
+      />
+      <div>{state}</div>
+      <div>
+        Debounced value: {debouncedValue}
+        <button onClick={cancel}>Cancel debounce</button>
+      </div>
+    </div>
+  );
+};
+```
+**11\. useGeolocation**
+===================
+
+This hook is used to get the user geolocation. useGeolocation returns latitude, longitude, altitude, and more info.
+```jsx
+import {useGeolocation} from 'react-use';
+
+const Demo = () => {
+  const state = useGeolocation();return (
+    <pre>
+      {JSON.stringify(state, null, 2)}
+    </pre>
+  );
+};
+```
+**12\. useNetworkState**
+====================
+
+This hook is used to get the network status of the browser. useNetworkState can be used the show the connection status to the user.
+```jsx
+import {useNetworkState} from 'react-use';
+
+const Demo = () => {
+  const state = useNetworkState();return (
+    <pre>
+      {JSON.stringify(state, null, 2)}
+    </pre>
+  );
+};
+```
+**13\. useCopyToClipboard**
+=======================
+
+useCopyToClipboard hook is used to copy the text to the clipboard.
+```jsx
+const Demo = () => {
+  const [text, setText] = React.useState('');
+  const [state, copyToClipboard] = useCopyToClipboard();
+
+  return (
+    <div>
+      <input value={text} onChange={e => setText(e.target.value)} />
+      <button type="button" onClick={() => copyToClipboard(text)}>copy text</button>
+      {state.error
+        ? <p>Unable to copy value: {state.error.message}</p>
+        : state.value && <p>Copied {state.value}</p>}
+    </div>
+  )
+}
+```
+**14\. useFavicon**
+===============
+
+The useFavicon hook is used to set the favicon of the page.
+```jsx
+import {useFavicon} from 'react-use';
+
+const Demo = () => {
+  useFavicon('[https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico'](https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico'));return null;
+};
+```
+**15\. useError**
+=============
+
+useError hook is used to dispatch errors.
+```jsx
+import { useError } from 'react-use';
+
+const Demo = () => {
+  const dispatchError = useError();const clickHandler = () => {
+    dispatchError(new Error('Some error!'));
+  };
+
+  return <button onClick={clickHandler}>Click me to throw</button>;
+};// In parent app
+
+const App = () => (
+  <ErrorBoundary>
+    <Demo />
+  </ErrorBoundary>
+);
+```
+
+# Final notes
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[10 GitHub Repositories Every Self-Taught Developer Needs]]></title>
+            <link>https://danfleser.com/posts/20220219112826-10-self-taught-dev-repos</link>
+            <guid>20220219112826-10-self-taught-dev-repos</guid>
+            <pubDate>Sat, 19 Feb 2022 11:28:26 GMT</pubDate>
+            <description><![CDATA[Indeed, every developer is, to a certain degree, self-taught. However, my way of looking at being a self-taught developer is to be able to write production-level code while having a minimal/no college background in computer science, engineering, or IT (much like myself).]]></description>
+            <content:encoded><![CDATA[
+<iframe
+  src="https://giphy.com/embed/cnhpl4IeYgU7MCBdV2"
+  width="100%"
+  height="100%"
+></iframe>
+
+Start with this in mind:
+
+> “Many people who excel are self-taught” — Herb Ritts
+
+# 1\. [🔧 roadmap.sh](https://roadmap.sh/)
+
+**⭐️⭐️⭐️ — 187k**
+
+The three suggested paths covered in this repository are:
+
+- Frontend developer
+- Backend developer
+- DevOps
+
+The repository covers all the skills and technology required for each of these paths. It also provides a strategy to learn these skills in a structured manner.
+
+# 2\. [🎓 Path to a free self-taught education in Computer Science!](https://github.com/ossu/computer-science)
+
+**⭐️⭐️⭐️ — 108k**
+
+This repository aims to create an open source curriculum for learning computer science. The repository covers the prerequisites, core, and advanced courses required to have a well-rounded understanding of the fundamentals of the field.
+
+# 3\. [📚 List of awesome university courses for learning Computer Science!](https://github.com/prakhar1989/awesome-courses)
+
+**⭐️⭐️⭐️ — 40k**
+
+This repo focuses on CS courses offered by universities. The unique aspect of the material compiled in this repo is that all the courses have their materials (such as lecture notes, lecture videos, and assignments) freely available on the internet.
+
+# 4\. [📖 A complete computer science study plan to become a software engineer.](https://github.com/jwasham/coding-interview-university)
+
+**⭐️⭐️⭐️ — 210k**
+
+The primary purpose of this repo was to create a study plan to transition from a software/web developer into a software engineer at a FAANG company.
+
+The topics covered in the repo include:
+
+- Daily plan
+- Big-O notation
+- Data structures and algorithms
+- OOPs, design patterns, threads/processes, networking, testing
+- Systems design
+- Resume, tips for answering general questions, tips for asking questions of the interviewer
+
+# 5\. [🌎 Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.](https://github.com/donnemartin/system-design-primer)
+
+**⭐️⭐️⭐️ — 163k**
+
+One of the few fantastic resources available online for system design, this repo is extremely useful for developers who want to understand how to build scalable systems.
+
+Helps you to prepare for systems design interviews at FAANG companies.
+
+# 6\. [📚 Freely available programming books](https://github.com/EbookFoundation/free-programming-books)
+
+**⭐️⭐️⭐️ — 222k**
+
+Tis repository has a massive collection of free programming books useful for learning all sorts of technology.
+
+# 7\. [🤓 Build your own](https://github.com/danistefanovic/build-your-own-x)
+
+**⭐️⭐️⭐️ — 131k**
+
+This repo is useful for developers in building their own versions of software architecture/frameworks. The types of software covered include:
+
+- Augmented reality
+- Blockchain/cryptocurrencies
+- Databases
+- Programming language
+- Neural networks
+
+# 8\. [🆓 A collective list of free APIs](https://github.com/public-apis/public-apis)
+
+**⭐️⭐️⭐️ — 181k**
+
+This repository is a collective list of freely available APIs that can be used for developing software applications.
+
+The repository is indexed categorically and also contains information regarding authorization, HTTPS, and CORS.
+
+# 9\. [🏠 Curated list of project-based tutorials](https://github.com/tuvtran/project-based-learning)
+
+**⭐️⭐️⭐️ — 64k**
+
+For the self-taught developer who loves to learn via creating projects, this repository is a gold mine. As the name suggests, this repository contains a list of programming languages and projects built with the respective language.
+
+# 10\. [⚔️ A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more](https://github.com/trimstray/the-book-of-secret-knowledge)
+
+**⭐️⭐️⭐️ — 44.5k**
+
+> \*\* "Knowledge is powerful, be careful how you use it!"
+
+This repository is a collection of various materials and tools that I use every day in my work. It contains a lot of useful information gathered in one piece. It is an invaluable source of knowledge for me that I often look back on.
+
+# Final notes
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[The 4 Resources You Need when Starting to Code]]></title>
+            <link>https://danfleser.com/posts/20220218192724-4-resources-to-use-when-starting-web-development</link>
+            <guid>20220218192724-4-resources-to-use-when-starting-web-development</guid>
+            <pubDate>Fri, 18 Feb 2022 19:27:24 GMT</pubDate>
+            <description><![CDATA[This article guides you through the jungle of technologies and resources. Want to learn how to code? , helping you go from no knowledge to building fast, interactive, modern websites. One of the trickiest challenges was choosing _what_ to learn and _where_ to learn it. There are so many languages, frameworks, and libraries - and lots of conflicting advice.]]></description>
+            <content:encoded><![CDATA[
+# Part 1: HTML, CSS, and JavaScript
+
+<iframe
+  src="https://giphy.com/embed/fuJPZBIIqzbt1kAYVc"
+  width="100%"
+  height="100%"
+></iframe>
+
+## **HTML**
+
+<iframe
+  src="https://giphy.com/embed/l3vRfNA1p0rvhMSvS"
+  width="100%"
+  height="100%"
+></iframe>
+
+If you’ve never done any coding before, then HTML is a great place to start. It is the core building block of the Internet, and unlike most other languages, it gives learners immediate visual feedback on the code they are writing.
+
+Start here:
+
+- [freeCodeCamp](https://www.freecodecamp.org/)
+
+Environment to practice
+
+- [CodePen](https://codepen.io/)
+
+## **CSS**
+
+<iframe
+  src="https://giphy.com/embed/yYSSBtDgbbRzq"
+  width="100%"
+  height="100%"
+></iframe>
+
+CSS is used to style the HTML.
+
+Start here:
+
+- [freeCodeCamp](https://www.freecodecamp.org/)
+- [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [CSS Grid Tutorial](https://cssgrid.io/)
+
+Environment to practice
+
+- [CodePen](https://codepen.io/)
+
+Most of questions had been asked already by users on StackOverflow, so a quick Google search will solve your problems.
+
+Check this article [7 Tricks To Master the Art of Googling](http://localhost:3000/posts/20220212095550-master-the-art-of-googling) to unlock TOP SECRET ancient googling skills that the masters of the universe have used.
+
+## **JavaScript**
+
+<img src="/images/20220218192724-javascript.png" alt="javascript meme girl" />
+
+JavaScript is the programming language of the web.
+
+Start here:
+
+- [JavaScript course](https://www.freecodecamp.org/)
+- [Codecademy](https://codecademy.com)
+- [Flatiron School](https://flatironschool.com/free-courses/learn-javascript/)
+- [https://codewars.com](https://codewars.com)
+- [MDN website](https://developer.mozilla.org/en-US/)
+
+Environment to practice:
+
+- [CodePen](https://codepen.io/)
+
+# Part 2: Other must-have parts of any developer’s toolkit
+
+## **Git and GitHub**
+
+Git is a “version-control system” and GitHub is the most popular cloud-based Git service.
+
+<iframe
+  src="https://giphy.com/embed/kH6CqYiquZawmU1HI6"
+  width="100%"
+  height="100%"
+></iframe>
+
+Git allows you to backup your files, keep track of changes, share your progress with other developers, and work on collaborative projects.
+
+Start here:
+
+- [Codecademy’s Git Tutorial](https://www.codecademy.com/learn/learn-git)
+
+## **The Command Line**
+
+The best way to use Git is via the “terminal” or “command line”, and this is also essential for modern web developers, allowing you to easily add 3rd party packages to your websites via [NPM](https://www.npmjs.com/) (Node Package Manager) or [Yarn](https://yarnpkg.com/en/).
+
+<iframe
+  src="https://giphy.com/embed/hrRvYhBjYcExaRdMuB"
+  width="100%"
+  height="100%"
+></iframe>
+
+Start here:
+
+- [Codecademy](https://www.codecademy.com/courses/learn-the-command-line/)
+
+# Part 3: Building your skill set
+
+## **Sass**
+
+Sass is a CSS pre-processor. It takes basic CSS, and adds several new functionalities that make it better, easier to write, and easier to maintain. It’s also very easy to learn.
+
+<img src="/images/20220218192724-scss.jpg" alt="css scss meme bear" />
+
+Start here:
+
+- [sass-lang.com](https://sass-lang.com/guide)
+
+## **Bootstrap**
+
+Bootstrap is a component library, developed by Twitter. It allows developers to build prototypes _very_ quickly. Instead of custom coding that slider, or navbar, or accordion, Bootstrap can help you deploy one in seconds.
+
+Start here:
+
+- [Bootstrap examples](https://getbootstrap.com/docs/5.1/examples/)
+
+## **React**
+
+<img src="/images/20220218192724-react.png" alt="reactjs image" />
+
+There are several modern JavaScript libraries out there, including Ember, React, Vue, and Angular. There’s no single right choice here, but after doing some research I chose to focus on React.
+
+Of all these libraries and frameworks, React appears to be the most popular and fastest growing. It was developed by Facebook, and its approach to DOM manipulation also gives it an advantage over Angular.
+
+Start here:
+
+- [reactjs.org](https://reactjs.org/tutorial/tutorial.html)
+
+# Part 4: Use your brain
+
+Just start and don't let a day pass without learning something.
+
+# Final notes
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
+
+Background music:
+
+<iframe
+  width="100%"
+  height="100%"
+  src="https://www.youtube-nocookie.com/embed/-emXZU-4NLA?autoplay=1"
+  title="Prokofiev: Romeo and Juliet, Op. 64 / Act 1 - 13. Dance Of The Knights"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+></iframe>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[The 4 ES2022 Features You Should Know About]]></title>
+            <link>https://danfleser.com/posts/20220218185832-es2022</link>
+            <guid>20220218185832-es2022</guid>
+            <pubDate>Fri, 18 Feb 2022 18:58:32 GMT</pubDate>
+            <description><![CDATA[ECMAScript 2022 is a new JavaScript standard that is going to be released in June 2022. Let’s overview the most important changes.]]></description>
+            <content:encoded><![CDATA[
+## 1\. Method at() in arrays
+
+Finally! ES2022 will give us a possibility to index array-like objects from the end. That’s a tiny feature, but it improves core readability when dealing with `arrays` or `strings`.
+
+`At()` method with positive number will work the same as indexing by `[]` , but with negative will allow accessing values from the end.
+
+Instead of writing:
+
+```js
+const arr = [1, 2, 3, 4];
+arr[arr.length - 2]; // 3
+arr.slice(-2)[0]; // 3
+
+const str = "1234";
+str[str.length - 2]; // '3'
+str.slice(-2)[0]; // '3'
+```
+
+We would be able to write:
+
+```js
+const arr = [1, 2, 3, 4];
+arr.at(-2); // 3
+
+const str = "1234";
+str.at(-2); // '3'
+```
+
+## 2\. Error cause
+
+`.cause` property on the error object would allow us to specify which error caused the other error.
+
+```js
+try {
+  doSomeComputationThatThrowAnError();
+} catch (error) {
+  throw new Error("I am the result of another error", { cause: error });
+}
+```
+
+## 3\. Top-level await
+
+- It allows to load modules dynamically
+
+```js
+const serviceName = await fetch(
+  "https://example.com/what-service-should-i-use"
+);
+const service = await import(`/services/${serviceName}.js`);
+
+// OR
+
+const params = new URLSearchParams(location.search);
+const theme = params.get("theme");
+const stylingFunctions = await import(`/styling-functions-${theme}.js`);
+```
+
+- It allows to conditionally render modules
+
+```js
+const date = new Date();
+
+if (date.getFullYear() === 2023) {
+  await require("/special-code-for-2023-year.js");
+}
+```
+
+## 4\. Private slots and methods
+
+
+They are private properties of the classes. ES2022 will give us the possibility to create them and get an error when we try to access them outside of the class. The same goes for private methods.
+
+JS team chose to give them `#` prefix.
+
+Here is an example of private slots in action:
+
+```js
+class Human {
+  #name = "John";
+
+  setName(name) {
+    this.#name = name;
+  }
+}
+
+const human = new Human();
+human.#name = "Amy"; // ERROR!
+human.setName("Amy"); // OK
+```
+
+And private method:
+
+```js
+class Human {
+  name = "John";
+
+  constructor(name) {
+    this.#setName("Amy"); // OK
+  }
+
+  #setName(name) {
+    this.name = name;
+  }
+}
+
+const human = new Human();
+human.#setName("Amy"); // ERROR!
+```
+
+# Final notes
+
+You can find all improvements [here](https://exploringjs.com/impatient-js/ch_new-javascript-features.html#new-in-es2022).
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[🔥The Last Web 3.0 Terms You’ll Ever Need]]></title>
             <link>https://danfleser.com/posts/20220216211413-top-web-3-terms-for-devs</link>
@@ -150,7 +1412,7 @@ Only interested in remote work.
 
 ## 3. Add jobs section with good descriptions
 
-Present achievements. An achievement worths 1000 words.
+Present achievements. An achievement worth 1000 words.
 
 Here are some good examples.
 

@@ -89,5 +89,5 @@ export function getAllTags(posts) {
     });
   });
 
-  return tags;
+  return tags.sort((a, b) => a.localeCompare(b));
 }

@@ -7,7 +7,7 @@ export default function Filter({ tags }) {
   return (
     <article className="app-post card">
       <header>
-        <h3 className="title mb-2">
+        <h3 className="text-lg font-bold mb-2">
           <span className="mr-1">🏷️</span>Tags
         </h3>
       </header>
