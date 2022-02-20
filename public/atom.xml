@@ -2,13 +2,581 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://danfleser.com/</id>
     <title>Development blog</title>
-    <updated>2022-02-19T14:22:48.906Z</updated>
+    <updated>2022-02-20T21:18:49.635Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Dan Fleser</name>
     </author>
     <link rel="alternate" href="https://danfleser.com/"/>
     <rights>Copyright © 2022 Dan Fleser</rights>
+    <entry>
+        <title type="html"><![CDATA[The 10 Websites To Host Your Side Project]]></title>
+        <id>20220220210227-websites-to-host-your-side-project-for-free</id>
+        <link href="https://danfleser.com/posts/20220220210227-websites-to-host-your-side-project-for-free"/>
+        <updated>2022-02-20T21:02:27.898Z</updated>
+        <summary type="html"><![CDATA[Websites To Host Your Side Project for Free]]></summary>
+        <content type="html"><![CDATA[
+## 1. [Vercel](https://vercel.com/)
+
+- HTTPS-enabled Custom Domains
+- Continuous Deployment with Git
+- High-performance Edge Network
+- Unlimited Websites & APIs
+- Serverless Functions in Node.js, Go, and more
+
+## 2. [Netlify](https://www.netlify.com/)
+
+- Automated builds from Git
+- Deploy to global Edge network
+- Live site previews with a collaboration UI for team members
+- Instant rollbacks to any version
+- Deploy static assets & dynamic serverless functions
+
+## 3. [AWS](https://aws.amazon.com/)
+
+- Most functionality
+- Largest community of customers and partners
+- Most secure
+- Fastest pace of innovation
+- Most proven operational expertise
+
+## 4. [GitHub Pages](https://pages.github.com/)
+
+- Blogging with Jekyll
+- Custom URLs
+
+## 5. [Heroku](https://www.heroku.com/)
+
+- Code and data rollback
+- GitHub Integration
+- App metrics
+- Continuous delivery
+- Extensibility
+- Smart containers
+
+## 6. [Google Cloud](https://cloud.google.com/)
+
+- Smart analytics
+- Infrastructure modernization
+- Application modernization
+- Business application platform
+- Productivity & collaboration
+
+## 7. [Firebase](https://firebase.google.com/)
+
+- A/B Testing
+- Analytics
+- App Distribution
+- App Indexing
+
+## 8. [Awardspace](https://www.awardspace.com/)
+
+- Host up to 4 Websites
+- CMS Installer
+- Web Based File Manager
+
+## 9. [Surge](https://surge.sh/)
+
+- Securing your custom domain with SSL
+- Forcing HTTP to redirect to HTTPS by default
+- Adding password protection to a project
+- Enabling Cross-Origin Resource Sharing
+- Adding custom redirects
+
+## 10. [Render](https://render.com/)
+
+- Automatic continuous deploys from Git
+- Custom domains with fully managed SSL
+- Unlimited collaborators
+- 100 GB/month bandwidth included
+
+# Conclusion
+
+> . Don’t forget to clap 👏 in the comment section below if you learned something new.
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[🔥Handy Copy-Paste Javascript Snippets Part 3]]></title>
+        <id>20220220202610-copy-paste-javascript-snippets-3</id>
+        <link href="https://danfleser.com/posts/20220220202610-copy-paste-javascript-snippets-3"/>
+        <updated>2022-02-20T20:26:10.939Z</updated>
+        <summary type="html"><![CDATA[A list of useful code snippets for lazy developers.]]></summary>
+        <content type="html"><![CDATA[
+👉 Part 1 -> [🔥Handy Copy-Paste Javascript Snippets Part 1](http://danfleser.com/posts/20220219132839-copy-paste-javascript-snippets)
+👉 Part 2 -> [🔥Handy Copy-Paste Javascript Snippets Part 2](http://danfleser.com/posts/20220220202431-copy-paste-javascript-snippets-2)
+
+# Strings
+
+## Check if a path is relative
+
+```js
+const isRelative = (path) => !/^([a-z]+:)?[\\/]/i.test(path); // Examples
+isRelative("/foo/bar/baz"); // false
+isRelative("C:\\foo\\bar\\baz"); // false
+isRelative("foo/bar/baz.txt"); // true
+isRelative("foo.md"); // true
+```
+
+## Make the first character of a string lowercase
+
+```js
+const lowercaseFirst = (str) => `${str.charAt(0).toLowerCase()}${str.slice(1)}`;
+// Example
+lowercaseFirst("Hello World"); // 'hello World'
+```
+
+## Repeat a string
+
+```js
+const repeat = (str, numberOfTimes) => str.repeat(numberOfTimes);
+```
+
+## Check if a string is a hexadecimal color
+
+```js
+const isHexColor = (color) =>
+  /^#([0-9A-F]{3}|[0-9A-F]{4}|[0-9A-F]{6}|[0-9A-F]{8})$/i.test(color); // Examples
+isHexColor("#012"); // true
+isHexColor("#A1B2C3"); // true
+isHexColor("012"); // false
+isHexColor("#GHIJKL"); // false
+```
+
+# Dates
+
+## Add “am/pm” suffix to an hour
+
+```js
+// `h` is an hour number between 0 and 23
+const suffixAmPm = (h) =>
+  `${h % 12 === 0 ? 12 : h % 12}${h < 12 ? "am" : "pm"}`; // Examples
+suffixAmPm(0); // '12am'
+suffixAmPm(5); // '5am'
+suffixAmPm(12); // '12pm'
+suffixAmPm(15); // '3pm'
+suffixAmPm(23); // '11pm'
+```
+
+## Calculate the number of different days between two dates
+
+```js
+const diffDays = (date, otherDate) =>
+  Math.ceil(Math.abs(date - otherDate) / (1000 * 60 * 60 * 24)); // Example
+diffDays(new Date("2014-12-19"), new Date("2020-01-01")); // 1839
+```
+
+## Check if a date is valid
+
+```js
+const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
+isDateValid("December 17, 1995 03:24:00"); // true
+```
+
+# **Miscellaneous**
+
+## Check if the code is running in Node.js
+
+```js
+const isNode =
+  typeof process !== "undefined" &&
+  process.versions != null &&
+  process.versions.node != null;
+```
+
+## Check if the code is running in the browser
+
+```js
+const isBrowser = typeof window === "object" && typeof document === "object";
+```
+
+## Convert URL parameters to object
+
+```js
+const getUrlParams = (query) =>
+  Array.from(new URLSearchParams(query)).reduce(
+    (p, [k, v]) =>
+      Object.assign({}, p, {
+        [k]: p[k] ? (Array.isArray(p[k]) ? p[k] : [p[k]]).concat(v) : v,
+      }),
+    {}
+  ); // Examples
+getUrlParams(location.search); // Get the parameters of the current URLgetUrlParams('foo=Foo&bar=Bar'); // { foo: "Foo", bar: "Bar" }// Duplicate key
+getUrlParams("foo=Foo&foo=Fuzz&bar=Bar"); // { foo: ["Foo", "Fuzz"], bar: "Bar" }
+```
+
+## Detect dark mode
+
+```js
+const isDarkMode =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
+```
+
+## Swap two variables
+
+```js
+[a, b] = [b, a];
+```
+
+## Copy to clipboard
+
+```js
+const copyToClipboard = (text) => navigator.clipboard.writeText(text); // Example
+copyToClipboard("Hello World");
+```
+
+## Convert RGB to Hex
+
+```js
+const rgbToHex = (r, g, b) =>
+  "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1); // Example
+rgbToHex(0, 51, 255); // #0033ff
+```
+
+## Generate a random hex color
+
+```js
+const randomColor = () =>
+  `#${Math.random().toString(16).slice(2, 8).padEnd(6, "0")}`; // Or
+const randomColor = () => `#${(~~(Math.random() * (1 << 24))).toString(16)}`;
+```
+
+## Generate a random IP address
+
+```js
+const randomIp = () =>
+  Array(4)
+    .fill(0)
+    .map((_, i) => Math.floor(Math.random() * 255) + (i === 0 ? 1 : 0))
+    .join("."); // Example
+randomIp(); // 175.89.174.131
+```
+
+## Generate a random string using the Node crypto module
+
+```js
+const randomStr = () => require("crypto").randomBytes(32).toString("hex");
+```
+
+# Conclusion
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[🔥Handy Copy-Paste Javascript Snippets Part 2]]></title>
+        <id>20220220202431-copy-paste-javascript-snippets-2</id>
+        <link href="https://danfleser.com/posts/20220220202431-copy-paste-javascript-snippets-2"/>
+        <updated>2022-02-20T20:24:31.325Z</updated>
+        <summary type="html"><![CDATA[A list of useful code snippets for lazy developers.]]></summary>
+        <content type="html"><![CDATA[
+👉 Part 1 -> [🔥Handy Copy-Paste Javascript Snippets Part 1](http://danfleser.com/posts/20220219132839-copy-paste-javascript-snippets)
+👉 Part 3 -> [🔥Handy Copy-Paste Javascript Snippets Part 3](http://danfleser.com/posts/20220220202610-copy-paste-javascript-snippets-3)
+
+# DOM
+
+## Check if an element is focused
+
+```js
+const hasFocus = (ele) => ele === document.activeElement;
+```
+
+## Get all siblings of an element
+
+```js
+const siblings = (ele) =>
+  [].slice.call(ele.parentNode.children).filter((child) => child !== ele);
+```
+
+## Get selected text
+
+```js
+const getSelectedText = () => window.getSelection().toString();
+```
+
+## Go back to the previous page
+
+```js
+history.back(); // Or
+history.go(-1);
+```
+
+## Clear all cookies
+
+```js
+const clearCookies = () =>
+  document.cookie
+    .split(";")
+    .forEach(
+      (c) =>
+        (document.cookie = c
+          .replace(/^ +/, "")
+          .replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`))
+    );
+```
+
+## Convert cookie to object
+
+```js
+const cookies = document.cookie
+  .split(";")
+  .map((item) => item.split("="))
+  .reduce((acc, [k, v]) => (acc[k.trim().replace('"', "")] = v) && acc, {});
+```
+
+# Arrays
+
+## Compare two arrays
+
+```js
+// `a` and `b` are arrays
+const isEqual = (a, b) => JSON.stringify(a) === JSON.stringify(b); // Or
+const isEqual = (a, b) =>
+  a.length === b.length && a.every((v, i) => v === b[i]); // Examples
+isEqual([1, 2, 3], [1, 2, 3]); // true
+isEqual([1, 2, 3], [1, "2", 3]); // false
+```
+
+## Convert an array of objects to a single object
+
+```js
+const toObject = (arr, key) =>
+  arr.reduce((a, b) => ({ ...a, [b[key]]: b }), {}); // Or
+const toObject = (arr, key) =>
+  Object.fromEntries(arr.map((it) => [it[key], it])); // Example
+toObject(
+  [
+    { id: "1", name: "Alpha", gender: "Male" },
+    { id: "2", name: "Bravo", gender: "Male" },
+    { id: "3", name: "Charlie", gender: "Female" },
+  ],
+  "id"
+); /*
+{
+'1': { id: '1', name: 'Alpha', gender: 'Male' },
+'2': { id: '2', name: 'Bravo', gender: 'Male' },
+'3': { id: '3', name: 'Charlie', gender: 'Female' }
+}
+*/
+```
+
+## Count by the properties of an array of objects
+
+```js
+const countBy = (arr, prop) =>
+  arr.reduce(
+    (prev, curr) => ((prev[curr[prop]] = ++prev[curr[prop]] || 1), prev),
+    {}
+  ); // Example
+countBy(
+  [
+    { branch: "audi", model: "q8", year: "2019" },
+    { branch: "audi", model: "rs7", year: "2020" },
+    { branch: "ford", model: "mustang", year: "2019" },
+    { branch: "ford", model: "explorer", year: "2020" },
+    { branch: "bmw", model: "x7", year: "2020" },
+  ],
+  "branch"
+);
+// { 'audi': 2, 'ford': 2, 'bmw': 1 }
+```
+
+## Check if an array is not empty
+
+```js
+const isNotEmpty = (arr) => Array.isArray(arr) && Object.keys(arr).length > 0; // Examples
+isNotEmpty([]); // false
+isNotEmpty([1, 2, 3]); // true
+```
+
+# Objects
+
+## Check if multiple objects are equal
+
+```js
+const isEqual = (...objects) =>
+  objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0])); // Examples
+isEqual({ foo: "bar" }, { foo: "bar" }); // true
+isEqual({ foo: "bar" }, { bar: "foo" }); // false
+```
+
+## Extract values of a property from an array of objects
+
+```js
+const pluck = (objs, property) => objs.map((obj) => obj[property]); // Example
+pluck(
+  [
+    { name: "John", age: 20 },
+    { name: "Smith", age: 25 },
+    { name: "Peter", age: 30 },
+  ],
+  "name"
+);
+// ['John', 'Smith', 'Peter']
+```
+
+## Invert keys and values of an object
+
+```js
+const invert = (obj) =>
+  Object.keys(obj).reduce((res, k) => Object.assign(res, { [obj[k]]: k }), {}); // Or
+const invert = (obj) =>
+  Object.fromEntries(Object.entries(obj).map(([k, v]) => [v, k])); // Example
+invert({ a: "1", b: "2", c: "3" }); // { 1: 'a', 2: 'b', 3: 'c' }
+```
+
+## Remove all null and undefined properties from an object
+
+```js
+const removeNullUndefined = (obj) =>
+  Object.entries(obj).reduce(
+    (a, [k, v]) => (v == null ? a : ((a[k] = v), a)),
+    {}
+  ); // Or
+const removeNullUndefined = (obj) =>
+  Object.entries(obj)
+    .filter(([_, v]) => v != null)
+    .reduce((acc, [k, v]) => ({ ...acc, [k]: v }), {}); // Or
+const removeNullUndefined = (obj) =>
+  Object.fromEntries(Object.entries(obj).filter(([_, v]) => v != null)); // Example
+removeNullUndefined({
+  foo: null,
+  bar: undefined,
+  fuzz: 42,
+});
+// { fuzz: 42 }
+```
+
+## Sort an object by its properties
+
+```js
+const sort = (obj) =>
+  Object.keys(obj)
+    .sort()
+    .reduce((p, c) => ((p[c] = obj[c]), p), {}); // Example
+const colors = {
+  white: "#ffffff",
+  black: "#000000",
+  red: "#ff0000",
+  green: "#008000",
+  blue: "#0000ff",
+};
+sort(colors); /*
+{
+black: '#000000',
+blue: '#0000ff',
+green: '#008000',
+red: '#ff0000',
+white: '#ffffff',
+}
+*/
+```
+
+## Check if an object is a Promise
+
+```js
+const isPromise = (obj) =>
+  !!obj &&
+  (typeof obj === "object" || typeof obj === "function") &&
+  typeof obj.then === "function";
+```
+
+## Check if an object is an array
+
+```js
+const isArray = (obj) => Array.isArray(obj);
+```
+
+# Conclusion
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Startup Ideas That Will Skyrocket in 2022]]></title>
+        <id>20220220153009-startup-ideas-for-2022</id>
+        <link href="https://danfleser.com/posts/20220220153009-startup-ideas-for-2022"/>
+        <updated>2022-02-20T15:30:09.642Z</updated>
+        <summary type="html"><![CDATA[What are the hottest topics now and what are still exotic to the market of technology?]]></summary>
+        <content type="html"><![CDATA[
+# Startup Ideas
+
+1. On-Demand Grocery Delivery and Store Management App
+2. Fruits and Vegetable Quality Check and Rating App
+3. On-Demand Restaurant Management App
+4. On-Demand Restaurant Detector App
+5. On-Demand Food Ordering and Delivery App
+6. Restaurant Discount App Development
+7. On-Demand Restaurant Table Booking App
+8. On-Demand Peer-To-Peer Money Transfer APP
+9. ML-Based Advising and Stock Trading App
+10. Lending and Mortgage Approval App
+11. End-To-End Banking App
+12. Blockchain-Based Money Transfer and Payment App
+13. Business Investment And Money Lending App
+14. Online Property Sell and Buy App
+15. Property Management App
+16. Online Property Booking Solution
+17. Online Study Material Providing App
+18. Quiz Conducting App
+19. Online Corporate Training Apps
+20. Online Learning or Tutoring App
+21. Language Learning App
+22. Voice Translation App
+23. Translating Images Into Words
+24. On-Demand Pet-Food and Essential Delivery App
+25. On-Demand Pet-care App
+26. On-Demand Babysitter App
+27. On-Demand Handyman Service Booking App
+28. On-Demand Fuel Delivery App
+29. On-Demand Car Repair and Services App
+30. Health Inspector and Advisory App
+31. Mood Tracking Solutions
+32. Meditation Mindfulness App
+33. Audio-Based Social Media App Like Clubhouse
+34. Warehouse Management and Inventory Tracking App
+35. On-Demand Lawn Maintenance and Moving App
+36. Affordable Delivery and Postal Apps
+37. GST Return Filing App
+38. Social Rating App
+39. Story Writing and Sharing App
+40. Fashion Design and Shopping Recommendation App
+41. Collective Shopping App Idea
+42. VR Based Virtual Travel App
+43. Toilet Finder App
+44. Everyday Task Assistance App
+45. Compatible Food Finder App
+46. An App For Freelancers
+47. Digital CV or Resume Creating App
+48. Selling Used Clothes App
+49. Safety Help Alert
+50. Dating and Matrimonial App
+51. Healthcare app
+52. On-demand services app
+53. CRM for small business:
+54. Employee training app
+55. Finance management app
+56. Travel-planning app
+57. AR shopping app
+58. ML-based astrology
+59. Memes developing app
+60. News App Idea
+61. YouTube radio/ChildTube:
+62. Car services app
+63. Family web app
+64. Interior design app
+65. Messages aggregator app
+66. Help alert app
+
+# Web Applications Type
+
+Single-Page Applications(SPA): perform logic on the web browser and on the server, use a framework like Angular, React, Vue. They are quick, easy to debug and user-friendly; brightest examples are Gmail, Netflix, Facebook.
+
+# Conclusion
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Most Developers Lack These Useful JavaScript Features]]></title>
         <id>20220219140317-modern-javascript-features</id>
@@ -178,12 +746,15 @@ It is recommended to periodically run the browser profiler tools on your web app
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[10 Copy-Paste Javascript Snippets Lazy Developers Use]]></title>
+        <title type="html"><![CDATA[🔥Handy Copy-Paste Javascript Snippets Part 1]]></title>
         <id>20220219132839-copy-paste-javascript-snippets</id>
         <link href="https://danfleser.com/posts/20220219132839-copy-paste-javascript-snippets"/>
         <updated>2022-02-19T13:28:39.882Z</updated>
-        <summary type="html"><![CDATA[A list of useful code snippets in front-end web development. Front-end development is one of the popular fields when it comes to software development or programming in general. A lot of people these days are pursuing a career in front-end development.]]></summary>
+        <summary type="html"><![CDATA[A list of useful code snippets for lazy developers.]]></summary>
         <content type="html"><![CDATA[
+👉 Part 2 -> [🔥Handy Copy-Paste Javascript Snippets Part 2](http://danfleser.com/posts/20220220202431-copy-paste-javascript-snippets-2)
+👉 Part 3 -> [🔥Handy Copy-Paste Javascript Snippets Part 3](http://danfleser.com/posts/20220220202610-copy-paste-javascript-snippets-3)
+
 # Shuffle an Array
 
 Shuffling an array is super easy with `sort` and `random` methods.
@@ -374,7 +945,7 @@ If you don’t develop the ability to solve problems for yourself, you will neve
 
 In the world of development, all the information you need is found in that magical place formerly known as the _Information Super Highway_. This massive library has one huge doorway: [Google](https://www.google.com).
 
-Check this article [7 Tricks To Master the Art of Googling](http://localhost:3000/posts/20220212095550-master-the-art-of-googling) to unlock TOP SECRET ancient googling skills that the masters of the universe have used.
+Check this article [7 Tricks To Master the Art of Googling](http://danfleser.com/posts/20220212095550-master-the-art-of-googling) to unlock TOP SECRET ancient googling skills that the masters of the universe have used.
 
 **Use the Resources:** Recognize that all the answers you need really are out there. When you have a question, force yourself to google it before asking someone else for the answer and check the documentation. Save the time of others for when you have tried and truly failed to find the answer you need.
 
@@ -1045,7 +1616,7 @@ Environment to practice
 
 Most of questions had been asked already by users on StackOverflow, so a quick Google search will solve your problems.
 
-Check this article [7 Tricks To Master the Art of Googling](http://localhost:3000/posts/20220212095550-master-the-art-of-googling) to unlock TOP SECRET ancient googling skills that the masters of the universe have used.
+Check this article [7 Tricks To Master the Art of Googling](http://danfleser.com/posts/20220212095550-master-the-art-of-googling) to unlock TOP SECRET ancient googling skills that the masters of the universe have used.
 
 ## **JavaScript**
 

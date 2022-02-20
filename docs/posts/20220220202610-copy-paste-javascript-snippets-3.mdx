@@ -1,0 +1,167 @@
+---
+title: "🔥Handy Copy-Paste Javascript Snippets Part 3"
+date: "2022-02-20T20:26:10.939Z"
+tags: "javascript"
+description: "A list of useful code snippets for lazy developers."
+cover_image: "20220220202610-copy-paste-javascript-snippets-3.png"
+---
+
+👉 Part 1 -> [🔥Handy Copy-Paste Javascript Snippets Part 1](http://danfleser.com/posts/20220219132839-copy-paste-javascript-snippets)
+👉 Part 2 -> [🔥Handy Copy-Paste Javascript Snippets Part 2](http://danfleser.com/posts/20220220202431-copy-paste-javascript-snippets-2)
+
+# Strings
+
+## Check if a path is relative
+
+```js
+const isRelative = (path) => !/^([a-z]+:)?[\\/]/i.test(path); // Examples
+isRelative("/foo/bar/baz"); // false
+isRelative("C:\\foo\\bar\\baz"); // false
+isRelative("foo/bar/baz.txt"); // true
+isRelative("foo.md"); // true
+```
+
+## Make the first character of a string lowercase
+
+```js
+const lowercaseFirst = (str) => `${str.charAt(0).toLowerCase()}${str.slice(1)}`;
+// Example
+lowercaseFirst("Hello World"); // 'hello World'
+```
+
+## Repeat a string
+
+```js
+const repeat = (str, numberOfTimes) => str.repeat(numberOfTimes);
+```
+
+## Check if a string is a hexadecimal color
+
+```js
+const isHexColor = (color) =>
+  /^#([0-9A-F]{3}|[0-9A-F]{4}|[0-9A-F]{6}|[0-9A-F]{8})$/i.test(color); // Examples
+isHexColor("#012"); // true
+isHexColor("#A1B2C3"); // true
+isHexColor("012"); // false
+isHexColor("#GHIJKL"); // false
+```
+
+# Dates
+
+## Add “am/pm” suffix to an hour
+
+```js
+// `h` is an hour number between 0 and 23
+const suffixAmPm = (h) =>
+  `${h % 12 === 0 ? 12 : h % 12}${h < 12 ? "am" : "pm"}`; // Examples
+suffixAmPm(0); // '12am'
+suffixAmPm(5); // '5am'
+suffixAmPm(12); // '12pm'
+suffixAmPm(15); // '3pm'
+suffixAmPm(23); // '11pm'
+```
+
+## Calculate the number of different days between two dates
+
+```js
+const diffDays = (date, otherDate) =>
+  Math.ceil(Math.abs(date - otherDate) / (1000 * 60 * 60 * 24)); // Example
+diffDays(new Date("2014-12-19"), new Date("2020-01-01")); // 1839
+```
+
+## Check if a date is valid
+
+```js
+const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
+isDateValid("December 17, 1995 03:24:00"); // true
+```
+
+# **Miscellaneous**
+
+## Check if the code is running in Node.js
+
+```js
+const isNode =
+  typeof process !== "undefined" &&
+  process.versions != null &&
+  process.versions.node != null;
+```
+
+## Check if the code is running in the browser
+
+```js
+const isBrowser = typeof window === "object" && typeof document === "object";
+```
+
+## Convert URL parameters to object
+
+```js
+const getUrlParams = (query) =>
+  Array.from(new URLSearchParams(query)).reduce(
+    (p, [k, v]) =>
+      Object.assign({}, p, {
+        [k]: p[k] ? (Array.isArray(p[k]) ? p[k] : [p[k]]).concat(v) : v,
+      }),
+    {}
+  ); // Examples
+getUrlParams(location.search); // Get the parameters of the current URLgetUrlParams('foo=Foo&bar=Bar'); // { foo: "Foo", bar: "Bar" }// Duplicate key
+getUrlParams("foo=Foo&foo=Fuzz&bar=Bar"); // { foo: ["Foo", "Fuzz"], bar: "Bar" }
+```
+
+## Detect dark mode
+
+```js
+const isDarkMode =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
+```
+
+## Swap two variables
+
+```js
+[a, b] = [b, a];
+```
+
+## Copy to clipboard
+
+```js
+const copyToClipboard = (text) => navigator.clipboard.writeText(text); // Example
+copyToClipboard("Hello World");
+```
+
+## Convert RGB to Hex
+
+```js
+const rgbToHex = (r, g, b) =>
+  "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1); // Example
+rgbToHex(0, 51, 255); // #0033ff
+```
+
+## Generate a random hex color
+
+```js
+const randomColor = () =>
+  `#${Math.random().toString(16).slice(2, 8).padEnd(6, "0")}`; // Or
+const randomColor = () => `#${(~~(Math.random() * (1 << 24))).toString(16)}`;
+```
+
+## Generate a random IP address
+
+```js
+const randomIp = () =>
+  Array(4)
+    .fill(0)
+    .map((_, i) => Math.floor(Math.random() * 255) + (i === 0 ? 1 : 0))
+    .join("."); // Example
+randomIp(); // 175.89.174.131
+```
+
+## Generate a random string using the Node crypto module
+
+```js
+const randomStr = () => require("crypto").randomBytes(32).toString("hex");
+```
+
+# Conclusion
+
+> ** Don’t forget to clap 👏 in the comment section below if you learned something new**
