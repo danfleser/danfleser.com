@@ -21,11 +21,11 @@ export default function Post({ post }) {
 
         <section className="app-post-info">
           <header>
-            <h3>
+            <h1>
               <Link href={"/posts/[slug]"} as={`/posts/${post.slug}`}>
                 <a className="title">{post.frontmatter.title}</a>
               </Link>
-            </h3>
+            </h1>
 
             <PostDetails
               date={post.frontmatter.date}

@@ -11,7 +11,7 @@ cover_image: "20220220202610-copy-paste-javascript-snippets-3.png"
 
 # Strings
 
-## Check if a path is relative
+# Check if a path is relative
 
 ```js
 const isRelative = (path) => !/^([a-z]+:)?[\\/]/i.test(path); // Examples
@@ -21,7 +21,7 @@ isRelative("foo/bar/baz.txt"); // true
 isRelative("foo.md"); // true
 ```
 
-## Make the first character of a string lowercase
+# Make the first character of a string lowercase
 
 ```js
 const lowercaseFirst = (str) => `${str.charAt(0).toLowerCase()}${str.slice(1)}`;
@@ -29,13 +29,13 @@ const lowercaseFirst = (str) => `${str.charAt(0).toLowerCase()}${str.slice(1)}`;
 lowercaseFirst("Hello World"); // 'hello World'
 ```
 
-## Repeat a string
+# Repeat a string
 
 ```js
 const repeat = (str, numberOfTimes) => str.repeat(numberOfTimes);
 ```
 
-## Check if a string is a hexadecimal color
+# Check if a string is a hexadecimal color
 
 ```js
 const isHexColor = (color) =>
@@ -48,7 +48,7 @@ isHexColor("#GHIJKL"); // false
 
 # Dates
 
-## Add “am/pm” suffix to an hour
+# Add “am/pm” suffix to an hour
 
 ```js
 // `h` is an hour number between 0 and 23
@@ -61,7 +61,7 @@ suffixAmPm(15); // '3pm'
 suffixAmPm(23); // '11pm'
 ```
 
-## Calculate the number of different days between two dates
+# Calculate the number of different days between two dates
 
 ```js
 const diffDays = (date, otherDate) =>
@@ -69,7 +69,7 @@ const diffDays = (date, otherDate) =>
 diffDays(new Date("2014-12-19"), new Date("2020-01-01")); // 1839
 ```
 
-## Check if a date is valid
+# Check if a date is valid
 
 ```js
 const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
@@ -78,7 +78,7 @@ isDateValid("December 17, 1995 03:24:00"); // true
 
 # **Miscellaneous**
 
-## Check if the code is running in Node.js
+# Check if the code is running in Node.js
 
 ```js
 const isNode =
@@ -87,13 +87,13 @@ const isNode =
   process.versions.node != null;
 ```
 
-## Check if the code is running in the browser
+# Check if the code is running in the browser
 
 ```js
 const isBrowser = typeof window === "object" && typeof document === "object";
 ```
 
-## Convert URL parameters to object
+# Convert URL parameters to object
 
 ```js
 const getUrlParams = (query) =>
@@ -108,7 +108,7 @@ getUrlParams(location.search); // Get the parameters of the current URLgetUrlPar
 getUrlParams("foo=Foo&foo=Fuzz&bar=Bar"); // { foo: ["Foo", "Fuzz"], bar: "Bar" }
 ```
 
-## Detect dark mode
+# Detect dark mode
 
 ```js
 const isDarkMode =
@@ -116,20 +116,20 @@ const isDarkMode =
   window.matchMedia("(prefers-color-scheme: dark)").matches;
 ```
 
-## Swap two variables
+# Swap two variables
 
 ```js
 [a, b] = [b, a];
 ```
 
-## Copy to clipboard
+# Copy to clipboard
 
 ```js
 const copyToClipboard = (text) => navigator.clipboard.writeText(text); // Example
 copyToClipboard("Hello World");
 ```
 
-## Convert RGB to Hex
+# Convert RGB to Hex
 
 ```js
 const rgbToHex = (r, g, b) =>
@@ -137,7 +137,7 @@ const rgbToHex = (r, g, b) =>
 rgbToHex(0, 51, 255); // #0033ff
 ```
 
-## Generate a random hex color
+# Generate a random hex color
 
 ```js
 const randomColor = () =>
@@ -145,7 +145,7 @@ const randomColor = () =>
 const randomColor = () => `#${(~~(Math.random() * (1 << 24))).toString(16)}`;
 ```
 
-## Generate a random IP address
+# Generate a random IP address
 
 ```js
 const randomIp = () =>
@@ -156,7 +156,7 @@ const randomIp = () =>
 randomIp(); // 175.89.174.131
 ```
 
-## Generate a random string using the Node crypto module
+# Generate a random string using the Node crypto module
 
 ```js
 const randomStr = () => require("crypto").randomBytes(32).toString("hex");

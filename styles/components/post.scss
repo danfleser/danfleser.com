@@ -9,20 +9,20 @@
     .app-post-info {
       @apply pl-4 flex flex-col justify-between leading-normal;
 
-      h3 {
+      h1 {
         @apply mb-2;
+
+        .title {
+          @apply cursor-pointer hover:text-indigo-600 text-xl;
+          // dark mode
+          @apply dark:hover:text-emerald-500;
+        }
       }
 
       .post-details {
         @apply mb-2;
       }
     }
-  }
-
-  .title {
-    @apply cursor-pointer hover:text-indigo-600;
-    // dark mode
-    @apply dark:hover:text-emerald-500;
   }
 
   .tag {

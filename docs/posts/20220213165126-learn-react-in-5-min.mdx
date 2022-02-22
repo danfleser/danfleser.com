@@ -6,7 +6,7 @@ description: "After reading this article, you should be able to start coding Rea
 cover_image: "20220213165126-learn-react-in-5-min.jpg"
 ---
 
-## Get you started with the popular JavaScript library in just a few minutes.
+# Get you started with the popular JavaScript library in just a few minutes.
 
 When getting started with React, you should use the simplest setup possible: an HTML file which imports the `React` and the `ReactDOM` libraries using script tags.
 
@@ -102,7 +102,7 @@ Unlike props — which can’t be changed directly by the component — the stat
 
 So if you want the data in your app to change — for example based on user interactions — it must be stored in a component’s state somewhere in the app.
 
-## Initializing state
+# Initializing state
 
 To initialize the state, simply set `this.state` in the `constructor()` method of the class. Our state is an object which in our case only has one key called `message`.
 
@@ -123,7 +123,7 @@ class Hello extends React.Component {
 
 Before we set the state, we have to call `super()` in the constructor. This is because `this` is uninitialized before `super()` has been called.
 
-## Changing the state
+# Changing the state
 
 To modify the state, simply call **this.setState(),** passing in the new state object as the argument. We’ll do this inside a method which we’ll call `updateMessage`.
 

@@ -11,33 +11,33 @@ cover_image: "20220220202431-copy-paste-javascript-snippets-2.png"
 
 # DOM
 
-## Check if an element is focused
+# Check if an element is focused
 
 ```js
 const hasFocus = (ele) => ele === document.activeElement;
 ```
 
-## Get all siblings of an element
+# Get all siblings of an element
 
 ```js
 const siblings = (ele) =>
   [].slice.call(ele.parentNode.children).filter((child) => child !== ele);
 ```
 
-## Get selected text
+# Get selected text
 
 ```js
 const getSelectedText = () => window.getSelection().toString();
 ```
 
-## Go back to the previous page
+# Go back to the previous page
 
 ```js
 history.back(); // Or
 history.go(-1);
 ```
 
-## Clear all cookies
+# Clear all cookies
 
 ```js
 const clearCookies = () =>
@@ -51,7 +51,7 @@ const clearCookies = () =>
     );
 ```
 
-## Convert cookie to object
+# Convert cookie to object
 
 ```js
 const cookies = document.cookie
@@ -62,7 +62,7 @@ const cookies = document.cookie
 
 # Arrays
 
-## Compare two arrays
+# Compare two arrays
 
 ```js
 // `a` and `b` are arrays
@@ -73,7 +73,7 @@ isEqual([1, 2, 3], [1, 2, 3]); // true
 isEqual([1, 2, 3], [1, "2", 3]); // false
 ```
 
-## Convert an array of objects to a single object
+# Convert an array of objects to a single object
 
 ```js
 const toObject = (arr, key) =>
@@ -96,7 +96,7 @@ toObject(
 */
 ```
 
-## Count by the properties of an array of objects
+# Count by the properties of an array of objects
 
 ```js
 const countBy = (arr, prop) =>
@@ -117,7 +117,7 @@ countBy(
 // { 'audi': 2, 'ford': 2, 'bmw': 1 }
 ```
 
-## Check if an array is not empty
+# Check if an array is not empty
 
 ```js
 const isNotEmpty = (arr) => Array.isArray(arr) && Object.keys(arr).length > 0; // Examples
@@ -127,7 +127,7 @@ isNotEmpty([1, 2, 3]); // true
 
 # Objects
 
-## Check if multiple objects are equal
+# Check if multiple objects are equal
 
 ```js
 const isEqual = (...objects) =>
@@ -136,7 +136,7 @@ isEqual({ foo: "bar" }, { foo: "bar" }); // true
 isEqual({ foo: "bar" }, { bar: "foo" }); // false
 ```
 
-## Extract values of a property from an array of objects
+# Extract values of a property from an array of objects
 
 ```js
 const pluck = (objs, property) => objs.map((obj) => obj[property]); // Example
@@ -151,7 +151,7 @@ pluck(
 // ['John', 'Smith', 'Peter']
 ```
 
-## Invert keys and values of an object
+# Invert keys and values of an object
 
 ```js
 const invert = (obj) =>
@@ -161,7 +161,7 @@ const invert = (obj) =>
 invert({ a: "1", b: "2", c: "3" }); // { 1: 'a', 2: 'b', 3: 'c' }
 ```
 
-## Remove all null and undefined properties from an object
+# Remove all null and undefined properties from an object
 
 ```js
 const removeNullUndefined = (obj) =>
@@ -183,7 +183,7 @@ removeNullUndefined({
 // { fuzz: 42 }
 ```
 
-## Sort an object by its properties
+# Sort an object by its properties
 
 ```js
 const sort = (obj) =>
@@ -208,7 +208,7 @@ white: '#ffffff',
 */
 ```
 
-## Check if an object is a Promise
+# Check if an object is a Promise
 
 ```js
 const isPromise = (obj) =>
@@ -217,7 +217,7 @@ const isPromise = (obj) =>
   typeof obj.then === "function";
 ```
 
-## Check if an object is an array
+# Check if an object is an array
 
 ```js
 const isArray = (obj) => Array.isArray(obj);
