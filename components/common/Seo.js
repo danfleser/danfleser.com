@@ -39,7 +39,7 @@ export default function Seo({
       <meta name="distribution" content="Global" />
       <meta name="rating" content="General" />
       <meta name="subject" content={metaTitle} />
-      <meta name="summary" content={siteMetadata.author.summary} />
+      <meta name="summary" content={metaDescription ?? siteMetadata.author.summary} />
       <meta name="category" content={siteMetadata.category} />
 
       <meta property="og:title" content={metaTitle} />
@@ -60,11 +60,6 @@ export default function Seo({
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:creator" content={siteMetadata.author.twitterId} />
       <meta name="twitter:image" content={metaThumbnail} />
-
-      <meta
-        name="google-site-verification"
-        content="CYUr6YB1g5gsOX7NuyHIqFhYqiX3A0QJC-9-dvOuVxc"
-      />
 
       <link rel="icon" type="image/png" href="/static/favicon.ico" />
       <link rel="apple-touch-icon" href="/static/favicon.ico" />
