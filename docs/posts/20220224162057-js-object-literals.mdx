@@ -1,0 +1,112 @@
+---
+title: "Stop Using If-Else and Switch, Use Object Literals Instead"
+date: "2022-02-24T16:20:57.088Z"
+tags: "javascript, optimization"
+description: "Write better conditionals in JavaScript with object literals"
+cover_image: "20220224162057-js-object-literals.png"
+---
+
+Long lists of `if/else` statements or `switch` cases can get bloated quickly.
+
+<iframe
+  src="https://giphy.com/embed/Uni2jYCihB3fG"
+  width="109%"
+  height="109%"
+></iframe>
+
+As an example, let’s say we have a function that takes a rhyming slang phrase and returns the meaning. Using `if/else` statements, it would look like this:
+
+```js
+function getTranslation(rhyme) {
+  if (rhyme.toLowerCase() === "apples and pears") {
+    return "Stairs";
+  } else if (rhyme.toLowerCase() === "hampstead heath") {
+    return "Teeth";
+  } else if (rhyme.toLowerCase() === "loaf of bread") {
+    return "Head";
+  } else if (rhyme.toLowerCase() === "pork pies") {
+    return "Lies";
+  } else if (rhyme.toLowerCase() === "whistle and flute") {
+    return "Suit";
+  }
+
+  return "Rhyme not found";
+}
+```
+
+OR
+
+```js
+function getTranslation(rhyme) {
+  switch (rhyme.toLowerCase()) {
+    case "apples and pears":
+      return "Stairs";
+    case "hampstead heath":
+      return "Teeth";
+    case "loaf of bread":
+      return "Head";
+    case "pork pies":
+      return "Lies";
+    case "whistle and flute":
+      return "Suit";
+    default:
+      return "Rhyme not found";
+  }
+}
+```
+
+# An Alternative
+
+You can use an object to achieve the same functionality as above in a much neater way. Let’s have a look at an example:
+
+```js
+function getTranslationMap(rhyme) {
+  const rhymes = {
+    "apples and pears": "Stairs",
+    "hampstead heath": "Teeth",
+    "loaf of bread": "Head",
+    "pork pies": "Lies",
+    "whistle and flute": "Suit",
+  };
+
+  return rhymes[rhyme.toLowerCase()] ?? "Rhyme not found";
+}
+```
+
+OR
+
+```js
+function stringToBool(str) {
+  const boolStrings = {
+    true: true,
+    false: false,
+  };
+
+  return boolStrings[str] ?? "String is not a boolean value";
+}
+```
+
+OR
+
+```js
+function calculate(num1, num2, action) {
+  const actions = {
+    add: (a, b) => a + b,
+    subtract: (a, b) => a - b,
+    multiply: (a, b) => a * b,
+    divide: (a, b) => a / b,
+  };
+
+  return actions[action]?.(num1, num2) ?? "Calculation is not recognised";
+}
+```
+
+<iframe
+  src="https://giphy.com/embed/aNbGyHcDYphNbhe4EE"
+  width="109%"
+  height="109%"
+></iframe>
+
+# Conclusion
+
+> . Don’t forget to clap 👏 in the comment section below if you learned something new.

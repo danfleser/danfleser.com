@@ -4,11 +4,124 @@
         <title>Development blog</title>
         <link>https://danfleser.com/</link>
         <description>undefined</description>
-        <lastBuildDate>Wed, 23 Feb 2022 21:52:09 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 24 Feb 2022 16:43:49 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <copyright>Copyright © 2022 Dan Fleser</copyright>
+        <item>
+            <title><![CDATA[Stop Using If-Else and Switch, Use Object Literals Instead]]></title>
+            <link>https://danfleser.com/posts/20220224162057-js-object-literals</link>
+            <guid>20220224162057-js-object-literals</guid>
+            <pubDate>Thu, 24 Feb 2022 16:20:57 GMT</pubDate>
+            <description><![CDATA[Write better conditionals in JavaScript with object literals]]></description>
+            <content:encoded><![CDATA[
+Long lists of `if/else` statements or `switch` cases can get bloated quickly.
+
+<iframe
+  src="https://giphy.com/embed/Uni2jYCihB3fG"
+  width="109%"
+  height="109%"
+></iframe>
+
+As an example, let’s say we have a function that takes a rhyming slang phrase and returns the meaning. Using `if/else` statements, it would look like this:
+
+```js
+function getTranslation(rhyme) {
+  if (rhyme.toLowerCase() === "apples and pears") {
+    return "Stairs";
+  } else if (rhyme.toLowerCase() === "hampstead heath") {
+    return "Teeth";
+  } else if (rhyme.toLowerCase() === "loaf of bread") {
+    return "Head";
+  } else if (rhyme.toLowerCase() === "pork pies") {
+    return "Lies";
+  } else if (rhyme.toLowerCase() === "whistle and flute") {
+    return "Suit";
+  }
+
+  return "Rhyme not found";
+}
+```
+
+OR
+
+```js
+function getTranslation(rhyme) {
+  switch (rhyme.toLowerCase()) {
+    case "apples and pears":
+      return "Stairs";
+    case "hampstead heath":
+      return "Teeth";
+    case "loaf of bread":
+      return "Head";
+    case "pork pies":
+      return "Lies";
+    case "whistle and flute":
+      return "Suit";
+    default:
+      return "Rhyme not found";
+  }
+}
+```
+
+# An Alternative
+
+You can use an object to achieve the same functionality as above in a much neater way. Let’s have a look at an example:
+
+```js
+function getTranslationMap(rhyme) {
+  const rhymes = {
+    "apples and pears": "Stairs",
+    "hampstead heath": "Teeth",
+    "loaf of bread": "Head",
+    "pork pies": "Lies",
+    "whistle and flute": "Suit",
+  };
+
+  return rhymes[rhyme.toLowerCase()] ?? "Rhyme not found";
+}
+```
+
+OR
+
+```js
+function stringToBool(str) {
+  const boolStrings = {
+    true: true,
+    false: false,
+  };
+
+  return boolStrings[str] ?? "String is not a boolean value";
+}
+```
+
+OR
+
+```js
+function calculate(num1, num2, action) {
+  const actions = {
+    add: (a, b) => a + b,
+    subtract: (a, b) => a - b,
+    multiply: (a, b) => a * b,
+    divide: (a, b) => a / b,
+  };
+
+  return actions[action]?.(num1, num2) ?? "Calculation is not recognised";
+}
+```
+
+<iframe
+  src="https://giphy.com/embed/aNbGyHcDYphNbhe4EE"
+  width="109%"
+  height="109%"
+></iframe>
+
+# Conclusion
+
+> . Don’t forget to clap 👏 in the comment section below if you learned something new.
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[The 10 Websites To Host Your Side Project]]></title>
             <link>https://danfleser.com/posts/20220220210227-websites-to-host-your-side-project-for-free</link>
