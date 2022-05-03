@@ -1,0 +1,13 @@
+.search-bar {
+  .search {
+    @apply relative w-44 md:w-72 h-10;
+
+    input {
+      @apply w-full h-full absolute pr-14;
+    }
+
+    button {
+      @apply absolute top-0 bottom-0 my-auto right-0 pr-4;
+    }
+  }
+}

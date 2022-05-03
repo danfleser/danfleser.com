@@ -91,3 +91,13 @@ export function getAllTags(posts) {
 
   return tags.sort((a, b) => a.localeCompare(b));
 }
+
+export function getShortArticles() {
+  const data = fs.readFileSync(
+    `${process.cwd()}/scripts/short-articles/articles.json`
+  );
+
+  return JSON.parse(data).filter(
+    (v, i, a) => a.findIndex((v2) => v2.title === v.title) === i
+  );
+}

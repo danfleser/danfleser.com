@@ -22,9 +22,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          <p className="copyrights">
-            © {year} Dan Fleser. All Rights Reserved.
-          </p>
+          <p className="copyrights">© {year} Dan Fleser. All Rights Reserved</p>
         </div>
       </div>
     </footer>

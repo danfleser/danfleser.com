@@ -1,40 +1,48 @@
 import Seo from "../components/common/Seo";
-import Filter from "../components/post/Filter";
-import Post from "../components/post/Post";
-import PostNoResults from "../components/post/PostNoResults";
+import Link from "next/link";
 import Profile from "../components/profile/Profile";
-import { getSortedPosts, getAllTags } from "../utils/posts";
-import { generateRssPostsFeed } from "../utils/rss";
-import { generateSitemap } from "../utils/sitemap-generator";
 
-export default function Home({ posts, tags }) {
+export default function Home() {
   return (
     <section>
       <Seo title="All posts" />
 
       <Profile />
 
-      <Filter tags={tags} />
+      <section className="site-map">
+        <div className="card">
+          <Link href="/articles/nice-to-read" passHref>
+            <h2>📖 Nice to read</h2>
+          </Link>
+        </div>
+        <div className="card">
+          <Link href="/articles/posts" passHref>
+            <h2>📰 Posts</h2>
+          </Link>
+        </div>
+      </section>
 
-      {posts.map((post) => (
-        <Post key={post.slug} post={post} />
-      ))}
+      <section className="site-map">
+        <div className="card">
+          <Link href="/miscellaneous/newsletter" passHref>
+            <h2>📰 Newsletter</h2>
+          </Link>
+        </div>
+        <div className="card">
+          <Link href="/miscellaneous/privacy-policy" passHref>
+            <h2>🔏 Privacy</h2>
+          </Link>
+        </div>
+      </section>
 
-      <PostNoResults></PostNoResults>
+      <section className="site-map">
+        <div className="card">
+          <Link href="/miscellaneous/contact" passHref>
+            <h2>📬 Contact</h2>
+          </Link>
+        </div>
+        <div className="card invisible-block"></div>
+      </section>
     </section>
   );
-}
-
-export async function getStaticProps() {
-  generateRssPostsFeed(await getSortedPosts(false));
-  await generateSitemap();
-
-  const posts = await getSortedPosts();
-
-  return {
-    props: {
-      posts: posts,
-      tags: getAllTags(posts),
-    },
-  };
 }

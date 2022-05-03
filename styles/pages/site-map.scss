@@ -1,0 +1,25 @@
+.site-map {
+  @apply flex flex-col md:flex-row;
+
+  div {
+    @apply flex-1 text-2xl;
+
+    &:first-child {
+      @apply md:mr-3;
+    }
+
+    &:not(:first-child) {
+      @apply md:ml-3;
+    }
+
+    h2 {
+      @apply cursor-pointer hover:text-indigo-600;
+      // dark mode
+      @apply dark:hover:text-emerald-500;
+    }
+  }
+
+  .invisible-block {
+    @apply invisible;
+  }
+}

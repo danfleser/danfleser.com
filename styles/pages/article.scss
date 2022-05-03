@@ -1,0 +1,9 @@
+.article-card {
+  .article-card-header {
+    @apply flex justify-between items-center mb-6;
+
+    h1 {
+      @apply text-2xl;
+    }
+  }
+}

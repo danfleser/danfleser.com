@@ -1,6 +1,7 @@
 import fs from "fs";
 import { Feed } from "feed";
 import { getSiteMetaData } from "./helpers";
+import { getShortArticles } from "./posts";
 
 export function generateRssPostsFeed(posts) {
   const { title, url, language, author } = getSiteMetaData();
@@ -32,6 +33,15 @@ export function generateRssPostsFeed(posts) {
       });
     }
   );
+  getShortArticles().forEach(({ title, description }) => {
+    feed.addItem({
+      title,
+      description,
+      date: new Date(),
+      id: title.replaceAll(" ", "_"),
+      link: `${url}articles/nice-to-read?article=${title.replaceAll(" ", "_")}`,
+    });
+  });
 
   // Write the RSS output to a public file, making it
   // accessible at url/rss.xml

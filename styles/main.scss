@@ -12,11 +12,14 @@
 @import "components/post.scss";
 @import "components/profile.scss";
 @import "components/responsive-image.scss";
+@import "components/search-bar.scss";
 @import "components/social-links.scss";
 @import "components/syntax-highlighter.scss";
 
 // pages
+@import "pages/article.scss";
 @import "pages/blog.scss";
 @import "pages/contact.scss";
 @import "pages/newsletter.scss";
 @import "pages/privacy-policy.scss";
+@import "pages/site-map.scss";

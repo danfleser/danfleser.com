@@ -25,6 +25,28 @@
     }
   }
 
+  .app-post-content {
+    &.short-article {
+      @apply md:flex-row-reverse md:justify-between;
+
+      .app-post-image {
+        @apply md:h-36 md:w-36 md:pl-4;
+      }
+
+      .app-post-info {
+        @apply pl-0;
+
+        p {
+          @apply mb-4;
+        }
+
+        .post-details {
+          @apply md:mb-0;
+        }
+      }
+    }
+  }
+
   .tag {
     @apply rounded p-1 mr-2 mb-2 cursor-pointer select-none transition-colors leading-none text-sm inline-block;
     @apply hover:bg-zinc-100 border hover:border-indigo-600;
